@@ -16,8 +16,6 @@ import yfinance as yf # https://aroussi.com/post/python-yahoo-finance
 from Database import Database
 from GLOBAL_VARS import *
 import math
-import tkinter as tk
-from tkinter import filedialog
 import glob
 from pathlib import Path
 
