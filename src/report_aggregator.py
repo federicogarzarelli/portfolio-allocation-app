@@ -2,7 +2,7 @@ import sys
 import matplotlib.pyplot as plt
 import os
 from jinja2 import Environment, FileSystemLoader
-from weasyprint import HTML
+#from weasyprint import HTML
 from utils import get_now, dir_exists
 from strategies import *
 import pybloqs.block.table_formatters as tf
@@ -246,7 +246,12 @@ class ReportAggregator:
         """ Returns PDF report with backtest results
         """
         html = self.generate_html()
-        HTML(string=html).write_pdf(self.outfile)
+        #HTML(string=html).write_pdf(self.outfile)
+
+        file = open(self.outfile, "w")
+        file.write(html)
+        file.close()
+
         msg = "See {} for report with backtest results of different strategies."
         print(msg.format(self.outfile))
 

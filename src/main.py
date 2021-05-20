@@ -334,9 +334,9 @@ def main(params):
                 InputList[i][strat] = ThisOutputList[i]
 
     if params['report_name'] != '':
-        outfilename = params['report_name'] + "_" + get_now() + ".pdf"
+        outfilename = params['report_name'] + "_" + get_now() + ".html"
     else:
-        outfilename = "Report_" + get_now() + ".pdf"
+        outfilename = "Report_" + get_now() + ".html"
 
     ReportAggregator = report_aggregator.ReportAggregator(outfilename, outputdir, params['user'], params['memo'], params['leverage'], platform.system(), InputList)
     ReportAggregator.report()
