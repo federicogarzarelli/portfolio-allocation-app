@@ -12,7 +12,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 from main import main
 from GLOBAL_VARS import params
 
-session_state = SessionState.get(startdate=datetime.strptime('2010-01-01', '%Y-%m-%d'), enddate = datetime.strptime('2021-01-01', '%Y-%m-%d'),
+session_state = SessionState.get(startdate=datetime.strptime('2019-01-01', '%Y-%m-%d'), enddate = datetime.strptime('2021-01-01', '%Y-%m-%d'),
                                 initial_cash=1000000.0, contribution=0.0, leverage=1.0, expense_ratio=0.01,
                                  historic="Historical DB (daily prices)", shares='SP500,ZB.F,ZN.F,BM.F,GC.C',
                                  shareclass='equity,bond_lt,bond_it,commodity,gold',
