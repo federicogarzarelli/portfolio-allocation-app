@@ -5,6 +5,7 @@ import os, sys
 import plotly.express as px
 import pandas as pd
 import numpy as np
+import utils
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import SessionState
 
@@ -354,4 +355,10 @@ def app():
 
         st.markdown("### Portfolio returns")
         st.plotly_chart(fig, use_container_width=True)
+
+        # st.markdown("### Downloads")
+        # if st.button('Download Report as HTML'):
+        #     tmp_download_link = utils.download_link(df, 'YOUR_DF.csv', 'Click here to download your data!')
+        #     st.markdown(tmp_download_link, unsafe_allow_html=True)
+        #
 
