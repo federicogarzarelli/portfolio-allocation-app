@@ -116,7 +116,18 @@ class PortfolioDB(Database):
                 print(('No Yahoo Symbol for {}. Module: getYahooCode.'.format(stockCode)))
                 return 0
             return data.at[0, self.YAHOO_SYMBOL]
-        
+
+    def getPriceFrequency(self, stockCode):
+        sqlQuery = ''' SELECT {} FROM {} WHERE {} = '{}' ''' \
+            .format(self.FREQUENCY, self.STOCKS_TABLE_NAME,
+                    self.TICKER, stockCode)
+        data = self.readDatabase(sqlQuery)
+        if data.empty:
+            print(('No frequency for {}. Module: getPriceFrequency.'.format(stockCode)))
+            return 0
+        return data.at[0, self.FREQUENCY]
+
+
     def getGoogleCode(self, stockCode):
             sqlQuery = ''' SELECT {} FROM {} WHERE {} = '{}' ''' \
                 .format(self.GOOGLE_FINANCE_SYMBOL, self.STOCKS_TABLE_NAME,
