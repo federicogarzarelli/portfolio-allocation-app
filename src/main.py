@@ -259,11 +259,6 @@ def main(params):
     else:
         params["fundmode"] = False
 
-    # Clear the output folder
-    outputdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    outputdir = find("output", outputdir)
-    delete_in_dir(outputdir)
-
     strategy_list = []
     if params['riskparity']:
         strategy_list.append('riskparity')
