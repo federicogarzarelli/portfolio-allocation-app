@@ -333,7 +333,7 @@ def main(params):
     else:
         outfilename = "Report_" + get_now() + ".html"
 
-    ReportAggregator = report_aggregator.ReportAggregator(outfilename, outputdir, params['user'], params['memo'], params['leverage'], platform.system(), InputList)
+    ReportAggregator = report_aggregator.ReportAggregator(outfilename, params['user'], params['memo'], params['leverage'], platform.system(), InputList)
     #ReportAggregator.report()
     OutputList = ReportAggregator.report_object()
     return OutputList

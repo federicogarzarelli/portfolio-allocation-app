@@ -14,9 +14,8 @@ class ReportAggregator:
     """ Aggregates one-strategy reports and creates a multi-strategy report
     """
 
-    def __init__(self, outfilename, outputdir, user, memo, leverage, system, InputList):
+    def __init__(self, outfilename, user, memo, leverage, system, InputList):
         self.outfilename = outfilename
-        self.outputdir = outputdir
         self.user = user
         self.memo = memo
         self.leverage = leverage
@@ -27,8 +26,6 @@ class ReportAggregator:
         for i in range(0,len(InputList)):
             self.InputList.append(InputList[i])
 
-        self.outfile = os.path.join(self.outputdir, self.outfilename)
-
     """
     Report
     """
@@ -38,21 +35,17 @@ class ReportAggregator:
 
         # Output into CSV
         for i in range(0, len(self.InputList)-1): # -1 is to exclude the parameters output
-            self.InputList[i].to_csv(self.outputdir + outputfilename[i] + get_now().replace(':', '') +'.csv')
+            self.InputList[i].to_csv( outputfilename[i] + get_now().replace(':', '') +'.csv')
 
     def check_and_assign_defaults(self):
         """ Check initialization parameters or assign defaults
         """
-        if not self.outfilename:
-            self.outfilename = 'Not given'
-        if not dir_exists(self.outputdir):
-            msg = "*** ERROR: outputdir {} does not exist."
-            print(msg.format(self.outputdir))
-            sys.exit(0)
         if not self.user:
             self.user = 'Fabio & Federico'
         if not self.memo:
             self.memo = 'Testing'
+        if not self.outfilename:
+            self.outfilename = 'Not given'
 
     def plot_equity_curve(self):
         """ Plots equity curve to png file
