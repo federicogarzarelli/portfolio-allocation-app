@@ -275,4 +275,11 @@ class ReportAggregator:
         self.generate_csv()
         self.generate_pdf_report()
 
+    def report_object(self):
+        OutputList = []
+        for i in range(0, len(self.InputList)-1): # -1 is to exclude the parameters output
+            OutputList.append(self.InputList[i])
+        html = self.generate_html()
+        OutputList.append(html)
+        return OutputList
 

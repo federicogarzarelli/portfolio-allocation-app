@@ -15,6 +15,13 @@ from PortfolioDB import PortfolioDB
 import platform
 import streamlit as st
 import base64
+from pathlib import Path
+
+def img_to_bytes(img_path):
+    img_bytes = Path(img_path).read_bytes()
+    encoded = base64.b64encode(img_bytes).decode()
+    return encoded
+
 
 def download_link(object_to_download, download_filename, download_link_text):
     """

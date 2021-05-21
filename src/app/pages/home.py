@@ -1,3 +1,4 @@
+import copy
 import streamlit as st
 from datetime import date, datetime, timedelta
 from scipy import stats
@@ -228,31 +229,10 @@ def app():
     params['logreturns'] = session_state.logreturns
 
     if launch_btn:
-        main(params)
+        mainout = main(params)
+        input_df = copy.deepcopy(mainout)
 
-    # get the output and show it in the page
-    basedir = os.path.abspath(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
-    folder = os.path.join(basedir, 'output')
-    today_str = datetime.today().strftime('%Y-%m-%d')
-    outputfilename = ["/Fund_Prices_", "/Returns_", "/PerformanceMetrics_", "/Target_Weights_",
-                      "/Effective_Weights_", "/Portfolio_Drawdown_", "/Asset_Prices_", "/Assets_drawdown_"]
-
-    input_df = []
-    outputfiles_exist = True
-    for name in outputfilename:
-        inputfilepath = folder + name + today_str + '.csv'
-        if os.path.isfile(inputfilepath):
-            input_df.append(pd.read_csv(inputfilepath, index_col=0))
-        else:
-            outputfiles_exist = False
-
-    # Placeholder for all the charts and analysis
-    #show_output = st.empty()
-    #with show_output.beta_container():
-    # with st.form(key='my_form'):
-
-    if outputfiles_exist == True: # Only make charts if ALL the output exists.
-
+        # if input_df:
         # Portfolio value
         idx = 0
         columns=input_df[idx].columns
@@ -356,9 +336,17 @@ def app():
         st.markdown("### Portfolio returns")
         st.plotly_chart(fig, use_container_width=True)
 
-        # st.markdown("### Downloads")
-        # if st.button('Download Report as HTML'):
-        #     tmp_download_link = utils.download_link(df, 'YOUR_DF.csv', 'Click here to download your data!')
-        #     st.markdown(tmp_download_link, unsafe_allow_html=True)
-        #
+        st.markdown("### Downloads area")
 
+        today_str = datetime.today().strftime('%Y-%m-%d')
+        outputfilename = ["Fund_Prices", "Returns", "Performance Metrics", "Target Weights",
+                          "Effective Weights", "Portfolio Drawdown", "Asset Prices", "Assets drawdown"]
+
+        for name in outputfilename:
+            inputfilepath = name + "_" + today_str + '.csv'
+            tmp_download_link = utils.download_link(input_df[0], inputfilepath, 'Click here to download ' + name)
+            st.markdown(tmp_download_link, unsafe_allow_html=True)
+
+        inputfilepath = params['report_name'] + "_" + today_str + '.html'
+        tmp_download_link = utils.download_link(input_df[8], inputfilepath, 'Click here to download the html report')
+        st.markdown(tmp_download_link, unsafe_allow_html=True)

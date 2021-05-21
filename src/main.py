@@ -251,7 +251,7 @@ def runOneStrat(strategy=None):
 
         return OutputList
 
-@st.cache(suppress_st_warning=True)
+@st.cache(suppress_st_warning=True, show_spinner=False)
 def main(params):
     # Fund mode if contribution is 0 otherwise, asset mode
     if params['contribution'] == 0:
@@ -339,5 +339,6 @@ def main(params):
         outfilename = "Report_" + get_now() + ".html"
 
     ReportAggregator = report_aggregator.ReportAggregator(outfilename, outputdir, params['user'], params['memo'], params['leverage'], platform.system(), InputList)
-    ReportAggregator.report()
-
+    #ReportAggregator.report()
+    OutputList = ReportAggregator.report_object()
+    return OutputList
