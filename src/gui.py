@@ -7,11 +7,10 @@ import os, sys
 
 app = MultiApp()
 
-# wd = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-# logo_path = utils.find('logo_small.png', wd)
+wd = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+logo_path = utils.find('logo_small.png', wd)
 # #print(logo_path)
-#logo = Image.open(logo_path)
-logo = Image.open('logo_small.png')
+logo = Image.open(logo_path)
 #
 # header_html = "<img src='data:image/png;base64,{}' class='img-fluid'>".format(utils.img_to_bytes(logo_path))
 # st.markdown(header_html, unsafe_allow_html=True)
