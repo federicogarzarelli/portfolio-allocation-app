@@ -73,8 +73,7 @@ def app():
 
         # Create table of metrics
         # cagr
-        cagr = asset_data.sort_values('date').groupby(['ticker']).returns_1.apply(np.prod) ** (
-                    asset_data.sort_values('date').groupby(['ticker']).factor.first() / asset_data.sort_values('date').groupby(['ticker']).returns_1.count()) - 1
+        cagr = asset_data.sort_values('date').groupby(['ticker']).returns_1.apply(np.prod) ** (asset_data.sort_values('date').groupby(['ticker']).factor.first() / asset_data.sort_values('date').groupby(['ticker']).returns_1.count()) - 1
 
         # volatility
         volatility = asset_data.sort_values('date').groupby(['ticker']).returns.std()*np.sqrt(asset_data.sort_values('date').groupby(['ticker']).factor.first())
