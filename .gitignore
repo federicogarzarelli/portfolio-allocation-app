@@ -2,4 +2,7 @@
 .idea
 *.pdf
 output/
-*.png
+src/templates/assetdrawdown_curve.png
+src/templates/assetprices_curve.png
+src/templates/equity_curve.png
+src/templates/equitydrawdown_curve.png

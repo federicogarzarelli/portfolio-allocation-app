@@ -8,7 +8,7 @@ import os, sys
 app = MultiApp()
 
 wd = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-logo_path = utils.find('logo_small.jpg', wd)
+logo_path = utils.find('logo_small.png', wd)
 # #print(logo_path)
 logo = Image.open(logo_path)
 #
