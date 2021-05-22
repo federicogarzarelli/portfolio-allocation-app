@@ -39,6 +39,8 @@ session_state = SessionState.get(startdate=datetime.strptime('2019-01-01', '%Y-%
                                  assets_multiselect=['SP500','ZB.F','ZN.F','BM.F','GC.C'])
 
 def app():
+    global input_df
+
     st.title('Home')
 
     st.write('First adjust the backtest parameters on the left, then launch the backtest by pressing the button below.')
@@ -163,76 +165,77 @@ def app():
         #launch_btn = st.button("Launch backtest")
         launch_btn = st.form_submit_button("Launch backtest")
 
-    params['startdate'] = session_state.startdate
-    params['enddate'] = session_state.enddate
-    params['initial_cash'] = session_state.initial_cash
-    params['contribution'] = session_state.contribution
-    params['leverage'] = session_state.leverage
-    params['expense_ratio'] = session_state.expense_ratio
-    params['historic'] = historic_cd
-    params['shares'] = session_state.shares
-    params['shareclass'] = session_state.shareclass
-    params['weights'] = session_state.weights
-    params['benchmark'] = session_state.benchmark
-    params['indicator'] = session_state.indicator
-    params['riskparity'] = session_state.riskparity
-    params['riskparity_nested'] = session_state.riskparity_nested
-    params['rotationstrat'] = session_state.rotationstrat
-    params['uniform'] = session_state.uniform
-    params['vanillariskparity'] = session_state.vanillariskparity
-    params['onlystocks'] = session_state.onlystocks
-    params['sixtyforty'] = session_state.sixtyforty
-    params['trend_u'] = session_state.trend_u
-    params['absmom_u'] = session_state.absmom_u
-    params['relmom_u'] = session_state.relmom_u
-    params['momtrend_u'] = session_state.momtrend_u
-    params['trend_rp'] = session_state.trend_rp
-    params['absmom_rp'] = session_state.absmom_rp
-    params['relmom_rp'] = session_state.relmom_rp
-    params['momtrend_rp'] = session_state.momtrend_rp
-    params['GEM'] = session_state.GEM
-    params['create_report'] = session_state.create_report
-    params['report_name'] = session_state.report_name
-    params['user'] = session_state.user
-    params['memo'] = session_state.memo
-    # advanced params
-    params['DAYS_IN_YEAR'] = session_state.DAYS_IN_YEAR
-    params['DAYS_IN_YEAR_BOND_PRICE'] = session_state.DAYS_IN_YEAR_BOND_PRICE
-    params['reb_days_days'] = session_state.reb_days_days
-    params['reb_days_years'] = session_state.reb_days_years
-    params['reb_days_custweights'] = session_state.reb_days_custweights
-    params['lookback_period_short_days'] = session_state.lookback_period_short_days
-    params['lookback_period_short_years'] = session_state.lookback_period_short_years
-    params['lookback_period_short_custweights'] = session_state.lookback_period_short_custweights
-    params['lookback_period_long_days'] = session_state.lookback_period_long_days
-    params['lookback_period_long_years'] = session_state.lookback_period_long_years
-    params['lookback_period_long_custweights'] = session_state.lookback_period_long_custweights
-    params['moving_average_period_days'] = session_state.moving_average_period_days
-    params['moving_average_period_years'] = session_state.moving_average_period_years
-    params['moving_average_period_custweights'] = session_state.moving_average_period_custweights
-    params['momentum_period_days'] = session_state.momentum_period_days
-    params['momentum_period_years'] = session_state.momentum_period_years
-    params['momentum_period_custweights'] = session_state.momentum_period_custweights
-    params['momentum_percentile_days'] = session_state.momentum_percentile_days
-    params['momentum_percentile_years'] = session_state.momentum_percentile_years
-    params['momentum_percentile_custweights'] = session_state.momentum_percentile_custweights
-    params['corrmethod_days'] = session_state.corrmethod_days
-    params['corrmethod_years'] = session_state.corrmethod_years
-    params['corrmethod_custweights'] = session_state.corrmethod_custweights
-    params['riskfree'] = session_state.riskfree
-    params['targetrate'] = session_state.targetrate
-    params['alpha'] = session_state.alpha
-    params['market_mu'] = session_state.market_mu
-    params['market_sigma'] = session_state.market_sigma
-    params['stddev_sample'] = session_state.stddev_sample
-    params['annualize'] = session_state.annualize
-    params['logreturns'] = session_state.logreturns
-
     if launch_btn:
-        mainout = main(params)
+        params['startdate'] = session_state.startdate
+        params['enddate'] = session_state.enddate
+        params['initial_cash'] = session_state.initial_cash
+        params['contribution'] = session_state.contribution
+        params['leverage'] = session_state.leverage
+        params['expense_ratio'] = session_state.expense_ratio
+        params['historic'] = historic_cd
+        params['shares'] = session_state.shares
+        params['shareclass'] = session_state.shareclass
+        params['weights'] = session_state.weights
+        params['benchmark'] = session_state.benchmark
+        params['indicator'] = session_state.indicator
+        params['riskparity'] = session_state.riskparity
+        params['riskparity_nested'] = session_state.riskparity_nested
+        params['rotationstrat'] = session_state.rotationstrat
+        params['uniform'] = session_state.uniform
+        params['vanillariskparity'] = session_state.vanillariskparity
+        params['onlystocks'] = session_state.onlystocks
+        params['sixtyforty'] = session_state.sixtyforty
+        params['trend_u'] = session_state.trend_u
+        params['absmom_u'] = session_state.absmom_u
+        params['relmom_u'] = session_state.relmom_u
+        params['momtrend_u'] = session_state.momtrend_u
+        params['trend_rp'] = session_state.trend_rp
+        params['absmom_rp'] = session_state.absmom_rp
+        params['relmom_rp'] = session_state.relmom_rp
+        params['momtrend_rp'] = session_state.momtrend_rp
+        params['GEM'] = session_state.GEM
+        params['create_report'] = session_state.create_report
+        params['report_name'] = session_state.report_name
+        params['user'] = session_state.user
+        params['memo'] = session_state.memo
+        # advanced params
+        params['DAYS_IN_YEAR'] = session_state.DAYS_IN_YEAR
+        params['DAYS_IN_YEAR_BOND_PRICE'] = session_state.DAYS_IN_YEAR_BOND_PRICE
+        params['reb_days_days'] = session_state.reb_days_days
+        params['reb_days_years'] = session_state.reb_days_years
+        params['reb_days_custweights'] = session_state.reb_days_custweights
+        params['lookback_period_short_days'] = session_state.lookback_period_short_days
+        params['lookback_period_short_years'] = session_state.lookback_period_short_years
+        params['lookback_period_short_custweights'] = session_state.lookback_period_short_custweights
+        params['lookback_period_long_days'] = session_state.lookback_period_long_days
+        params['lookback_period_long_years'] = session_state.lookback_period_long_years
+        params['lookback_period_long_custweights'] = session_state.lookback_period_long_custweights
+        params['moving_average_period_days'] = session_state.moving_average_period_days
+        params['moving_average_period_years'] = session_state.moving_average_period_years
+        params['moving_average_period_custweights'] = session_state.moving_average_period_custweights
+        params['momentum_period_days'] = session_state.momentum_period_days
+        params['momentum_period_years'] = session_state.momentum_period_years
+        params['momentum_period_custweights'] = session_state.momentum_period_custweights
+        params['momentum_percentile_days'] = session_state.momentum_percentile_days
+        params['momentum_percentile_years'] = session_state.momentum_percentile_years
+        params['momentum_percentile_custweights'] = session_state.momentum_percentile_custweights
+        params['corrmethod_days'] = session_state.corrmethod_days
+        params['corrmethod_years'] = session_state.corrmethod_years
+        params['corrmethod_custweights'] = session_state.corrmethod_custweights
+        params['riskfree'] = session_state.riskfree
+        params['targetrate'] = session_state.targetrate
+        params['alpha'] = session_state.alpha
+        params['market_mu'] = session_state.market_mu
+        params['market_sigma'] = session_state.market_sigma
+        params['stddev_sample'] = session_state.stddev_sample
+        params['annualize'] = session_state.annualize
+        params['logreturns'] = session_state.logreturns
+
+    #if input_df != 0:
+    mainout = main(params)
+    if mainout is not False:
         input_df = copy.deepcopy(mainout)
 
-        # if input_df:
         # Portfolio value
         idx = 0
         columns=input_df[idx].columns

@@ -12,7 +12,6 @@ from PortfolioDB import PortfolioDB
 import platform
 import streamlit as st
 
-
 # Strategy parameters not passed
 from strategies import customweights
 
@@ -251,9 +250,12 @@ def runOneStrat(strategy=None):
 
         return OutputList
 
-@st.cache(suppress_st_warning=True, show_spinner=False)
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
 def main(params):
     # Fund mode if contribution is 0 otherwise, asset mode
+    if params['initial_cash'] == '':
+        return False
+
     if params['contribution'] == 0:
         params["fundmode"] = True
     else:
