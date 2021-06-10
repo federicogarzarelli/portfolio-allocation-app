@@ -157,20 +157,15 @@ class PerformanceReport:
         n_assets = self.get_strategy_params().get('n_assets')
 
         # Asset targetweights
-        size_weights = 100  # get targetweights for the last 100 days
-        if len(self.get_date_index()) > size_weights:
-            idx = self.get_date_index()[len(self.get_date_index()) - size_weights:len(self.get_date_index())]
-        else:
-            size_weights = len(self.get_date_index())
-            idx = self.get_date_index()[0:len(self.get_date_index())]
+        idx = self.get_date_index()[0:len(self.get_date_index())]
 
         targetweights_df = pd.DataFrame(index=idx)
         effectiveweights_df = pd.DataFrame(index=idx)
 
         for i in range(0, n_assets):
-            targetweights_df[st.assets[i]._name] = st.observers.targetweightsobserver.lines[i].get(size=size_weights)
+            targetweights_df[st.assets[i]._name] = st.observers.targetweightsobserver.lines[i].get(size=len(self.get_date_index()))
             effectiveweights_df[st.assets[i]._name] = st.observers.effectiveweightsobserver.lines[i].get(
-                size=size_weights)
+                size=len(self.get_date_index()))
         return targetweights_df, effectiveweights_df
 
     def get_strategy_name(self):
@@ -256,10 +251,8 @@ class PerformanceReport:
         perf_data = self.get_aggregated_data()
 
         targetweights, effectiveweights = self.get_weights()
-        targetweights = targetweights.tail(1).T
-        effectiveweights = effectiveweights.tail(1).T
-        targetweights.columns = [self.get_strategy_name()]
-        effectiveweights.columns = [self.get_strategy_name()]
+        targetweights['strategy'] = self.get_strategy_name()
+        effectiveweights['strategy'] = self.get_strategy_name()
 
         equitydd = self.get_equity_drawdown()
         equitydd.index = equitydd.index.date

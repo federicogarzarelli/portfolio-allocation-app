@@ -1,6 +1,6 @@
 import streamlit as st
 from app.multiapp import MultiApp
-from app.pages import home, settings, exploreDB # import your app modules here
+from app.pages import home, settings, exploreDB, signals # import your app modules here
 from PIL import Image
 import utils
 import os, sys
@@ -28,6 +28,7 @@ This app backtests portfolio allocation strategies using historical data.
 app.add_app("Home", home.app)
 app.add_app("Advanced Settings", settings.app)
 app.add_app("Explore Prices DB", exploreDB.app)
+app.add_app("Market signals", signals.app)
 # The main app
 app.run()
 

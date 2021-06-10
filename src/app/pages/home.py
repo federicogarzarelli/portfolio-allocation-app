@@ -21,6 +21,7 @@ session_state = SessionState.get(startdate=datetime.strptime('2019-01-01', '%Y-%
                                  weights='', benchmark='', indicator=False,
                                  riskparity=True, riskparity_nested=False, rotationstrat=False, uniform=True, vanillariskparity=False, onlystocks=False, sixtyforty=False,
                                  trend_u=False, absmom_u=False, relmom_u=False, momtrend_u=False, trend_rp=False, absmom_rp=False, relmom_rp=False, momtrend_rp=False, GEM=False,
+                                 acc_dualmom=False,
                                  create_report=True, report_name='backtest report', user='FG', memo='backtest report',
                                  # advanced parameters
                                  DAYS_IN_YEAR=252, DAYS_IN_YEAR_BOND_PRICE=360,
@@ -150,9 +151,12 @@ def app():
                                                         value=session_state.momtrend_rp, key='momtrend_rp',
                                                         help='First weights are assigned according to the "riskparity" strategy. Second, assets are ranked based on their return over the period (momentum) and divided in two classes. For the assets belonging to the lower return class, the weight is set to zero (leave as cash). Finally, a trend filter is then applied to assets with positive weight: if the current asset price is smaller than the simple moving average, the weight is set to zero (leave as cash).')
         session_state.GEM = st.sidebar.checkbox('Global equity momentum', value=session_state.GEM, key='GEM',
-                                                help='Global equity momentum strategy. Needs only 4 assets of classes equity, equity_intl, bond_lt, money_market. example: `--shares VEU,IVV,BIL,AGG --shareclass equity_intl,equity,money_market,bond_lt`. See https://blog.thinknewfound.com/2019/01/fragility-case-study-dual-momentum-gem/')
+                                                help='Global equity momentum strategy. Needs only 4 assets of classes equity, equity_intl, bond_lt, money_market. example: `VEU,IVV,BIL,AGG equity_intl,equity,money_market,bond_lt`. See https://blog.thinknewfound.com/2019/01/fragility-case-study-dual-momentum-gem/')
+        session_state.acc_dualmom = st.sidebar.checkbox('Accelerating Dual Momentum', value=session_state.acc_dualmom, key='acc_dualmom',
+                                                help='Accelerating Dual Momentum. Needs only 3 assets of classes equity, equity_intl, bond_lt. example: VFINX,VINEX,VUSTX, shareclass equity,equity_intl,bond_lt. See https://engineeredportfolio.com/2018/05/02/accelerating-dual-momentum-investing/')
 
-        st.sidebar.subheader("PDF Report")
+
+        st.sidebar.subheader("HTML Report")
         # session_state.create_report = st.sidebar.checkbox('create PDF report', value=session_state.create_report,
         #                                                   key='create_report', help=None)
         session_state.report_name = st.sidebar.text_input("report name", value=session_state.report_name, max_chars=None,
@@ -194,6 +198,7 @@ def app():
         params['relmom_rp'] = session_state.relmom_rp
         params['momtrend_rp'] = session_state.momtrend_rp
         params['GEM'] = session_state.GEM
+        params['acc_dualmom'] = session_state.acc_dualmom
         params['create_report'] = session_state.create_report
         params['report_name'] = session_state.report_name
         params['user'] = session_state.user
@@ -264,19 +269,29 @@ def app():
 
         # Portfolio weights
         st.markdown("### Portfolio weights")
-        col1, col2 = st.beta_columns(2)
-
-        idx = 3
-        for column in input_df[idx]:
-            input_df[idx][column] = input_df[idx][column].astype(float).map(lambda n: '{:.2%}'.format(n))
-        col1.subheader("Target weights")
-        col1.dataframe(input_df[idx])
-
+        # col1, col2 = st.beta_columns(2)
+        #
+        # idx = 3
+        # columns=input_df[idx].columns
+        # input_df[idx]['date'] = input_df[idx].index
+        # input_df_long = pd.melt(input_df[idx], id_vars=['date','strategy'], value_vars=columns[0:-1],var_name='asset', value_name='weight')
+        #
+        # col1.subheader("Target weights")
+        #
+        # for strat in input_df_long['strategy'].unique():
+        #     fig = px.bar(input_df_long[input_df_long['strategy']==strat], x="date", y="weight", color="asset", title=strat + ' weights')
+        #     col1.plotly_chart(fig, use_container_width=True)
         idx = 4
-        for column in input_df[idx]:
-            input_df[idx][column] = input_df[idx][column].astype(float).map(lambda n: '{:.2%}'.format(n))
-        col2.subheader("Effective weights")
-        col2.dataframe(input_df[idx])
+        columns=input_df[idx].columns
+        input_df[idx]['date'] = input_df[idx].index
+        input_df_long = pd.melt(input_df[idx], id_vars=['date','strategy'], value_vars=columns[0:-1],var_name='asset', value_name='weight')
+
+        st.subheader("Effective weights")
+
+        for strat in input_df_long['strategy'].unique():
+            fig = px.bar(input_df_long[input_df_long['strategy']==strat], x="date", y="weight", color="asset", title=strat + ' weights')
+            st.plotly_chart(fig, use_container_width=True)
+
 
         # Asset value
         idx = 6
@@ -342,13 +357,15 @@ def app():
         st.markdown("### Downloads area")
 
         today_str = datetime.today().strftime('%Y-%m-%d')
-        outputfilename = ["Fund_Prices", "Returns", "Performance Metrics", "Target Weights",
+        outputfilename = ["Fund Prices", "Returns", "Performance Metrics", "Target Weights",
                           "Effective Weights", "Portfolio Drawdown", "Asset Prices", "Assets drawdown"]
 
+        i = 0
         for name in outputfilename:
             inputfilepath = name + "_" + today_str + '.csv'
-            tmp_download_link = utils.download_link(input_df[0], inputfilepath, 'Click here to download ' + name)
+            tmp_download_link = utils.download_link(input_df[i], inputfilepath, 'Click here to download ' + name)
             st.markdown(tmp_download_link, unsafe_allow_html=True)
+            i = i + 1
 
         inputfilepath = params['report_name'] + "_" + today_str + '.html'
         tmp_download_link = utils.download_link(input_df[8], inputfilepath, 'Click here to download the html report')

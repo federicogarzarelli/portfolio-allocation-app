@@ -170,11 +170,11 @@ def runOneStrat(strategy=None):
         shares_list = shares_list + indicatorLabels
 
     if params['benchmark'] != '':
-        # look for the benchmark in the database
-        #benchmark_df = import_process_hist(params['benchmark, args) # First look for the benchmark in the historical "database"
-        benchmark_df = import_histprices_db(params['benchmark'])
-
-        if benchmark_df is None: # if not, download it
+        if params['historic'] == 'medium' or params['historic'] == 'long':
+            # look for the benchmark in the database
+            #benchmark_df = import_process_hist(params['benchmark, args) # First look for the benchmark in the historical "database"
+            benchmark_df = import_histprices_db(params['benchmark'])
+        else:
             benchmark_df = web.DataReader(params['benchmark'], "yahoo", startdate, enddate)["Adj Close"]
             benchmark_df = benchmark_df.to_frame("close")
 
@@ -294,6 +294,8 @@ def main(params):
         strategy_list.append('momtrend_rp')
     if params['GEM']:
         strategy_list.append('GEM')
+    if params['acc_dualmom']:
+        strategy_list.append('acc_dualmom')
     if not strategy_list:
         strategy_list = ["customweights"]
     if params['benchmark'] != '':
@@ -327,6 +329,8 @@ def main(params):
         for i in range(0, len(ThisOutputList)):
             if strat == strategy_list[0] or i in stratIndependentOutput:
                 InputList[i] = ThisOutputList[i]
+            elif i in [3,4]:
+                InputList[i] = InputList[i].append(ThisOutputList[i])
             else:
                 InputList[i][strat] = ThisOutputList[i]
 

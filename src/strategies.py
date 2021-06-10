@@ -101,8 +101,14 @@ class StandaloneStrat(bt.Strategy):
         self.startdate = None
         self.timeframe = self.get_timeframe()
 
+        days1month = 1
+        days3month = 1
+        days6month = 1
         if self.timeframe == "Days":
             self.log("Strategy: you are using data with daily frequency", dt=None)
+            days1month = 21
+            days3month = 21 * 3
+            days6month = 21 * 6
         elif self.timeframe == "Years":
             self.log("Strategy: you are using data with yearly frequency", dt=None)
 
@@ -110,6 +116,10 @@ class StandaloneStrat(bt.Strategy):
         self.assetclose = []  # Keep a reference to the close price
         self.sma = []
         self.momentum = []
+        self.mom1month = []
+        self.mom3month = []
+        self.mom6month = []
+
         for asset in range(0, self.params.n_assets):
             self.assets.append(self.datas[asset])
             self.assetclose.append(self.datas[asset].close)
@@ -117,6 +127,12 @@ class StandaloneStrat(bt.Strategy):
                                                               period=self.params.moving_average_period))
             self.momentum.append(bt.indicators.RateOfChange(self.datas[asset].close,
                                                               period=self.params.momentum_period))
+            self.mom1month.append(bt.indicators.RateOfChange(self.datas[asset].close,
+                                                              period=days1month))
+            self.mom3month.append(bt.indicators.RateOfChange(self.datas[asset].close,
+                                                              period=days3month))
+            self.mom6month.append(bt.indicators.RateOfChange(self.datas[asset].close,
+                                                              period=days6month))
 
         self.benchmark_assets = []  # Save indicators here
         self.benchmark_assetsclose = []  # Keep a reference to the close price
@@ -353,6 +369,17 @@ class sixtyforty(StandaloneStrat):
 
         tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable','benchmark']]
 
+        # asset class replacements for this strategy
+        # equity_intl --> equity
+        # money_market --> bond_it
+        # cryptocurrencies --> gold
+        # real_estate --> equity
+        tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+        tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+        tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+        tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
+
+
         assetclass_cnt = {}
         for key in assetclass_allocation:
             count = sum(map(lambda x: x == key, tradable_shareclass))
@@ -390,6 +417,16 @@ class onlystocks(StandaloneStrat):
 
         tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable','benchmark']]
 
+        # asset class replacements for this strategy
+        # equity_intl --> equity
+        # money_market --> bond_it
+        # cryptocurrencies --> gold
+        # real_estate --> equity
+        tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+        tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+        tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+        tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
+
         assetclass_cnt = {}
         for key in assetclass_allocation:
             count = sum(map(lambda x: x == key, tradable_shareclass))
@@ -418,7 +455,6 @@ class benchmark(StandaloneStrat):
         self.strategy_name = "benchmark"
         super().__init__()
 
-
     def next_open(self):
         if len(self) % self.params.reb_days == 0:
             self.log("Pre-rebalancing CASH %.2f, VALUE  %.2f, FUND SHARES %.2f, FUND VALUE %.2f:" % (
@@ -443,6 +479,17 @@ class vanillariskparity(StandaloneStrat):
         }
 
         tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable','benchmark']]
+
+        # asset class replacements for this strategy
+        # equity_intl --> equity
+        # money_market --> bond_it
+        # cryptocurrencies --> gold
+        # real_estate --> equity
+        tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+        tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+        tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+        tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
+
 
         assetclass_cnt = {}
         for key in assetclass_allocation:
@@ -479,6 +526,16 @@ class uniform(StandaloneStrat):
         }
 
         tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable','benchmark']]
+
+        # asset class replacements for this strategy
+        # equity_intl --> equity
+        # money_market --> bond_it
+        # cryptocurrencies --> gold
+        # real_estate --> equity
+        tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+        tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+        tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+        tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
 
         assetclass_cnt = {}
         assetclass_flag = {}
@@ -521,7 +578,9 @@ class rotationstrat(StandaloneStrat):
                 "commodity": 0,
                 "equity": 0,
                 "bond_lt": 0,
-                "bond_it": 0
+                "bond_it": 0,
+                "money_market": 0,
+                "real_estate": 0
             }
 
             strat = {
@@ -536,65 +595,19 @@ class rotationstrat(StandaloneStrat):
 
             tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable','benchmark']]
 
+            # asset class replacements for this strategy
+            # equity_intl --> equity
+            # cryptocurrencies --> gold
+            tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+            tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+
+
             for key in assetclass_allocation:
                 if key == winningAsset:
                     assetclass_allocation[key] = 1.0
 
             assetclass_cnt = {}
 
-            for key in assetclass_allocation:
-                count = sum(map(lambda x: x == key, tradable_shareclass))
-                assetclass_cnt[key] = count
-
-            a = list(map(assetclass_allocation.get, tradable_shareclass))
-            b = list(map(assetclass_cnt.get, tradable_shareclass))
-
-            self.weights = [float(x) / y for x, y in zip(a, b)]
-
-            self.log("Pre-rebalancing CASH %.2f, VALUE  %.2f, FUND SHARES %.2f, FUND VALUE %.2f:" % (
-            self.broker.get_cash(),
-            self.broker.get_value(),
-            self.broker.get_fundshares(),
-            self.broker.get_fundvalue()))
-
-            self.rebalance()
-
-class rotationuniform(StandaloneStrat):
-    def __init__(self):
-        self.strategy_name = "rotationuniform"
-        super().__init__()
-
-
-    def next_open(self):
-        if len(self) % self.params.reb_days == 0:
-            assetclass_allocation = {
-                "gold": 0,
-                "commodity": 0,
-                "equity": 0,
-                "bond_lt": 0,
-                "bond_it": 0
-            }
-
-            strat = {
-                1: "gold",
-                2: "bond_lt",
-                3: "equity"
-            }
-
-            which_max = self.indassetsclose.index(max(self.indassetsclose))
-
-            winningAsset = strat.get(which_max)
-
-            tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable','benchmark']]
-
-            assetclass_allocation_winner = 2 / len(assetclass_allocation)
-            for key in assetclass_allocation:
-                if key == winningAsset:
-                    assetclass_allocation[key] = assetclass_allocation_winner
-                else:
-                    assetclass_allocation[key] = (1-assetclass_allocation_winner)/(len(assetclass_allocation)-1)
-
-            assetclass_cnt = {}
             for key in assetclass_allocation:
                 count = sum(map(lambda x: x == key, tradable_shareclass))
                 assetclass_cnt[key] = count
@@ -670,6 +683,18 @@ class riskparity_nested(StandaloneStrat):
             "bond_it": 0
         }
 
+        tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable', 'benchmark']]
+
+        # asset class replacements for this strategy
+        # equity_intl --> equity
+        # money_market --> bond_it
+        # cryptocurrencies --> gold
+        # real_estate --> equity
+        tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+        tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+        tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+        tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
+
         if len(self) % self.params.reb_days == 0:
 
             shareclass_prices = []
@@ -678,13 +703,13 @@ class riskparity_nested(StandaloneStrat):
             # First run risk parity at asset class level
             for key in assetclass_allocation:
                 # Get the assets whose asset class is "key"
-                count = sum(map(lambda x: x == key, self.params.shareclass))
+                count = sum(map(lambda x: x == key, tradable_shareclass))
                 shareclass_cnt.append(count)
                 if count > 1:
                     thisAssetClass_target_risk = [1 / count] * count # Same risk for each assetclass = risk parity
 
                     # calculate the logreturns
-                    thisAssetClass_idx = [i for i, e in enumerate(self.params.shareclass) if e == key]
+                    thisAssetClass_idx = [i for i, e in enumerate(tradable_shareclass) if e == key]
                     thisAssetClassClose = [self.assetclose[i].get(size=self.params.lookback_period_long) for i in thisAssetClass_idx]
 
                     # Check if asset prices is equal to the lookback period for all assets exist
@@ -715,7 +740,7 @@ class riskparity_nested(StandaloneStrat):
                     shareclass_prices.append(prod)
 
                 if count == 1:
-                    thisAssetClass_idx = [i for i, e in enumerate(self.params.shareclass) if e == key]
+                    thisAssetClass_idx = [i for i, e in enumerate(tradable_shareclass) if e == key]
                     thisAssetClassClose = [self.assetclose[i].get(size=self.params.lookback_period_long) for i in thisAssetClass_idx]
                     shareclass_prices.append(thisAssetClassClose[0])
                     assetWeights.append(np.asarray([1]))
@@ -749,7 +774,7 @@ class riskparity_nested(StandaloneStrat):
 
             weights = pd.DataFrame(columns=["sort", "weights"])
             for i in range(0, len(assetClass_weights)):
-                thisAssetClass_idx = [k for k, e in enumerate(self.params.shareclass) if e == keys_lst[i]]
+                thisAssetClass_idx = [k for k, e in enumerate(tradable_shareclass) if e == keys_lst[i]]
                 for j in range(0, len(assetWeights[i])):
                     to_append=[thisAssetClass_idx[j], assetClass_weights[i] * assetWeights[i][j]]
                     a_series = pd.Series(to_append, index=weights.columns)
@@ -836,6 +861,15 @@ class trend_u(StandaloneStrat):
 
         if len(self) % self.params.reb_days == 0:
             tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable', 'benchmark']]
+            # asset class replacements for this strategy
+            # equity_intl --> equity
+            # money_market --> bond_it
+            # cryptocurrencies --> gold
+            # real_estate --> equity
+            tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+            tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+            tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+            tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
 
             assetclass_cnt = {}
             assetclass_flag = {}
@@ -889,11 +923,21 @@ class trend2_u(StandaloneStrat):
                 trend.append(self.sma[asset][0])
                 price.append(self.assetclose[asset].get(0)[0])
 
+            tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable', 'benchmark']]
+            # asset class replacements for this strategy
+            # equity_intl --> equity
+            # money_market --> bond_it
+            # cryptocurrencies --> gold
+            # real_estate --> equity
+            tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+            tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+            tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+            tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
+
             trend_df = pd.DataFrame({'idx': range(0, self.params.n_assets),
                                         'trend': trend,
                                         'price': price,
-                                        'tradable_shareclass': [x for x in self.params.shareclass if
-                                                                x not in ['non-tradable', 'benchmark']]})
+                                        'tradable_shareclass': tradable_shareclass})
             trend_df['trend_buy_flag'] = \
                 trend_df['trend'] > trend_df['price']
 
@@ -983,6 +1027,15 @@ class absmom_u(StandaloneStrat):
             }
 
             tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable', 'benchmark']]
+            # asset class replacements for this strategy
+            # equity_intl --> equity
+            # money_market --> bond_it
+            # cryptocurrencies --> gold
+            # real_estate --> equity
+            tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+            tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+            tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+            tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
 
             assetclass_cnt = {}
             assetclass_flag = {}
@@ -1068,10 +1121,20 @@ class relmom_u(StandaloneStrat):
             for asset in range(0, self.params.n_assets):
                 momentum.append(self.momentum[asset][0])
 
+            tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable', 'benchmark']]
+            # asset class replacements for this strategy
+            # equity_intl --> equity
+            # money_market --> bond_it
+            # cryptocurrencies --> gold
+            # real_estate --> equity
+            tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+            tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+            tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+            tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
+
             momentum_df = pd.DataFrame({'idx': range(0, self.params.n_assets),
                                         'momentum': momentum,
-                                        'tradable_shareclass': [x for x in self.params.shareclass if
-                                                                x not in ['non-tradable', 'benchmark']]})
+                                        'tradable_shareclass': tradable_shareclass})
             momentum_df['momentum_buy_flag'] = \
                 momentum_df['momentum'] > momentum_df['momentum'].quantile(self.params.momentum_percentile)
 
@@ -1162,6 +1225,17 @@ class momtrend_u(StandaloneStrat):
     def next_open(self):
         if len(self) % self.params.reb_days == 0:
 
+            tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable', 'benchmark']]
+            # asset class replacements for this strategy
+            # equity_intl --> equity
+            # money_market --> bond_it
+            # cryptocurrencies --> gold
+            # real_estate --> equity
+            tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+            tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+            tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+            tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
+
             # Apply the relative momentum filter here
             momentum = []
             for asset in range(0, self.params.n_assets):
@@ -1169,8 +1243,7 @@ class momtrend_u(StandaloneStrat):
 
             momentum_df = pd.DataFrame({'idx': range(0, self.params.n_assets),
                                         'momentum': momentum,
-                                        'tradable_shareclass': [x for x in self.params.shareclass if
-                                                                x not in ['non-tradable', 'benchmark']]})
+                                        'tradable_shareclass': tradable_shareclass})
             momentum_df['momentum_buy_flag'] = momentum_df['momentum'] > momentum_df['momentum'].quantile(self.params.momentum_percentile)
 
             tradable_shareclass_momentum = list(
@@ -1215,10 +1288,20 @@ class momtrend_rp(StandaloneStrat):
             for asset in range(0, self.params.n_assets):
                 momentum.append(self.momentum[asset][0])
 
+            tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable', 'benchmark']]
+            # asset class replacements for this strategy
+            # equity_intl --> equity
+            # money_market --> bond_it
+            # cryptocurrencies --> gold
+            # real_estate --> equity
+            tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+            tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+            tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+            tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
+
             momentum_df = pd.DataFrame({'idx': range(0, self.params.n_assets),
                                         'momentum': momentum,
-                                        'tradable_shareclass': [x for x in self.params.shareclass if
-                                                                x not in ['non-tradable', 'benchmark']]})
+                                        'tradable_shareclass': tradable_shareclass})
             momentum_df['momentum_buy_flag'] = momentum_df['momentum'] > momentum_df['momentum'].quantile(self.params.momentum_percentile)
             n_momentum_assets = momentum_df['momentum_buy_flag'].sum()
 
@@ -1275,10 +1358,20 @@ class momtrelabs_u(StandaloneStrat):
             for asset in range(0, self.params.n_assets):
                 momentum.append(self.momentum[asset][0])
 
+            tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable', 'benchmark']]
+            # asset class replacements for this strategy
+            # equity_intl --> equity
+            # money_market --> bond_it
+            # cryptocurrencies --> gold
+            # real_estate --> equity
+            tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+            tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+            tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+            tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
+
             momentum_df = pd.DataFrame({'idx': range(0, self.params.n_assets),
                                         'momentum': momentum,
-                                        'tradable_shareclass': [x for x in self.params.shareclass if
-                                                                x not in ['non-tradable', 'benchmark']]})
+                                        'tradable_shareclass': tradable_shareclass})
             momentum_df['momentum_buy_flag'] = momentum_df['momentum'] > momentum_df['momentum'].quantile(self.params.momentum_percentile)
 
             tradable_shareclass_momentum = list(
@@ -1323,10 +1416,20 @@ class momrelabs_rp(StandaloneStrat):
             for asset in range(0, self.params.n_assets):
                 momentum.append(self.momentum[asset][0])
 
+            tradable_shareclass = [x for x in self.params.shareclass if x not in ['non-tradable', 'benchmark']]
+            # asset class replacements for this strategy
+            # equity_intl --> equity
+            # money_market --> bond_it
+            # cryptocurrencies --> gold
+            # real_estate --> equity
+            tradable_shareclass = ["equity" if x == "equity_intl" else x for x in tradable_shareclass]
+            tradable_shareclass = ["bond_it" if x == "money_market" else x for x in tradable_shareclass]
+            tradable_shareclass = ["gold" if x == "cryptocurrencies" else x for x in tradable_shareclass]
+            tradable_shareclass = ["equity" if x == "real_estate" else x for x in tradable_shareclass]
+
             momentum_df = pd.DataFrame({'idx': range(0, self.params.n_assets),
                                         'momentum': momentum,
-                                        'tradable_shareclass': [x for x in self.params.shareclass if
-                                                                x not in ['non-tradable', 'benchmark']]})
+                                        'tradable_shareclass': tradable_shareclass})
             momentum_df['momentum_buy_flag'] = momentum_df['momentum'] > momentum_df['momentum'].quantile(self.params.momentum_percentile)
             n_momentum_assets = momentum_df['momentum_buy_flag'].sum()
 
@@ -1385,13 +1488,13 @@ class GEM(StandaloneStrat):
             assetclasses = ["equity","equity_intl","bond_lt","money_market"]
 
             # Get the assets belonging to the categories required and ignore the rest
-            tradable_shareclass = [x for x in self.params.shareclass if x in assetclasses]
+            strat_shareclass = [x for x in self.params.shareclass if x in assetclasses]
 
             # Check that only 4 assets are delivered with the shareclasses defined above
             assetclass_cnt = {}
             assetclass_flag = {}
             for assetclass in assetclasses:
-                count = sum(map(lambda x: x == assetclass, tradable_shareclass))
+                count = sum(map(lambda x: x == assetclass, strat_shareclass))
                 assetclass_cnt[assetclass] = count
                 if count > 0:
                     assetclass_flag[assetclass] = 1
@@ -1420,6 +1523,81 @@ class GEM(StandaloneStrat):
                     momentum_df.loc[momentum_df['tradable_shareclass'] == 'equity_intl','asset_weight'] = 1
             else:
                 momentum_df.loc[momentum_df['tradable_shareclass'] == 'bond_lt','asset_weight'] = 1
+
+            self.weights = momentum_df['asset_weight'].to_list()
+
+            self.log("Pre-rebalancing CASH %.2f, VALUE  %.2f, FUND SHARES %.2f, FUND VALUE %.2f:" % (
+            self.broker.get_cash(),
+            self.broker.get_value(),
+            self.broker.get_fundshares(),
+            self.broker.get_fundvalue()))
+
+            self.rebalance()
+
+class acc_dualmom(StandaloneStrat):
+    def __init__(self):
+        self.strategy_name = "GEM"
+        super().__init__()
+
+    """
+    https://engineeredportfolio.com/2018/05/02/accelerating-dual-momentum-investing/
+    """
+
+    def next_open(self):
+        if len(self) % self.params.reb_days == 0:
+            # Required asset classes to execute the strategy
+            assetclasses = ["equity","equity_intl","bond_lt"]
+
+            # Get the assets belonging to the categories required and ignore the rest
+            strat_shareclass = [x for x in self.params.shareclass if x in assetclasses]
+
+            # Check that only 3 assets are delivered with the shareclasses defined above
+            assetclass_cnt = {}
+            assetclass_flag = {}
+            for assetclass in assetclasses:
+                count = sum(map(lambda x: x == assetclass, strat_shareclass))
+                assetclass_cnt[assetclass] = count
+                if count > 0:
+                    assetclass_flag[assetclass] = 1
+                else:
+                    assetclass_flag[assetclass] = 0
+
+            for key in assetclass_cnt.keys():
+                if not assetclass_cnt[key] == 1:
+                    sys.exit('Error: ' + str(assetclass_cnt[key]) + ' assets found for the category ' + str(key) +
+                             '. Accelerating dual moment strategy requires exactly one asset for this category.')
+
+            # calculate the score
+            mom1month = []
+            mom3month = []
+            mom6month = []
+
+            for asset in range(0, self.params.n_assets):
+                mom1month.append(self.mom1month[asset][0])
+                mom3month.append(self.mom3month[asset][0])
+                mom6month.append(self.mom6month[asset][0])
+
+            momentum_df = pd.DataFrame({'idx': range(0, self.params.n_assets),
+                                        'mom1month': mom1month,
+                                        'mom3month': mom3month,
+                                        'mom6month': mom6month,
+                                        'tradable_shareclass': [x for x in self.params.shareclass if
+                                                                x not in ['non-tradable', 'benchmark']]})
+
+            momentum_df['score'] = momentum_df['mom1month'] + momentum_df['mom1month'] + momentum_df['mom1month']
+            momentum_df['asset_weight'] = 0
+
+
+            if momentum_df.loc[momentum_df['tradable_shareclass']=='equity','score'].values[0] > momentum_df.loc[momentum_df['tradable_shareclass']=='equity_intl','score'].values[0]:
+                if momentum_df.loc[momentum_df['tradable_shareclass']=='equity','score'].values[0] > 0:
+                    momentum_df.loc[momentum_df['tradable_shareclass'] == 'equity','asset_weight'] = 1
+                else:
+                    momentum_df.loc[momentum_df['tradable_shareclass'] == 'bond_lt','asset_weight'] = 1
+            else:
+                if momentum_df.loc[momentum_df['tradable_shareclass']=='equity_intl','score'].values[0] > 0:
+                    momentum_df.loc[momentum_df['tradable_shareclass'] == 'equity_intl','asset_weight'] = 1
+                else:
+                    momentum_df.loc[momentum_df['tradable_shareclass'] == 'bond_lt','asset_weight'] = 1
 
             self.weights = momentum_df['asset_weight'].to_list()
 
