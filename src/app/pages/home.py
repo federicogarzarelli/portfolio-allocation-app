@@ -21,7 +21,7 @@ session_state = SessionState.get(startdate=datetime.strptime('2019-01-01', '%Y-%
                                  weights='', benchmark='', indicator=False,
                                  riskparity=True, riskparity_nested=False, rotationstrat=False, uniform=True, vanillariskparity=False, onlystocks=False, sixtyforty=False,
                                  trend_u=False, absmom_u=False, relmom_u=False, momtrend_u=False, trend_rp=False, absmom_rp=False, relmom_rp=False, momtrend_rp=False, GEM=False,
-                                 acc_dualmom=False,
+                                 acc_dualmom=False, acc_dualmom2=False,
                                  create_report=True, report_name='backtest report', user='FG', memo='backtest report',
                                  # advanced parameters
                                  DAYS_IN_YEAR=252, DAYS_IN_YEAR_BOND_PRICE=360,
@@ -154,6 +154,8 @@ def app():
                                                 help='Global equity momentum strategy. Needs only 4 assets of classes equity, equity_intl, bond_lt, money_market. example: `VEU,IVV,BIL,AGG equity_intl,equity,money_market,bond_lt`. See https://blog.thinknewfound.com/2019/01/fragility-case-study-dual-momentum-gem/')
         session_state.acc_dualmom = st.sidebar.checkbox('Accelerating Dual Momentum', value=session_state.acc_dualmom, key='acc_dualmom',
                                                 help='Accelerating Dual Momentum. Needs only 3 assets of classes equity, equity_intl, bond_lt. example: VFINX,VINEX,VUSTX, shareclass equity,equity_intl,bond_lt. See https://engineeredportfolio.com/2018/05/02/accelerating-dual-momentum-investing/')
+        session_state.acc_dualmom2 = st.sidebar.checkbox('Accelerating Dual Momentum (extended)', value=session_state.acc_dualmom, key='acc_dualmom2',
+                                                help='Accelerating Dual Momentum (extended). Needs only 4 assets of classes equity, equity_intl, bond_lt, gold. example: VFINX,VINEX,VUSTX,GLD shareclass equity,equity_intl,bond_lt,gold.')
 
 
         st.sidebar.subheader("HTML Report")
@@ -199,6 +201,7 @@ def app():
         params['momtrend_rp'] = session_state.momtrend_rp
         params['GEM'] = session_state.GEM
         params['acc_dualmom'] = session_state.acc_dualmom
+        params['acc_dualmom2'] = session_state.acc_dualmom2
         params['create_report'] = session_state.create_report
         params['report_name'] = session_state.report_name
         params['user'] = session_state.user

@@ -385,6 +385,27 @@ def load_AccDualMom_curves(startdate, enddate):
     return df
 
 @st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
+def load_AccDualMom_curves2(startdate, enddate):
+    shares_list = ['VFINX','VINEX','VUSTX','GLD','GSG']
+    df = pd.DataFrame()
+    for i in range(len(shares_list)):
+        this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+        this_df = this_df.to_frame("close")
+        this_df['asset'] = shares_list[i]
+        df = df.append(this_df)
+
+    df['ret1m'] = df.groupby(['asset'])['close'].pct_change(periods=21)
+    df['ret3m'] = df.groupby(['asset'])['close'].pct_change(periods=21*3)
+    df['ret6m'] = df.groupby(['asset'])['close'].pct_change(periods=21*6)
+
+    df = df.dropna()
+    df['score'] = df['ret1m']+df['ret3m']+df['ret6m']
+
+    df = df.drop(["close",'ret1m','ret3m','ret6m'],axis=1)
+    df['date'] = df.index
+    return df
+
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
 def load_GEM_curves(startdate, enddate):
     shares_list = ['VEU','IVV','BIL']
     df = pd.DataFrame()

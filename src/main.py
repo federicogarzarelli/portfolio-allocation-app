@@ -296,6 +296,8 @@ def main(params):
         strategy_list.append('GEM')
     if params['acc_dualmom']:
         strategy_list.append('acc_dualmom')
+    if params['acc_dualmom2']:
+        strategy_list.append('acc_dualmom2')
     if not strategy_list:
         strategy_list = ["customweights"]
     if params['benchmark'] != '':

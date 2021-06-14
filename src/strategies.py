@@ -1608,3 +1608,82 @@ class acc_dualmom(StandaloneStrat):
             self.broker.get_fundvalue()))
 
             self.rebalance()
+
+class acc_dualmom2(StandaloneStrat):
+    def __init__(self):
+        self.strategy_name = "GEM"
+        super().__init__()
+
+    """
+    https://engineeredportfolio.com/2018/05/02/accelerating-dual-momentum-investing/
+    """
+
+    def next_open(self):
+        if len(self) % self.params.reb_days == 0:
+            # Required asset classes to execute the strategy
+            assetclasses = ["equity","equity_intl","bond_lt","gold"]
+
+            # Get the assets belonging to the categories required and ignore the rest
+            strat_shareclass = [x for x in self.params.shareclass if x in assetclasses]
+
+            # Check that only 3 assets are delivered with the shareclasses defined above
+            assetclass_cnt = {}
+            assetclass_flag = {}
+            for assetclass in assetclasses:
+                count = sum(map(lambda x: x == assetclass, strat_shareclass))
+                assetclass_cnt[assetclass] = count
+                if count > 0:
+                    assetclass_flag[assetclass] = 1
+                else:
+                    assetclass_flag[assetclass] = 0
+
+            for key in assetclass_cnt.keys():
+                if not assetclass_cnt[key] == 1:
+                    sys.exit('Error: ' + str(assetclass_cnt[key]) + ' assets found for the category ' + str(key) +
+                             '. Accelerating dual moment strategy requires exactly one asset for this category.')
+
+            # calculate the score
+            mom1month = []
+            mom3month = []
+            mom6month = []
+
+            for asset in range(0, self.params.n_assets):
+                mom1month.append(self.mom1month[asset][0])
+                mom3month.append(self.mom3month[asset][0])
+                mom6month.append(self.mom6month[asset][0])
+
+            momentum_df = pd.DataFrame({'idx': range(0, self.params.n_assets),
+                                        'mom1month': mom1month,
+                                        'mom3month': mom3month,
+                                        'mom6month': mom6month,
+                                        'tradable_shareclass': [x for x in self.params.shareclass if
+                                                                x not in ['non-tradable', 'benchmark']]})
+
+            momentum_df['score'] = momentum_df['mom1month'] + momentum_df['mom1month'] + momentum_df['mom1month']
+            momentum_df['asset_weight'] = 0
+
+            if momentum_df.loc[momentum_df['tradable_shareclass']=='equity','score'].values[0] > momentum_df.loc[momentum_df['tradable_shareclass']=='equity_intl','score'].values[0]:
+                if momentum_df.loc[momentum_df['tradable_shareclass']=='equity','score'].values[0] > 0:
+                    momentum_df.loc[momentum_df['tradable_shareclass'] == 'equity','asset_weight'] = 1
+                else:
+                    if momentum_df.loc[momentum_df['tradable_shareclass']=='bond_lt','score'].values[0] > momentum_df.loc[momentum_df['tradable_shareclass']=='gold','score'].values[0]:
+                        momentum_df.loc[momentum_df['tradable_shareclass'] == 'bond_lt', 'asset_weight'] = 1
+                    else:
+                        momentum_df.loc[momentum_df['tradable_shareclass'] == 'gold','asset_weight'] = 1
+            else:
+                if momentum_df.loc[momentum_df['tradable_shareclass']=='equity_intl','score'].values[0] > 0:
+                    momentum_df.loc[momentum_df['tradable_shareclass'] == 'equity_intl','asset_weight'] = 1
+                else:
+                    if momentum_df.loc[momentum_df['tradable_shareclass']=='bond_lt','score'].values[0] > momentum_df.loc[momentum_df['tradable_shareclass']=='gold','score'].values[0]:
+                        momentum_df.loc[momentum_df['tradable_shareclass'] == 'bond_lt', 'asset_weight'] = 1
+                    else:
+                        momentum_df.loc[momentum_df['tradable_shareclass'] == 'gold','asset_weight'] = 1
+            self.weights = momentum_df['asset_weight'].to_list()
+
+            self.log("Pre-rebalancing CASH %.2f, VALUE  %.2f, FUND SHARES %.2f, FUND VALUE %.2f:" % (
+            self.broker.get_cash(),
+            self.broker.get_value(),
+            self.broker.get_fundshares(),
+            self.broker.get_fundvalue()))
+
+            self.rebalance()

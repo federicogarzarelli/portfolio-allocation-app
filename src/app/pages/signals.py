@@ -84,6 +84,31 @@ def app():
     AccDualMom_stocks_df = pd.DataFrame(AccDualMom_stocks, columns=['ticker', 'name', 'link'])
     col2.dataframe(AccDualMom_stocks_df)
 
+    st.markdown("## Accelerating dual momentum (with GLD)")
+    st.write("Accelerating Dual Momentum, including TIPs as inflation hedge. Needs only 4 assets of classes equity, "
+             "equity_intl, bond_lt, gold. example: "
+             "VFINX,VINEX,VUSTX,GLD shareclass equity,equity_intl,bond_lt,gold. "
+             "See https://engineeredportfolio.com/2018/05/02/accelerating-dual-momentum-investing/")
+
+    AccDualMom_curves2 = utils.load_AccDualMom_curves2(date.today()-timedelta(365*2), date.today())
+    fig = px.line(AccDualMom_curves2, x="date", y="score", color="asset")
+    st.plotly_chart(fig, use_container_width=True)
+
+    #col1, col2 = st.beta_columns(2)
+    #wd = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    #AccDualMom_image_path = utils.find('acc_dualmom.png', wd)
+    #AccDualMom_image = Image.open(AccDualMom_image_path)
+    #col1.image(AccDualMom_image)
+    AccDualMom_stocks =  [['VFINX', 'Vanguard 500 Index Fund Investor Shares','https://finance.yahoo.com/quote/VFINX'],
+                          ['VINEX', 'Vanguard International Explorer Fund Investor Shares','https://finance.yahoo.com/quote/VINEX'],
+                          ['VUSTX', 'Vanguard Long-Term Treasury Fund Investor Shares','https://finance.yahoo.com/quote/VUSTX'],
+                          ['GLD', 'SPDR Gold Shares (GLD)','https://finance.yahoo.com/quote/GLD'],
+                          ['GSG', 'iShares S&P GSCI Commodity-Indexed Trust (GSG)', 'https://finance.yahoo.com/quote/gsg'],
+                         ]
+    AccDualMom_stocks_df = pd.DataFrame(AccDualMom_stocks, columns=['ticker', 'name', 'link'])
+    #col2.dataframe(AccDualMom_stocks_df)
+    st.dataframe(AccDualMom_stocks_df)
+
 
 
 
