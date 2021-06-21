@@ -23,7 +23,7 @@ def app():
     st.write("Signal for the asset rotation strategy that buys either gold, bonds or equities"
              " (see https://seekingalpha.com/article/4283733-simple-rules-based-asset-rotation-strategy).")
 
-    rotstrat_curves = utils.load_economic_curves(date.today()-timedelta(180), date.today())
+    rotstrat_curves = utils.load_economic_curves(date.today()-timedelta(365*2), date.today())
     rotstrat_curves = rotstrat_curves.drop(['Max'],axis=1)
     columns = rotstrat_curves.columns
     rotstrat_curves['date'] = rotstrat_curves.index
@@ -49,7 +49,7 @@ def app():
              "example: `VEU,IVV,BIL,AGG equity_intl,equity,money_market,bond_lt`. "
              "See https://blog.thinknewfound.com/2019/01/fragility-case-study-dual-momentum-gem/")
 
-    GEM_curves = utils.load_GEM_curves(date.today()-timedelta(365*2), date.today())
+    GEM_curves = utils.load_GEM_curves(date.today()-timedelta(365*3), date.today())
     fig = px.line(GEM_curves, x="date", y="return", color="asset")
     st.plotly_chart(fig, use_container_width=True)
 
@@ -69,7 +69,7 @@ def app():
              "VFINX,VINEX,VUSTX, shareclass equity,equity_intl,bond_lt. "
              "See https://engineeredportfolio.com/2018/05/02/accelerating-dual-momentum-investing/")
 
-    AccDualMom_curves = utils.load_AccDualMom_curves(date.today()-timedelta(365*2), date.today())
+    AccDualMom_curves = utils.load_AccDualMom_curves(date.today()-timedelta(365*2.5), date.today())
     fig = px.line(AccDualMom_curves, x="date", y="score", color="asset")
     st.plotly_chart(fig, use_container_width=True)
 
@@ -90,7 +90,7 @@ def app():
              "VFINX,VINEX,VUSTX,GLD shareclass equity,equity_intl,bond_lt,gold. "
              "See https://engineeredportfolio.com/2018/05/02/accelerating-dual-momentum-investing/")
 
-    AccDualMom_curves2 = utils.load_AccDualMom_curves2(date.today()-timedelta(365*2), date.today())
+    AccDualMom_curves2 = utils.load_AccDualMom_curves2(date.today()-timedelta(365*2.5), date.today())
     fig = px.line(AccDualMom_curves2, x="date", y="score", color="asset")
     st.plotly_chart(fig, use_container_width=True)
 
