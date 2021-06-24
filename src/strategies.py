@@ -1584,7 +1584,7 @@ class acc_dualmom(StandaloneStrat):
                                         'tradable_shareclass': [x for x in self.params.shareclass if
                                                                 x not in ['non-tradable', 'benchmark']]})
 
-            momentum_df['score'] = momentum_df['mom1month'] + momentum_df['mom1month'] + momentum_df['mom1month']
+            momentum_df['score'] = (momentum_df['mom1month'] + momentum_df['mom3month'] + momentum_df['mom6month'])/3
             momentum_df['asset_weight'] = 0
 
 
@@ -1659,7 +1659,7 @@ class acc_dualmom2(StandaloneStrat):
                                         'tradable_shareclass': [x for x in self.params.shareclass if
                                                                 x not in ['non-tradable', 'benchmark']]})
 
-            momentum_df['score'] = momentum_df['mom1month'] + momentum_df['mom1month'] + momentum_df['mom1month']
+            momentum_df['score'] = momentum_df['mom1month'] + momentum_df['mom3month'] + momentum_df['mom6month']
             momentum_df['asset_weight'] = 0
 
             if momentum_df.loc[momentum_df['tradable_shareclass']=='equity','score'].values[0] > momentum_df.loc[momentum_df['tradable_shareclass']=='equity_intl','score'].values[0]:
