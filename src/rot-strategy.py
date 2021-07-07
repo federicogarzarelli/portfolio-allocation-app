@@ -5,6 +5,10 @@ import datetime
 import matplotlib.pyplot as plt
 from subprocess import call
 
+import yfinance as yf
+yf.pdr_override()
+
+
 path = '/home/newuser/Desktop/AlgoTrading/Research/'
 
 def get_today():
