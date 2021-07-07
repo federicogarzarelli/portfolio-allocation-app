@@ -18,7 +18,7 @@ import base64
 from pathlib import Path
 
 import yfinance as yf
-yf.pdr_override()
+# yf.pdr_override()
 
 def img_to_bytes(img_path):
     img_bytes = Path(img_path).read_bytes()
@@ -314,12 +314,8 @@ def covariances(shares, start, end):
 
     :return: covariance matrix
     '''
-    prices = pd.DataFrame([web.DataReader(t,
-                                          'yahoo',
-                                          start,
-                                          end).loc[:, 'Adj Close']
-                           for t in shares],
-                          index=shares).T.asfreq('B').ffill()
+    # prices = pd.DataFrame([web.DataReader(t,'yahoo',start,end).loc[:, 'Adj Close'] for t in shares], index=shares).T.asfreq('B').ffill()
+    prices = pd.DataFrame([yf.download(t,start=start,end=end).loc[:, 'Adj Close'] for t in shares], index=shares).T.asfreq('B').ffill()
 
     covariances = 52.0 * \
                   prices.asfreq('W-FRI').pct_change().iloc[1:, :].cov().values
@@ -371,7 +367,9 @@ def load_AccDualMom_curves(startdate, enddate):
     shares_list = ['VFINX','VINEX','VUSTX']
     df = pd.DataFrame()
     for i in range(len(shares_list)):
-        this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+        # this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+        this_df = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
+
         this_df = this_df.to_frame("close")
         this_df['asset'] = shares_list[i]
         df = df.append(this_df)
@@ -392,7 +390,9 @@ def load_AccDualMom_curves2(startdate, enddate):
     shares_list = ['VFINX','VINEX','VUSTX','GLD','GSG']
     df = pd.DataFrame()
     for i in range(len(shares_list)):
-        this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+        # this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+        this_df = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
+
         this_df = this_df.to_frame("close")
         this_df['asset'] = shares_list[i]
         df = df.append(this_df)
@@ -413,7 +413,9 @@ def load_GEM_curves(startdate, enddate):
     shares_list = ['VEU','IVV','BIL']
     df = pd.DataFrame()
     for i in range(len(shares_list)):
-        this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+        # this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+        this_df = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
+
         this_df = this_df.to_frame("close")
         this_df['asset'] = shares_list[i]
         df = df.append(this_df)

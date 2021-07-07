@@ -104,7 +104,8 @@ def runOneStrat(strategy=None):
 
         # download the datas
         for i in range(len(shares_list)):
-            this_assets = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+            # this_assets = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+            this_assets = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
 
             if APPLY_LEVERAGE_ON_LIVE_STOCKS == True:
                 this_assets = add_leverage(this_assets, leverage=params['leverage'],
@@ -175,7 +176,9 @@ def runOneStrat(strategy=None):
             #benchmark_df = import_process_hist(params['benchmark, args) # First look for the benchmark in the historical "database"
             benchmark_df = import_histprices_db(params['benchmark'])
         else:
-            benchmark_df = web.DataReader(params['benchmark'], "yahoo", startdate, enddate)["Adj Close"]
+            # benchmark_df = web.DataReader(params['benchmark'], "yahoo", startdate, enddate)["Adj Close"]
+            benchmark_df = yf.download(params['benchmark'], start=startdate, end=enddate)["Adj Close"]
+
             benchmark_df = benchmark_df.to_frame("close")
 
         if benchmark_df is not None:
