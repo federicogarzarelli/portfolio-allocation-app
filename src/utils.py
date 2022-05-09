@@ -2,7 +2,6 @@ import pandas as pd
 import os
 import backtrader as bt
 import numpy as np
-import datetime
 from strategies import *
 import matplotlib.pyplot as plt
 import numpy as np
@@ -16,6 +15,14 @@ import platform
 import streamlit as st
 import base64
 from pathlib import Path
+import datetime
+import threading
+from time import time, sleep
+import pandas as pd
+import requests
+from pprint import pprint
+from scipy.stats import kurtosis, skew
+
 
 import yfinance as yf
 # yf.pdr_override()
@@ -111,7 +118,6 @@ def print_header(params, strategy_list):
     print('###    shares' + ' ' + str(params['shares']))
     print('###    shareclass' + ' ' + str(params['shareclass']))
     print('###    weights' + ' ' + str(params['weights']))
-    print('###    indicators' + ' ' + str(params['indicator']))
     print('###    initial_cash' + ' ' + str(params['initial_cash']))
     print('###    contribution' + ' ' + str(params['contribution']))
     print('###    create_report' + ' ' + str(params['create_report']))
@@ -151,20 +157,39 @@ def import_histprices_db(dataLabel):
     return df
 
 
-def add_leverage(proxy, leverage=1, expense_ratio=0.0, timeframe=bt.TimeFrame.Days):
+def get_loan(startdate, enddate, BM_rate_flg, interest):
     """
-    Simulates a leverage ETF given its proxy, leverage, and expense ratio.
+    Simulates the interests paid for a margin loan taken with the broker
+    The benchmark rate is th e fed funds rates. The broker interest rate is added to it.
+    """
+    benchmark_rate = load_fred_curve(startdate, enddate, ['FEDFUNDS'])
+    if BM_rate_flg == True:
+        benchmark_rate["FEDFUNDS"] = benchmark_rate["FEDFUNDS"] / 100 + interest / 100
+    else:
+        benchmark_rate["FEDFUNDS"] = interest / 100
+    benchmark_rate["daily_rate"] = benchmark_rate["FEDFUNDS"] / 360
+    dates = pd.DataFrame(index=pd.date_range(startdate, enddate))
+    benchmark_rate_dates = pd.merge(dates, benchmark_rate, how="left", left_index=True, right_index=True)
+    benchmark_rate_dates = benchmark_rate_dates.fillna(method='bfill')
+    benchmark_rate_dates = benchmark_rate_dates.fillna(method='ffill')
+    benchmark_rate_dates["close"] = 1 * (1 + benchmark_rate_dates["daily_rate"]).cumprod()
+    cash_df = benchmark_rate_dates[['close']]
+    return cash_df
 
-    Daily percent change is calculated by taking the daily log-return of
-    the price, subtracting the daily expense ratio, then multiplying by the leverage.
+
+def add_expenses(proxy, expense_ratio=0.0, timeframe=bt.TimeFrame.Days):
+    """
+    Add an expense ratio to an ETF.
+    Daily percent change is calculated by taking the daily return of
+    the price, subtracting the daily expense ratio.
     """
     initial_value = proxy.iloc[0]
     pct_change = proxy.pct_change(1)
     if timeframe == bt.TimeFrame.Days:
-        pct_change = (pct_change - expense_ratio / params['DAYS_IN_YEAR']) * leverage
+        pct_change = (pct_change - expense_ratio / params['DAYS_IN_YEAR'])
     elif timeframe == bt.TimeFrame.Years:
         pct_change = ((1 + pct_change) ** (1 / params['DAYS_IN_YEAR'])) - 1 # Transform into daily returns
-        pct_change = (pct_change - expense_ratio / params['DAYS_IN_YEAR']) * leverage # Apply leverage
+        pct_change = (pct_change - expense_ratio / params['DAYS_IN_YEAR']) # Apply expense ratio
         pct_change = ((1 + pct_change) ** params['DAYS_IN_YEAR']) - 1 # Re-transform into yearly returns
     new_price = initial_value * (1 + pct_change).cumprod()
     new_price.iloc[0] = initial_value
@@ -353,8 +378,8 @@ def timestamp2str(ts):
 def get_now():
     """ Return current datetime as str
     """
-    #return timestamp2str(datetime.datetime.now())
-    return timestamp2str(datetime.now())
+    return timestamp2str(datetime.datetime.now())
+    # return timestamp2str(datetime.now())
 
 
 def dir_exists(foldername):
@@ -362,72 +387,8 @@ def dir_exists(foldername):
     """
     return os.path.isdir(foldername)
 
-@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
-def load_AccDualMom_curves(startdate, enddate):
-    shares_list = ['VFINX','VINEX','VUSTX']
-    df = pd.DataFrame()
-    for i in range(len(shares_list)):
-        # this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
-        this_df = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
-
-        this_df = this_df.to_frame("close")
-        this_df['asset'] = shares_list[i]
-        df = df.append(this_df)
-
-    df['ret1m'] = df.groupby(['asset'])['close'].pct_change(periods=21)
-    df['ret3m'] = df.groupby(['asset'])['close'].pct_change(periods=21*3)
-    df['ret6m'] = df.groupby(['asset'])['close'].pct_change(periods=21*6)
-
-    df = df.dropna()
-    df['score'] = df['ret1m']+df['ret3m']+df['ret6m']
-
-    df = df.drop(["close",'ret1m','ret3m','ret6m'],axis=1)
-    df['date'] = df.index
-    return df
-
-@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
-def load_AccDualMom_curves2(startdate, enddate):
-    shares_list = ['VFINX','VINEX','VUSTX','GLD','GSG']
-    df = pd.DataFrame()
-    for i in range(len(shares_list)):
-        # this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
-        this_df = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
-
-        this_df = this_df.to_frame("close")
-        this_df['asset'] = shares_list[i]
-        df = df.append(this_df)
-
-    df['ret1m'] = df.groupby(['asset'])['close'].pct_change(periods=21)
-    df['ret3m'] = df.groupby(['asset'])['close'].pct_change(periods=21*3)
-    df['ret6m'] = df.groupby(['asset'])['close'].pct_change(periods=21*6)
-
-    df = df.dropna()
-    df['score'] = df['ret1m']+df['ret3m']+df['ret6m']
-
-    df = df.drop(["close",'ret1m','ret3m','ret6m'],axis=1)
-    df['date'] = df.index
-    return df
-
-@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
-def load_GEM_curves(startdate, enddate):
-    shares_list = ['VEU','IVV','BIL']
-    df = pd.DataFrame()
-    for i in range(len(shares_list)):
-        # this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
-        this_df = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
-
-        this_df = this_df.to_frame("close")
-        this_df['asset'] = shares_list[i]
-        df = df.append(this_df)
-
-    df['return'] = df.groupby(['asset']).pct_change(periods=params['DAYS_IN_YEAR'])
-    df = df.dropna()
-    df = df.drop(["close"],axis=1)
-    df['date'] = df.index
-    return df
-
 """
-load indicators for the rotational strategy
+load indicators for the rotational strategy and for the other strategies shown in Market signals
 """
 
 @st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
@@ -437,10 +398,210 @@ def load_economic_curves(start, end):
     df_fundamental = df_fundamental.dropna()
     df_fundamental['T10YIE_T10Y2Y'] = df_fundamental['T10YIE'] - df_fundamental['T10Y2Y']
     df_fundamental = df_fundamental.drop(['T10YIE'], axis=1)
+
+    # df_fundamental = df_fundamental.ewm(span=60,min_periods=60,adjust=False).mean()
+    # df_fundamental = df_fundamental.dropna()
+
     df_fundamental['Max'] = df_fundamental.idxmax(axis=1)
     df_fundamental.index.name = 'Date'
     return df_fundamental
 
+def load_fred_curve(start, end, tickers):
+    df_fundamental = web.DataReader(tickers, "fred", start=start, end=end)
+    df_fundamental = df_fundamental.fillna(method="ffill")
+    df_fundamental.index.name = 'Date'
+    return df_fundamental
+
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
+def load_riskparity_data(shares_list, startdate, enddate):
+    df = pd.DataFrame()
+    for i in range(len(shares_list)):
+        # this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+        this_df = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
+        this_df = this_df.to_frame("close")
+        this_df = this_df[~this_df.index.duplicated(keep='first')]
+        this_df['asset'] = shares_list[i]
+        df = df.append(this_df)
+
+    # Keep common dates only
+    df['Date'] = df.index
+    # df.reset_index().set_index(['Date','asset'], inplace=True)
+    df_pivot = df.pivot(index='Date', columns='asset', values='close')
+    df_pivot = df_pivot.dropna()
+    df_pivot['Date'] = df_pivot.index
+    df = pd.melt(df_pivot, id_vars=['Date'])
+    df = df.set_index('Date')
+    df = df.rename(columns={'value': 'close'})
+
+    return df
+
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
+def load_GEM_curves(shares_list, startdate, enddate):
+    df = pd.DataFrame()
+    for i in range(len(shares_list)):
+        # this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+        this_df = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
+        this_df = this_df.to_frame("close")
+        this_df = this_df[~this_df.index.duplicated(keep='first')]
+        this_df['asset'] = shares_list[i]
+        df = df.append(this_df)
+
+    # Keep common dates only
+    df['Date'] = df.index
+    df_pivot = df.pivot(index='Date', columns='asset', values='close')
+    df_pivot = df_pivot.dropna()
+    df_pivot['Date'] = df_pivot.index
+    df = pd.melt(df_pivot, id_vars=['Date'])
+    df = df.set_index('Date')
+    df = df.rename(columns={'value': 'close'})
+
+    df['return'] = df.groupby(['asset']).pct_change(periods=params['DAYS_IN_YEAR'])
+    df = df.dropna()
+    df = df.drop(["close"],axis=1)
+    df['date'] = df.index
+    return df
+
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
+def load_AccDualMom_curves(shares_list, startdate, enddate):
+    df = pd.DataFrame()
+    for i in range(len(shares_list)):
+        # this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+        this_df = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
+        this_df = this_df.fillna(method="ffill")
+        this_df = this_df.to_frame("close")
+        this_df = this_df[~this_df.index.duplicated(keep='first')]
+        this_df['asset'] = shares_list[i]
+        df = df.append(this_df)
+    df['Date'] = df.index
+    df.reset_index(drop=True, inplace=True)
+
+    # Keep common dates only
+    df_pivot = df.pivot(index='Date', columns='asset', values='close')
+    df_pivot = df_pivot.dropna()
+    df_pivot['Date'] = df_pivot.index
+    df = pd.melt(df_pivot, id_vars=['Date'])
+    df = df.set_index('Date')
+    df = df.rename(columns={'value': 'close'})
+
+    last_date = df_pivot['Date'][-1]
+
+    monthly = df.groupby(['asset']).resample('BM').last()
+    monthly = monthly.droplevel('asset')
+    monthly['m1'] = monthly.groupby(['asset']).close.shift(1)
+    monthly['m3'] = monthly.groupby(['asset']).close.shift(3)
+    monthly['m6'] = monthly.groupby(['asset']).close.shift(6)
+    monthly = monthly.drop(columns=['close'])
+    monthly = monthly.dropna()
+    last_monthly_date = monthly.index[-1]
+    monthly.rename(index={last_monthly_date: last_date}, inplace=True)
+
+    t = pd.merge(df, monthly, how="left",  left_on=['Date','asset'], right_on = ['Date','asset'])
+    t = t.bfill(axis='rows')
+    t['ret1m'] = t['close']/t['m1']-1
+    t['ret3m'] = t['close']/t['m3']-1
+    t['ret6m'] = t['close']/t['m6']-1
+    t['score'] = t['ret1m'] + t['ret3m'] + t['ret6m']
+    t = t.drop(["close",'m1','m3','m6','ret1m','ret3m','ret6m'],axis=1)
+    t['date'] = t.index
+    return t
+
+def AccDualMom_weights():
+    shares_list = ['VFINX','VINEX','VUSTX']
+    # shares_list = ['SPY','SCZ','TLT']
+    AccDualMom_curves = load_AccDualMom_curves(shares_list, date.today()-timedelta(365*2.5), date.today())
+    # add the 3m t bill
+    t_bill = load_fred_curve(date.today()-timedelta(365*2.5), date.today(), ['DTB3'])
+    t_bill = t_bill.rename(columns={"DTB3": "score"})
+    t_bill['score'] = t_bill['score']/100
+    t_bill['asset'] = '3m_tbill'
+    #t_bill['date'] = t_bill.index
+    t_bill = pd.merge(t_bill, AccDualMom_curves['date'], how='right', left_index=True, right_index=True)
+    t_bill = t_bill.fillna(method="ffill")
+    t_bill = t_bill.fillna(method="bfill")
+    AccDualMom_curves = AccDualMom_curves.append(t_bill)
+
+    end_month = AccDualMom_curves.groupby(AccDualMom_curves.index.month).max().sort_values('date').iloc[-2]['date']
+    AccDualMom_stocks = [['equity',shares_list[0], 'Vanguard 500 Index Fund Investor Shares', AccDualMom_curves.loc[(AccDualMom_curves.asset == shares_list[0]) & (AccDualMom_curves.index == end_month)]['score'].values[0], AccDualMom_curves.loc[(AccDualMom_curves.asset == shares_list[0]) & (AccDualMom_curves.index == AccDualMom_curves.index.max())]['score'].values[0],'https://finance.yahoo.com/quote/VFINX'],
+                  ['equity_intl',shares_list[1], 'Vanguard International Explorer Fund Investor Shares', AccDualMom_curves.loc[(AccDualMom_curves.asset == shares_list[1]) & (AccDualMom_curves.index == end_month)]['score'].values[0], AccDualMom_curves.loc[(AccDualMom_curves.asset == shares_list[1]) & (AccDualMom_curves.index == AccDualMom_curves.index.max())]['score'].values[0],  'https://finance.yahoo.com/quote/VINEX'],
+                  ['3m_bills','DTB3', '3-Month Treasury Bill Secondary Market Rate', AccDualMom_curves.loc[(AccDualMom_curves.asset == '3m_tbill') & (AccDualMom_curves.index == end_month)]['score'].values[0], AccDualMom_curves.loc[(AccDualMom_curves.asset == '3m_tbill') & (AccDualMom_curves.index == AccDualMom_curves.index.max())]['score'].values[0], 'https://fred.stlouisfed.org/series/DTB3']]
+
+    AccDualMom_stocks_df = pd.DataFrame(AccDualMom_stocks, columns=['type','ticker', 'name', 'month end score','today score','link'])
+
+    score_col_name = 'today score'
+    data = AccDualMom_stocks_df
+
+    if data.loc[data['type'] == 'equity', score_col_name].values[0] > \
+            data.loc[data['type'] == 'equity_intl', score_col_name].values[0]:
+        if data.loc[data['type'] == 'equity', score_col_name].values[0] > \
+                data.loc[data['type'] == '3m_bills', score_col_name].values[0]:
+            ticker_eom = data.loc[data['type'] == 'equity', 'ticker'].values[0]
+        else:
+            ticker_eom = "VUSTX"
+    else:
+        if data.loc[data['type'] == 'equity_intl', score_col_name].values[0] > \
+                data.loc[data['type'] == '3m_bills', score_col_name].values[0]:
+            ticker_eom = data.loc[data['type'] == 'equity_intl', 'ticker'].values[0]
+        else:
+            ticker_eom = "VUSTX"
+
+    if ticker_eom == 'VFINX':
+        ticker_eom = 'VOO'
+    elif ticker_eom == 'VINEX':
+        ticker_eom = 'VSS'
+    elif ticker_eom == 'VUSTX':
+        ticker_eom = 'TLT'
+
+    w={'contractDesc':['VOO','VSS','TLT'],'conid':['136155102','59234393','15547841'],'target_allocation':[0,0,0]}
+    weights = pd.DataFrame(data=w)
+    weights.loc[weights['contractDesc'] == ticker_eom, 'target_allocation'] = 1
+
+    return weights
+
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
+def load_vigilant_curves(shares_list, startdate, enddate):
+    df = pd.DataFrame()
+    for i in range(len(shares_list)):
+        # this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+        this_df = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
+        this_df = this_df.to_frame("close")
+        this_df = this_df[~this_df.index.duplicated(keep='first')]
+        this_df['asset'] = shares_list[i]
+        df = df.append(this_df)
+
+    # Keep common dates only
+    df['Date'] = df.index
+    df_pivot = df.pivot(index='Date', columns='asset', values='close')
+    df_pivot = df_pivot.dropna()
+    df_pivot['Date'] = df_pivot.index
+    df = pd.melt(df_pivot, id_vars=['Date'])
+    df = df.set_index('Date')
+    df = df.rename(columns={'value': 'close'})
+
+    last_date = df_pivot['Date'][-1]
+
+    monthly = df.groupby(['asset']).resample('BM').last()
+    monthly = monthly.droplevel('asset')
+    monthly['m1'] = monthly.groupby(['asset']).close.shift(1)
+    monthly['m3'] = monthly.groupby(['asset']).close.shift(3)
+    monthly['m6'] = monthly.groupby(['asset']).close.shift(6)
+    monthly['m12'] = monthly.groupby(['asset']).close.shift(12)
+    monthly = monthly.drop(columns=['close'])
+    monthly = monthly.dropna()
+    last_monthly_date = monthly.index[-1]
+    monthly.rename(index={last_monthly_date: last_date}, inplace=True)
+
+    t = pd.merge(df, monthly, how="left",  left_on=['Date','asset'], right_on = ['Date','asset'])
+    t = t.bfill(axis='rows')
+    t['ret1m'] = t['close']/t['m1']-1
+    t['ret3m'] = t['close']/t['m3']-1
+    t['ret6m'] = t['close']/t['m6']-1
+    t['ret6m'] = t['close']/t['m6']-1
+    t['ret12m'] = t['close']/t['m12']-1
+    t['score'] = 12*t['ret1m'] + 4*t['ret3m'] + 2*t['ret6m'] + t['ret12m']
+    t = t.drop(["close",'m1','m3','m6','ret1m','ret3m','ret6m'],axis=1)
+    t['date'] = t.index
+
+    return t
 """
 Functions to calculate performance metrics
 
@@ -533,6 +694,7 @@ def prices(returns, base):
 def dd(returns, tau):
     # Returns the draw-down given time period tau
     values = prices(returns, 100)
+
     pos = len(values) - 1
     pre = pos - tau
     drawdown = float('+inf')
@@ -544,7 +706,6 @@ def dd(returns, tau):
         pos, pre = pos - 1, pre - 1
     # Drawdown should be positive
     return abs(drawdown)
-
 
 def max_dd(returns):
     # Returns the maximum draw-down for any tau in (0, T) where T is the length of the return series
@@ -675,8 +836,6 @@ def calmar_ratio(er, returns, rf):
     else:
         return math.nan
 
-
-
 def sterling_ration(er, returns, rf, periods):
     if average_dd(returns, periods)!=0:
         return (er - rf) / average_dd(returns, periods)
@@ -736,3 +895,411 @@ if __name__ == "__main__":
     test_risk_metrics()
     test_risk_adjusted_metrics()
 """
+
+"""
+utils for IBKR
+"""
+
+FX_ticker_mapping = pd.DataFrame(list(zip(["EUR",    "USD",    "CHF",   "USD",     "EUR",    "CHF"],
+                                          ["USD",    "EUR",    "USD",   "CHF",     "CHF",    "EUR"],
+                                          ["EUR.USD","EUR.USD","CHF.USD","CHF.USD","EUR.CHF","EUR.CHF"],
+                                          ["SELL",   "BUY",    "SELL",   "BUY",    "SELL",   "BUY"])),
+                                      columns=['ccyfrom', 'ccyto', 'ticker', 'side'])
+
+
+def send_telegram(text):
+    token = '1679672381:AAEq2sml5nj17YSHAgKsPq5t560nUnc0Jz0'
+    params = {'chat_id': 1132052090, 'text': text, 'parse_mode': 'HTML'}
+    resp = requests.post('https://api.telegram.org/bot{}/sendMessage'.format(token), params)
+    resp.raise_for_status()
+
+def log(txt):
+    ''' Logging function for this strategy txt is the statement and dt can be used to specify a specific datetime'''
+    st.write("%s, %s" % (datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), txt))
+
+def mycOID(ticker='EUR.USD', side = 'BUY'):
+    return ticker + "_" + side + "_" + datetime.datetime.now().strftime("%Y%m%d%H%M%S.%f")
+
+def ib_exit(ib_client):
+    ib_client.logout()
+    ib_client.close_session()
+
+# Orders functions
+#this_order_status = order_status[0][0]['order_status']
+
+def order_status_management(ib_client, order_status, order_details):
+    amt = order_details[2]['orders'][0]['quantity']
+    side = order_details[2]['orders'][0]['side']
+    ticker = order_details[2]['orders'][0]['ticker']
+    type = order_details[2]['orders'][0]['orderType']
+
+    if order_status == 'Filled':
+        # Print and message in the console and send a message to telegram
+        msg = side + " " + type + " order executed for " + str(amt) + " shares of " + ticker +". Program continues to run."
+        log(msg)
+        send_telegram(msg)
+        return True
+    elif order_status == 'ApiPending':
+        # Wait 5 minutes and then recheck the state. If state is still ApiPending, then exit.
+        if order_status_management.count == 5:
+            msg = "Status of " + side + " " + type + " order for " + str(amt) + " shares of " + ticker + " is ApiPending. Program exits."
+            log(msg)
+            ib_exit(ib_client)
+        sleep(30 - time() % 30)
+        ib_client.tickle()
+        order_status_management.count += 1
+        live_orders = ib_client.get_live_orders()
+        live_orders_df = pd.DataFrame.from_records(live_orders['orders'])
+        current_status = \
+        live_orders_df.loc[live_orders_df['orderId'] == int(order_details[0][0]['order_id']), 'status'].values[0]
+        order_status_management(ib_client, current_status, order_details)
+    elif order_status == 'ApiCancelled':
+        msg = side + " " + type + " order for " + str(amt) + " shares of " + ticker + " was cancelled as requested. " \
+              "Status is ApiCancelled. Program continues."
+        log(msg)
+        send_telegram(msg)
+        return True
+    elif order_status == 'Inactive':
+        msg = "Status of " + side + " " + type + " order for " + str(amt) + " shares of " + ticker + \
+              " is Inactive. Program exits."
+        log(msg)
+        send_telegram(msg)
+        ib_exit(ib_client)
+    elif order_status == 'PendingSubmit':
+        msg = "Status of " + side + " " + type + " order for " + str(amt) + " shares of " + ticker + \
+              " is PendingSubmit. Likely this is because the exchange is closed. Program continues."
+        log(msg)
+        send_telegram(msg)
+        return True
+    elif order_status == 'PendingCancel':
+        msg = "Status of " + side + " " + type + " order for " + str(amt) + " shares of " + ticker + " is " + order_status + ". Program continues."
+        log(msg)
+        send_telegram(msg)
+        return True
+    elif order_status == 'PreSubmitted':
+        msg = "Status of " + side + " " + type + " order for " + str(amt) + " shares of " + ticker + \
+              " is Presubmitted. Program continues."
+        log(msg)
+        send_telegram(msg)
+        return True
+    elif order_status == 'Submitted':
+        msg = "Status of " + side + " " + type + " order for " + str(amt) + " shares of " + ticker + \
+              " is Submitted. Program continues."
+        log(msg)
+        send_telegram(msg)
+        return True
+    elif order_status == 'Cancelled':
+        msg = "Status of " + side + " " + type + " order for " + str(amt) + " shares of " + ticker + \
+              " is Cancelled. This is likely due to not sufficient balance. Program exits."
+        log(msg)
+        send_telegram(msg)
+        ib_exit(ib_client)
+    else:
+        # Wait 5 minutes and then recheck the state. If state is still ApiPending, then exit.
+        if order_status_management.count == 5:
+            msg = "Status of " + side + " " + type + " order for " + str(amt) + " shares of " + ticker + " is " + order_status + ". Program exits."
+            log(msg)
+            send_telegram(msg)
+            ib_exit(ib_client)
+
+        sleep(30 - time() % 30)
+        ib_client.tickle()
+        order_status_management.count += 1
+        live_orders = ib_client.get_live_orders()
+        live_orders_df = pd.DataFrame.from_records(live_orders['orders'])
+        current_status = \
+        live_orders_df.loc[live_orders_df['orderId'] == int(order_details[0][0]['order_id']), 'status'].values[0]
+        order_status_management(ib_client, current_status, order_details)
+
+#order_status_management.count = 0
+
+def get_FXconid(ib_client, ticker='EUR.USD'):
+    if not ticker in list(FX_ticker_mapping['ticker']):
+        log("Error. Ticker is not valid. Please consider the ticker obtained reversing the currency order.")
+        ib_exit(ib_client)
+    sym_content = ib_client.symbol_search(symbol=ticker)
+    sym_content = sym_content[0]['sections'][:]
+    sym_df = pd.DataFrame.from_records(sym_content)
+    conid = sym_df.loc[sym_df['secType']=='CASH']['conid'].values[0]
+    return int(conid)
+
+def get_FX_quote(ib_client, ticker='EUR.USD'):
+    if not ticker in list(FX_ticker_mapping['ticker']):
+        log("Error. Ticker is not valid. Please consider the ticker obtained reversing the currency order.")
+        ib_exit(ib_client)
+    conid = get_FXconid(ib_client, ticker)
+    quote = ib_client.market_data(conids=conid, since='0', fields=['31', '84', '86'])
+    quote = ib_client.market_data(conids=conid, since='0', fields=['31', '84', '86'])
+    if '31' not in quote[0]:
+        log("Error: " + str(ticker) + " quote not available. Program exiting.")
+        ib_exit(ib_client)
+    else:
+        quote = float(quote[0]['31'].replace(',', ''))
+    return quote
+
+def get_stkConid(ib_client, ticker='QQQ'):
+     sym_content = ib_client.symbol_search(symbol=ticker)
+     sym_content = sym_content[0]['sections'][:]
+     sym_df = pd.DataFrame.from_records(sym_content)
+     conid = sym_df.loc[sym_df['secType']=='STK']['conid'].values
+     return int(conid[0])
+
+def myround(x, prec=2, base=.05):
+  return round(base * round(float(x)/base),prec)
+
+def get_minIncrement(ib_client, conid=''):
+    info = ib_client.contract_details_rules(conid=conid)
+    return float(info['rules']['increment'])
+
+def get_rth(ib_client, conid=''):
+    info = ib_client.contract_details_rules(conid=conid)
+    return info['r_t_h']
+
+def get_stk_quote(ib_client, conid = ''): # stock quote as mid price
+    rth_flag = get_rth(ib_client, conid)
+    if not rth_flag:
+        log("Contract " + str(conid) + " is outside regular market hours.")
+    try:
+        stk_quote = ib_client.market_data(conid, since='0', fields=['31', '84', '86'])
+        stk_quote = ib_client.market_data(conid, since='0', fields=['31', '84', '86'])
+        bid = float(stk_quote[0]['84'].replace(',', ''))  # IB uses commas as thousands separators
+        ask = float(stk_quote[0]['86'].replace(',', ''))
+        mid = (bid + ask) / 2
+        return mid
+    except:
+        if not rth_flag:
+            st.write("No quote could be downloaded for contract " + str(conid) + ", because it is outside regular "
+                                                                                    "market hours.")
+            return 0
+        else:
+            st.write("No quote could be downloaded for contract " + str(conid) + ", with reason unknown.")
+            return 0
+
+def convertFX(ib_client, ccyfrom='EUR', ccyto='USD', amt_ccyfrom=0, account_id=''):
+    condition = (FX_ticker_mapping['ccyfrom'] == ccyfrom) & (FX_ticker_mapping['ccyto'] == ccyto)
+    ib_ticker = FX_ticker_mapping.loc[condition,'ticker'].values[0]
+    side = FX_ticker_mapping.loc[condition,'side'].values[0]
+
+    conid = get_FXconid(ib_client, ticker=ib_ticker)
+    mycOID_ = mycOID(ticker=ib_ticker, side=side)
+    orders = {'orders':
+            [{
+              'acctId': account_id,
+              'conid': conid,
+              'secType': 'CASH',
+              'cOID': mycOID_,
+              'parentId': mycOID_,
+              'orderType': 'MKT',
+              'listingExchange': 'IDEALPRO',
+              #'outsideRTH': True,
+              #'price': 0,
+              'side': side,
+              'ticker': ib_ticker,
+              'tif': 'GTC',
+              #'referrer': 'string',
+              'quantity': round(amt_ccyfrom-1),
+              'useAdaptive': True
+            }]}
+    order_status = ib_client.place_orders(account_id, orders)
+    message_flag = False
+
+    if 'error' in order_status:
+        return [order_status, mycOID_, orders]
+
+    while 'message' in order_status[0]:
+        message_flag = True
+        reply=st.radio(''.join(map(str, order_status[0]['message'])) , ('Yes', 'No'))
+        if reply == "Yes":
+            reply_ib = True
+        else:
+            reply_ib = False
+        reply_id=order_status[0]['id']
+        order_status=ib_client.place_order_reply(reply_id=reply_id, reply=reply_ib)
+    if not 'order_status' in order_status[0]:
+        if message_flag == False:
+            log('Error: no order_status delivered and no message provided.')
+        else:
+            log('Error: no order_status delivered after messages were replied.')
+        ib_exit(ib_client)
+    #log("Order " + order_status[0]['order_status'] + ", order_id: " +  order_status[0]['order_id'] + ", " + order['side'] + " " + str(order['quantity']) + " " + order['ticker'])
+    return [order_status, mycOID_, orders]
+
+def stock_buysell(ib_client, ib_ticker='QQQ', conid='', amt=0, account_id='', side = 'BUY', price=0):
+    mycOID_ = mycOID(ticker=ib_ticker, side = side)
+    orders = {'orders': [{
+              'acctId': account_id,
+              'conid': int(conid),
+              'secType': 'STK',
+              'cOID': mycOID_,
+              'parentId': mycOID_,
+              'orderType': 'LMT',
+              'listingExchange': 'SMART',
+              'outsideRTH': True,
+              'price': price,
+              'side': side,
+              'ticker': ib_ticker,
+              'tif': 'GTC',
+              #'referrer': 'string',
+              'quantity': round(amt),
+              'useAdaptive': True
+            }]}
+    order_status = ib_client.place_orders(account_id, orders)
+    message_flag = False
+
+    if 'error' in order_status:
+        return [order_status, mycOID_, orders]
+
+    while 'message' in order_status[0]:
+        message_flag = True
+        reply=st.radio(''.join(map(str, order_status[0]['message'])), ('Yes', 'No'), key= mycOID(ticker=ib_ticker, side = side))
+        if reply == 'Yes':
+            reply_ib = True
+        else:
+            reply_ib = False
+        reply_id=order_status[0]['id']
+        order_status=ib_client.place_order_reply(reply_id=reply_id, reply=reply_ib)
+    if not 'order_status' in order_status[0]:
+        if message_flag == False:
+            log('Error: no order_status delivered and no message provided.')
+        else:
+            log('Error: no order_status delivered after messages were replied.')
+        ib_exit(ib_client)
+    #log("Order " + order_status[0]['order_status'] + ", order_id: " +  order_status[0]['order_id'] + ", " + order['side'] + " " + str(order['quantity']) + " " + order['ticker'])
+    return [order_status, mycOID_, orders]
+
+def get_portfolio_returns(ib_client, account_id, freq = 'D'):
+    perf_data = ib_client.portfolio_performance(account_id, freq)
+    returns = pd.DataFrame(data={'date': perf_data['cps']['dates'], 'returns':perf_data['cps']['data'][0]['returns']})
+    returns['returns'] = (returns['returns'] + 1).pct_change()
+    returns['returns'].iloc[0] = 0
+    returns['date'] = pd.to_datetime(returns['date'], format="%Y-%m-%d")
+    returns['date'] = returns['date'].dt.date
+    return returns
+
+def get_portfolio_nav(ib_client, account_id, freq = 'D'):
+    perf_data = ib_client.portfolio_performance(account_id, freq)
+    nav = pd.DataFrame(data={'date': perf_data['nav']['dates'], 'nav':perf_data['nav']['data'][0]['navs']})
+    nav['date'] = pd.to_datetime(nav['date'], format="%Y-%m-%d")
+    nav['date'] = nav['date'].dt.date
+    return nav
+
+def live_portfolio_metrics(params, returns_df):
+    cumret = (returns_df + 1).cumprod()
+    returns = returns_df.to_numpy()
+    tot_return = (returns + 1).prod() - 1
+    annual_return = ((1 + tot_return) ** (params['DAYS_IN_YEAR'] / (round((params['enddate'] - params['startdate']).days * params['DAYS_IN_YEAR'] / 365))) - 1)
+    max_dd = -np.nanmin((cumret.shift(-1) / cumret.cummax(axis=0) - 1).shift(1))
+    max_money_dd = -np.nanmin((cumret.shift(-1) - cumret.cummax(axis=0)).shift(1))
+
+    target = params['targetrate']
+    rate = params['riskfree']
+    alpha = params['alpha']
+    market_mu = params['market_mu']
+    market_sigma = params['market_sigma']
+
+    factor = params['DAYS_IN_YEAR']
+
+    rate = pow(1.0 + rate, 1.0 / factor) - 1.0
+    market_mu = pow(1.0 + market_mu, 1.0 / factor) - 1.0
+    market_sigma = market_sigma / np.sqrt(factor)
+
+
+    # Simulate market returns following a geometric brownian motion with used specified mu and sigma
+    dt = 1
+    market_returns = market_mu * dt + market_sigma * np.sqrt(dt) * np.random.normal(0, 1, len(returns))
+
+    ret_avg = returns_df.mean()
+    ret_dev = returns_df.std()
+    ret_skew = skew(returns)
+    ret_kurt = kurtosis(returns)
+
+    treynor_ratio_ = treynor_ratio(ret_avg, returns, market_returns, rate)
+    sharpe_ratio_ = sharpe_ratio(ret_avg, returns, rate)
+    information_ratio_ = information_ratio(returns, market_returns)
+    var_ = var(returns, alpha)
+    cvar_ = cvar(returns, alpha)
+    excess_var_ = excess_var(ret_avg, returns, rate, alpha)
+    conditional_sharpe_ratio_ = conditional_sharpe_ratio(ret_avg, returns, rate, alpha)
+    omega_ratio_ = omega_ratio(ret_avg, returns, rate, target)
+    sortino_ratio_ = sortino_ratio(ret_avg, returns, rate, target)
+    kappa_three_ratio_ = kappa_three_ratio(ret_avg, returns, rate, target)
+    gain_loss_ratio_ = gain_loss_ratio(returns, target)
+    upside_potential_ratio_ = upside_potential_ratio(returns, target)
+    calmar_ratio_ = calmar_ratio(ret_avg, returns, rate)
+
+    if params['annualize'] and factor is not None:
+        ret_avg = ret_avg * factor
+        ret_dev = ret_dev * np.sqrt(factor)
+        ret_skew = ret_skew / np.sqrt(factor)
+        ret_kurt = ret_kurt / factor
+        # A factor was found -> annualize the quantities
+        treynor_ratio_ = treynor_ratio_ * np.sqrt(factor)
+        sharpe_ratio_ = sharpe_ratio_ * np.sqrt(factor)
+        information_ratio_ = information_ratio_ * np.sqrt(factor)
+        var_ = var_ * np.sqrt(factor)
+        cvar_ = cvar_ * np.sqrt(factor)
+        excess_var_ = excess_var_ * np.sqrt(factor)
+        conditional_sharpe_ratio_ = conditional_sharpe_ratio_ * np.sqrt(factor)
+        omega_ratio_ = omega_ratio_
+        sortino_ratio_ = sortino_ratio_ * np.sqrt(factor)
+        kappa_three_ratio_ = kappa_three_ratio_ * np.sqrt(factor)
+        gain_loss_ratio_ = gain_loss_ratio_
+        upside_potential_ratio_ = upside_potential_ratio_
+        calmar_ratio_ = calmar_ratio_ * factor
+
+    kpis = {  # PnL
+        'Starting cash': params['initial_cash'],
+        'End value': params['initial_cash'] * (1 + tot_return),
+        'Total return': tot_return,
+        'Annual return': annual_return,
+        'Annual return (asset mode)': annual_return,
+        'Max money drawdown': max_money_dd,
+        'Max percentage drawdown': max_dd,
+        # Distribution
+        'Returns volatility': ret_dev,
+        'Returns skewness': ret_skew,
+        'Returns kurtosis': ret_kurt,
+        # Risk-adjusted return based on Volatility
+        'Treynor ratio': treynor_ratio_,
+        'Sharpe ratio': sharpe_ratio_,
+        'Information ratio': information_ratio_,
+        # Risk-adjusted return based on Value at Risk
+        'VaR': var_,
+        'Expected Shortfall': cvar_,
+        'Excess var': excess_var_,
+        'Conditional sharpe ratio': conditional_sharpe_ratio_,
+        # Risk-adjusted return based on Lower Partial Moments
+        'Omega ratio': omega_ratio_,
+        'Sortino ratio': sortino_ratio_,
+        'Kappa three ratio': kappa_three_ratio_,
+        'Gain loss ratio': gain_loss_ratio_,
+        'Upside potential ratio': upside_potential_ratio_,
+        # Risk-adjusted return based on Drawdown risk
+        'Calmar ratio': calmar_ratio_
+    }
+
+    kpis_df = pd.DataFrame.from_dict(kpis, orient='index')
+
+    kpis_df['Category'] = ['P&L', 'P&L', 'P&L', 'P&L', 'P&L',
+                           'Risk-adjusted return based on Drawdown', 'Risk-adjusted return based on Drawdown',
+                           'Distribution moments', 'Distribution moments', 'Distribution moments',
+                           'Risk-adjusted return based on Volatility',
+                           'Risk-adjusted return based on Volatility',
+                           'Risk-adjusted return based on Volatility',
+                           'Risk-adjusted return based on Value at Risk',
+                           'Risk-adjusted return based on Value at Risk',
+                           'Risk-adjusted return based on Value at Risk',
+                           'Risk-adjusted return based on Value at Risk',
+                           'Risk-adjusted return based on Lower Partial Moments',
+                           'Risk-adjusted return based on Lower Partial Moments',
+                           'Risk-adjusted return based on Lower Partial Moments',
+                           'Risk-adjusted return based on Lower Partial Moments',
+                           'Risk-adjusted return based on Lower Partial Moments',
+                           'Risk-adjusted return based on Drawdown']
+
+    kpis_df['Metrics'] = kpis_df.index
+
+    all_stats = kpis_df.set_index(['Category', 'Metrics'])
+
+    all_stats.columns = ['live portfolio']
+    return all_stats

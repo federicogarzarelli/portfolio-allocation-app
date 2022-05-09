@@ -43,7 +43,7 @@ option = st.selectbox(
 
 'You selected: ', option
 
-left_column, right_column = st.beta_columns(2)
+left_column, right_column = st.columns(2)
 pressed = left_column.button('Press me?')
 if pressed:
     right_column.write("Woohoo!")

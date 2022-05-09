@@ -1,0 +1,3894 @@
+-> POST /v1/portal/pa/performance
+<- 500 POST /v1/portal/pa/performance
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,500|45ms
+-> request: /v1/api/sso/validate?gw=1
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,500|266ms
+-> GET /v1/api/sso/validate?gw=1,500|457ms
+-> request: /v1/api/sso/validate?gw=1
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,500|50ms
+-> GET /v1/api/sso/validate?gw=1,500|57ms
+-> request: /v1/api/sso/validate?gw=1
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,500|41ms
+-> GET /v1/api/sso/validate?gw=1,500|117ms
+-> POST /v1/portal/pa/performance
+<- 500 POST /v1/portal/pa/performance
+-> request: /v1/api/sso/validate?gw=1
+-> request: /v1/api/sso/validate?gw=1
+-> request: /v1/api/sso/validate?gw=1
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,500|47ms
+-> GET /v1/api/sso/validate?gw=1,500|78ms
+-> GET /v1/api/sso/validate?gw=1,500|152ms
+-> GET /v1/api/sso/validate?gw=1,500|176ms
+-> request: /sso/ping
+-> GET /sso/ping,200|149ms
+-> request: /sso/ping
+-> GET /sso/ping,200|215ms
+-> request: /sso/ping
+-> GET /sso/ping,200|210ms
+-> request: /sso/ping
+-> GET /sso/ping,200|221ms
+-> request: /sso/ping
+-> GET /sso/ping,200|220ms
+-> request: /sso/ping
+-> GET /sso/ping,200|230ms
+-> request: /sso/ping
+-> GET /sso/ping,200|130ms
+-> request: /sso/ping
+-> GET /sso/ping,200|131ms
+-> request: /sso/ping
+-> GET /sso/ping,200|213ms
+-> request: /sso/ping
+-> GET /sso/ping,200|128ms
+-> request: /sso/ping
+-> GET /sso/ping,200|211ms
+-> request: /sso/ping
+-> GET /sso/ping,200|128ms
+-> request: /sso/ping
+-> GET /sso/ping,200|360ms
+-> request: /sso/ping
+-> GET /sso/ping,200|242ms
+-> request: /sso/ping
+-> GET /sso/ping,200|227ms
+-> request: /sso/ping
+-> GET /sso/ping,200|216ms
+-> request: /sso/ping
+-> GET /sso/ping,200|211ms
+-> request: /sso/ping
+-> GET /sso/ping,200|258ms
+-> request: /sso/ping
+-> GET /sso/ping,200|220ms
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> GET /sso/ping,200|704ms
+-> GET /sso/ping,200|443ms
+-> GET /sso/ping,200|389649ms
+-> request: /sso/ping
+-> GET /sso/ping,200|389646ms
+-> GET /sso/ping,200|389646ms
+-> GET /sso/ping,200|389650ms
+-> GET /sso/ping,200|389648ms
+-> request: /sso/ping
+-> GET /sso/ping,200|389786ms
+-> GET /sso/ping,200|389905ms
+-> GET /sso/ping,200|258ms
+-> GET /sso/ping,200|544ms
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> GET /sso/ping,200|268ms
+-> GET /sso/ping,200|270ms
+-> GET /sso/ping,200|598ms
+-> GET /sso/ping,200|398ms
+-> GET /sso/ping,200|413ms
+-> GET /sso/ping,200|470ms
+-> GET /sso/ping,200|536ms
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> GET /sso/ping,200|378ms
+-> GET /sso/ping,200|378ms
+-> GET /sso/ping,200|378ms
+-> GET /sso/ping,200|632ms
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> GET /sso/ping,200|289ms
+-> GET /sso/ping,200|310ms
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> GET /sso/ping,200|289ms
+-> GET /sso/ping,200|326ms
+-> GET /sso/ping,200|299ms
+-> GET /sso/ping,200|308ms
+-> GET /sso/ping,200|349ms
+-> GET /sso/ping,200|429ms
+-> GET /sso/ping,200|429ms
+-> GET /sso/ping,200|440ms
+-> request: /sso/ping
+-> request: /sso/ping
+-> GET /sso/ping,200|148ms
+-> GET /sso/ping,200|246ms
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> GET /sso/ping,200|322ms
+-> GET /sso/ping,200|389ms
+-> GET /sso/ping,200|392ms
+-> GET /sso/ping,200|401ms
+-> GET /sso/ping,200|404ms
+-> GET /sso/ping,200|481ms
+-> GET /sso/ping,200|546ms
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> request: /sso/ping
+-> GET /sso/ping,200|1359476ms
+-> GET /sso/ping,200|1359477ms
+-> GET /sso/ping,200|425ms
+-> GET /sso/ping,200|515ms
+-> GET /sso/ping,200|545ms
+-> GET /sso/ping,200|561ms
+-> GET /sso/ping,200|667ms
+-> request: /sso/ping
+-> GET /sso/ping,200|238ms
+-> request: /sso/ping
+-> GET /sso/ping,200|244ms
+-> request: /sso/ping
+-> GET /sso/ping,200|239ms
+-> request: /sso/ping
+-> GET /sso/ping,200|252ms
+-> request: /sso/ping
+-> GET /sso/ping,200|147ms
+-> request: /sso/ping
+-> GET /sso/ping,200|248ms
+-> request: /sso/ping
+-> GET /sso/ping,200|257ms
+-> request: /sso/ping
+-> GET /sso/ping,200|237ms
+-> request: /sso/ping
+-> GET /sso/ping,200|242ms
+-> request: /sso/ping
+-> GET /sso/ping,200|234ms
+-> request: /sso/ping
+-> GET /sso/ping,200|153ms
+-> request: /sso/ping
+-> GET /sso/ping,200|239ms
+-> request: /sso/ping
+-> GET /sso/ping,200|248ms
+-> request: /sso/ping
+-> GET /sso/ping,200|240ms
+-> request: /sso/ping
+-> GET /sso/ping,200|258ms
+-> request: /sso/ping
+-> GET /sso/ping,200|243ms
+-> request: /sso/ping
+-> GET /sso/ping,200|161ms
+-> request: /sso/ping
+-> GET /sso/ping,200|162ms
+-> request: /sso/ping
+-> GET /sso/ping,200|244ms
+-> request: /sso/ping
+-> GET /sso/ping,200|154ms
+-> request: /sso/ping
+-> GET /sso/ping,200|257ms
+-> GET /v1/portal/iserver/auth/status
+<- 401 GET /v1/portal/iserver/auth/status
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /sso/Templates/otp-responsive.css?1638866804849
+-> GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1638866804849
+-> GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+-> GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+<- 200 GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+<- 200 GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+-> GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery/switchery.min.js
+-> GET /scripts/common/js/switchery/switchery-init.js
+<- 200 GET /scripts/common/js/switchery/switchery.min.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+<- 200 GET /scripts/common/js/switchery/switchery-init.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+-> GET /sso/images/2fa.png
+<- 200 GET /sso/images/2fa.png
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+<- 200 GET /sso/CombineFiles
+-> POST /sso/Authenticator?76644
+<- 200 POST /sso/Authenticator?76644
+-> POST /sso/Authenticator?66682
+<- 200 POST /sso/Authenticator?66682
+-> POST /sso/Authenticator?73093
+<- 200 POST /sso/Authenticator?73093
+-> request: /sso/ping
+-> POST /sso/Authenticator?39560
+-> GET /sso/ping,200|164ms
+<- 200 POST /sso/Authenticator?39560
+-> POST /sso/Authenticator?10164
+<- 200 POST /sso/Authenticator?10164
+-> POST /sso/Authenticator?24767
+-> GET /fonts/sourcesanspro-regular-webfont.woff2
+-> GET /fonts/sourcesanspro-semibold-webfont.woff2
+<- 200 GET /fonts/sourcesanspro-regular-webfont.woff2
+<- 200 GET /fonts/sourcesanspro-semibold-webfont.woff2
+<- 200 POST /sso/Authenticator?24767
+-> POST /sso/Authenticator?78772
+<- 200 POST /sso/Authenticator?78772
+-> POST /sso/Authenticator?27506
+<- 200 POST /sso/Authenticator?27506
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|92ms
+-> GET /v1/api/sso/validate?gw=1,200|478ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=d5ec1182c8de40a5867075e3245e27aaec8c17f3cd5d93cf55308df8de660c88992a26c191e779ce3a1394cc4198ba9398e27996f258fb9c48e2b73d349cdb29&CHRESPONSE=6d93b9a016a2284644d96468b045e7001a761327
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=d5ec1182c8de40a5867075e3245e27aaec8c17f3cd5d93cf55308df8de660c88992a26c191e779ce3a1394cc4198ba9398e27996f258fb9c48e2b73d349cdb29&CHRESPONSE=6d93b9a016a2284644d96468b045e7001a761327
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|68ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|403ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|177ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|71ms
+-> GET /v1/api/one/user,503|10077ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|75ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> POST /v1/portal/pa/performance
+<- 200 POST /v1/portal/pa/performance
+-> POST /v1/portal/pa/performance
+<- 200 POST /v1/portal/pa/performance
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|92ms
+-> request: /sso/ping
+-> GET /sso/ping,200|164ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|942ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|74ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|100ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|57ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|74ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|80ms
+-> request: /sso/ping
+-> GET /sso/ping,200|148ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|118ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|79ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|75ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /sso/ping
+-> GET /sso/ping,200|231ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|57ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|78ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|105ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /sso/ping
+-> GET /sso/ping,200|228ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|78ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|75ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|55ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|114ms
+-> request: /sso/ping
+-> GET /sso/ping,200|225ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|108ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|118ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /sso/ping
+-> GET /sso/ping,200|236ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|74ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|80ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|119ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /sso/ping
+-> GET /sso/ping,200|225ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|104ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /sso/ping
+-> GET /sso/ping,200|244ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|99ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|91ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /sso/ping
+-> GET /sso/ping,200|173ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|95ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|125ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|109ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /sso/ping
+-> GET /sso/ping,200|225ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|91ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|56ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /sso/ping
+-> GET /sso/ping,200|229ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|200ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|80ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|75ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /sso/ping
+-> GET /sso/ping,200|927ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|78ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|55ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /sso/ping
+-> GET /sso/ping,200|152ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|93ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|129ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|96ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|374ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|94ms
+-> request: /sso/ping
+-> GET /sso/ping,200|237ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1342ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|90ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /sso/ping
+-> GET /sso/ping,200|243ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|79ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /sso/ping
+-> GET /sso/ping,200|253ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|85ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|83ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|156ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|112ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|78ms
+-> request: /sso/ping
+-> GET /sso/ping,200|148ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|96ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|118ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /sso/ping
+-> GET /sso/ping,200|156ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|185ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|96ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|80ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|141ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|105ms
+-> request: /sso/ping
+-> GET /sso/ping,200|145ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|130ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|119ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|104ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /sso/ping
+-> GET /sso/ping,200|237ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|108ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|95ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|118ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|80ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /sso/ping
+-> GET /sso/ping,200|164ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|88ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|100ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|114ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|110ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /sso/ping
+-> GET /sso/ping,200|140ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|74ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|340ms
+-> request: /v1/api/logout
+-> GET /v1/api/logout,200|80ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|80ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|79ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /sso/ping
+-> GET /sso/ping,200|156ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|82ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /sso/ping
+-> GET /sso/ping,200|153ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|249ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /sso/ping
+-> GET /sso/ping,200|200ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|82ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|121ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|75ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|77ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /sso/ping
+-> GET /sso/ping,200|245ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|91ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|79ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|104ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|75ms
+-> request: /sso/ping
+-> GET /sso/ping,200|240ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|93ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|89ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /sso/ping
+-> GET /sso/ping,200|238ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|110ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|120ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|112ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|85ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /sso/ping
+-> GET /sso/ping,200|235ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|79ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|82ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /sso/ping
+-> GET /sso/ping,200|166ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|77ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|115ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|78ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /sso/ping
+-> GET /sso/ping,200|248ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|92ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|125ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|191ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|84ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|77ms
+-> request: /sso/ping
+-> GET /sso/ping,200|543ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|122ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|416ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|85ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|90ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|144ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /sso/ping
+-> GET /sso/ping,200|151ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|117ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|91ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|93ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|80ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /sso/ping
+-> GET /sso/ping,200|143ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|56ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|74ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|82ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|77ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|74ms
+-> request: /sso/ping
+-> GET /sso/ping,200|232ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|90ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /sso/ping
+-> GET /sso/ping,200|159ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|111ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|87ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|79ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|90ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /sso/ping
+-> GET /sso/ping,200|240ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,401|186ms
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,401|195ms
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,401|182ms
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,401|188ms
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,401|216ms
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,401|182ms
+-> request: /sso/ping
+-> GET /sso/ping,200|232ms
+-> request: /sso/ping
+-> GET /sso/ping,200|153ms
+-> request: /sso/ping
+-> GET /sso/ping,200|263ms
+-> request: /sso/ping
+-> GET /sso/ping,200|237ms
+-> request: /sso/ping
+-> GET /sso/ping,200|145ms
+-> request: /sso/ping
+-> GET /sso/ping,200|239ms
+-> request: /sso/ping
+-> GET /sso/ping,200|145ms
+-> request: /sso/ping
+-> GET /sso/ping,200|153ms
+-> request: /sso/ping
+-> GET /sso/ping,200|236ms
+-> request: /sso/ping
+-> GET /sso/ping,200|241ms
+-> request: /sso/ping
+-> GET /v1/portal/iserver/auth/status
+-> GET /sso/ping,200|262ms
+<- 401 GET /v1/portal/iserver/auth/status
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /sso/Templates/otp-responsive.css?1638881242749
+-> GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1638881242749
+<- 200 GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+-> GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+<- 200 GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+-> GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery/switchery.min.js
+<- 200 GET /scripts/common/js/switchery/switchery.min.js
+<- 200 GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery/switchery-init.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+<- 200 GET /scripts/common/js/switchery/switchery-init.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+-> GET /sso/images/2fa.png
+<- 200 GET /sso/images/2fa.png
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+<- 200 GET /sso/CombineFiles
+-> POST /sso/Authenticator?53985
+<- 200 POST /sso/Authenticator?53985
+-> POST /sso/Authenticator?69388
+<- 200 POST /sso/Authenticator?69388
+-> POST /sso/Authenticator?32293
+<- 200 POST /sso/Authenticator?32293
+-> POST /sso/Authenticator?26344
+-> GET /fonts/sourcesanspro-regular-webfont.woff2
+<- 200 GET /fonts/sourcesanspro-regular-webfont.woff2
+-> GET /fonts/sourcesanspro-semibold-webfont.woff2
+<- 200 GET /fonts/sourcesanspro-semibold-webfont.woff2
+<- 200 POST /sso/Authenticator?26344
+-> POST /sso/Authenticator?58457
+<- 200 POST /sso/Authenticator?58457
+-> POST /sso/Authenticator?97495
+<- 200 POST /sso/Authenticator?97495
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|283ms
+-> GET /v1/api/sso/validate?gw=1,200|345ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=62be668616ca1cb7caeb36f23e9bf616adf29def959ae5cd268b1e8aa96f7f13058ae81697ffb76f9e57aa841b69a4e01e6f681f45c0bfe34d8f2082d3b43852&CHRESPONSE=5d101cdc7c40c70ff0c031a37e3e37271c53d92b
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=62be668616ca1cb7caeb36f23e9bf616adf29def959ae5cd268b1e8aa96f7f13058ae81697ffb76f9e57aa841b69a4e01e6f681f45c0bfe34d8f2082d3b43852&CHRESPONSE=5d101cdc7c40c70ff0c031a37e3e37271c53d92b
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|70ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|375ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|139ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|42ms
+-> GET /v1/api/one/user,503|10069ms
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|75ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|49ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=4631ae18aded0779e049c295a841911fb004ccd94a7c1e3fecb9bb9fcd467fe12d37676dab550cd7c5883ab858fda320977dbf7d37463951f9a91bfecac90af9&CHRESPONSE=f7c970af797db428e0957e44b5ad9706fe8875e4
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=4631ae18aded0779e049c295a841911fb004ccd94a7c1e3fecb9bb9fcd467fe12d37676dab550cd7c5883ab858fda320977dbf7d37463951f9a91bfecac90af9&CHRESPONSE=f7c970af797db428e0957e44b5ad9706fe8875e4
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|38ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /sso/Templates/otp-responsive.css?1638881353700
+-> GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+-> request: /v1/api/sso/validate?gw=1
+<- 200 GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1638881353700
+-> GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+<- 200 GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+-> GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery/switchery.min.js
+-> GET /scripts/common/js/switchery/switchery-init.js
+<- 200 GET /scripts/common/js/switchery/switchery.min.js
+<- 200 GET /scripts/common/js/switchery/switchery-init.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+-> GET /v1/api/sso/validate?gw=1,200|235ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+-> GET /sso/CombineFiles
+-> GET /sso/images/2fa.png
+<- 200 GET /sso/images/2fa.png
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /v1/api/one/user,200|223ms
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=262d78b824cd3eff9383910d35ac62bb4889e1e17789fa017ba7dfabc16505e8b991d4576b713d4feff9f2c84c3ee0cdad65e30ed67060e7b642805b855e4916&CHRESPONSE=e5af26a52ac247fd1313de9f509e4b894819e90a
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=262d78b824cd3eff9383910d35ac62bb4889e1e17789fa017ba7dfabc16505e8b991d4576b713d4feff9f2c84c3ee0cdad65e30ed67060e7b642805b855e4916&CHRESPONSE=e5af26a52ac247fd1313de9f509e4b894819e90a
+<- 200 GET /sso/CombineFiles
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,503|10069ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|74ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|369ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> POST /sso/Authenticator?11100
+<- 200 POST /sso/Authenticator?11100
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /sso/Authenticator?44966
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+<- 200 POST /sso/Authenticator?44966
+-> POST /sso/Authenticator?48729
+<- 200 POST /sso/Authenticator?48729
+-> POST /sso/Authenticator?95057
+-> GET /fonts/sourcesanspro-regular-webfont.woff2
+<- 200 GET /fonts/sourcesanspro-regular-webfont.woff2
+-> GET /fonts/sourcesanspro-semibold-webfont.woff2
+<- 200 POST /sso/Authenticator?95057
+<- 200 GET /fonts/sourcesanspro-semibold-webfont.woff2
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|76ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|68ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=4521b09726739ad8977ff58c6788f834809646679ddda2800d46313140b7fc6673df641dbe70a2b7adde9c1b542be408968784e5d444107ca9e943edf6b4de6c&CHRESPONSE=4c50264c7ee68150e982f9c493178cbd0ca20f53
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=4521b09726739ad8977ff58c6788f834809646679ddda2800d46313140b7fc6673df641dbe70a2b7adde9c1b542be408968784e5d444107ca9e943edf6b4de6c&CHRESPONSE=4c50264c7ee68150e982f9c493178cbd0ca20f53
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST /sso/Authenticator?35618
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10038ms
+-> request: /v1/api/iserver/auth/status
+<- 200 POST /sso/Authenticator?35618
+-> GET /v1/api/iserver/auth/status,200|69ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|77ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /sso/Authenticator?91865
+<- 200 POST /sso/Authenticator?91865
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|57ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|59ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=bd0e166410ff78fdfacbfb5265bfa8d8cf9967d638b1787672286eb161864d1fee3f812dfea0866a69aa1480d9b94bc5db87c44b98accdc4165fd142906bac52&CHRESPONSE=9e7e4f22a26aa3a583e2a0f5487e445d43da1ac2
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=bd0e166410ff78fdfacbfb5265bfa8d8cf9967d638b1787672286eb161864d1fee3f812dfea0866a69aa1480d9b94bc5db87c44b98accdc4165fd142906bac52&CHRESPONSE=9e7e4f22a26aa3a583e2a0f5487e445d43da1ac2
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10038ms
+-> POST /sso/Authenticator?26427
+<- 200 POST /sso/Authenticator?26427
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|80ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|72ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /sso/Authenticator?35920
+<- 200 POST /sso/Authenticator?35920
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|82ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|297ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=55f55abe587b310d1735908dd83d112115db6eb63ee1c965cd44221eefc9341beab06e5db6c7bbc7c5104bc65b186968e8dcf33b78980edfb805def55d1c976f&CHRESPONSE=0ade4e213472a4e0fd85af32a19e7427ba6f4802
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=55f55abe587b310d1735908dd83d112115db6eb63ee1c965cd44221eefc9341beab06e5db6c7bbc7c5104bc65b186968e8dcf33b78980edfb805def55d1c976f&CHRESPONSE=0ade4e213472a4e0fd85af32a19e7427ba6f4802
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST /sso/Authenticator?9174
+<- 200 POST /sso/Authenticator?9174
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10071ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|73ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|70ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /sso/Templates/otp-responsive.css?1638881394173
+-> GET /sso/CombineFiles
+<- 200 GET /sso/Templates/otp-responsive.css?1638881394173
+<- 200 GET /sso/CombineFiles
+-> GET /images/web/favicons/home-screen-icon-128x128.png
+<- 200 GET /images/web/favicons/home-screen-icon-128x128.png
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|65ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|63ms
+-> POST /sso/Authenticator?18507
+<- 200 POST /sso/Authenticator?18507
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10043ms
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> POST /sso/Authenticator?26848
+<- 200 POST /sso/Authenticator?26848
+-> POST /sso/Authenticator?47057
+<- 200 POST /sso/Authenticator?47057
+-> POST /sso/Authenticator?40531
+<- 200 POST /sso/Authenticator?40531
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|37ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|72ms
+-> POST /sso/Authenticator?67803
+<- 200 POST /sso/Authenticator?67803
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> POST /sso/Authenticator?74537
+<- 200 POST /sso/Authenticator?74537
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|50ms
+-> GET /v1/api/sso/validate?gw=1,200|79ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|71ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=4656eae08ac7a4097a4e4b6873b5e8daa89e43278fbe60b7e77279a6bc92a4c2147408c1b91d5135efea61f0ce52c79cc1496e13ad99614f555e0a9259d99edc&CHRESPONSE=b2adbe831bf8c79287afbef0e96418f8ed959035
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=4656eae08ac7a4097a4e4b6873b5e8daa89e43278fbe60b7e77279a6bc92a4c2147408c1b91d5135efea61f0ce52c79cc1496e13ad99614f555e0a9259d99edc&CHRESPONSE=b2adbe831bf8c79287afbef0e96418f8ed959035
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|73ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|78ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|72ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|94ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=88cf77c3c83e16423dfb56daf40e7ab7d654d459bdd5a7c98975c2c8c4015d4d12a55e366e2540e00c9d5ee6345de11751906a0a749371e61957795b1b66dfff&CHRESPONSE=2a5205fdffc2050b845815c1fb6c0d17b6f66f5f
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=88cf77c3c83e16423dfb56daf40e7ab7d654d459bdd5a7c98975c2c8c4015d4d12a55e366e2540e00c9d5ee6345de11751906a0a749371e61957795b1b66dfff&CHRESPONSE=2a5205fdffc2050b845815c1fb6c0d17b6f66f5f
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|168ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|73ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10041ms
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|75ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|48ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=262d78b824cd3eff9383910d35ac62bb4889e1e17789fa017ba7dfabc16505e8b991d4576b713d4feff9f2c84c3ee0cdad65e30ed67060e7b642805b855e4916&CHRESPONSE=77d7bea751494f2848365402e66bbb4c647cbf32
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=262d78b824cd3eff9383910d35ac62bb4889e1e17789fa017ba7dfabc16505e8b991d4576b713d4feff9f2c84c3ee0cdad65e30ed67060e7b642805b855e4916&CHRESPONSE=77d7bea751494f2848365402e66bbb4c647cbf32
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10072ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|91ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|74ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|71ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|54ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=cb347ad47ab02d4b15eb8fdfb83d4b59541ba465d4ae254a9b3803879a637e656a082bb6a2bf1ad322195f4bd9bdc7e828af2786701e7e34b3060b030b3fd0e8&CHRESPONSE=457a811cedf1e742e1229fdf930b404acfb7ec9d
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=cb347ad47ab02d4b15eb8fdfb83d4b59541ba465d4ae254a9b3803879a637e656a082bb6a2bf1ad322195f4bd9bdc7e828af2786701e7e34b3060b030b3fd0e8&CHRESPONSE=457a811cedf1e742e1229fdf930b404acfb7ec9d
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10061ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|45ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|76ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|72ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|76ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=a9306770469e8ccd6f6bf00670884b92ae86c8ec4acfc26c8c134f4f8f832d004a812914cffdc60487f5c2e899477a03f4e3f8e4e0fac37b119f08af4e229631&CHRESPONSE=8a1a6c5eb2df652c5fe4fe9d4ef65266011090e9
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=a9306770469e8ccd6f6bf00670884b92ae86c8ec4acfc26c8c134f4f8f832d004a812914cffdc60487f5c2e899477a03f4e3f8e4e0fac37b119f08af4e229631&CHRESPONSE=8a1a6c5eb2df652c5fe4fe9d4ef65266011090e9
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10037ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|36ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|71ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|76ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|56ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=b46fb7837e27870da7e4eb86ca798e1ec7132cef3daf7c3fa5099a8a23ee8e0a254c1f3e30347e9473b26eef18a6c52f1512277e895782b2fd42b6e33ef9d9cf&CHRESPONSE=45adf9dd10066a70021331d1a437db40cd873a1c
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=b46fb7837e27870da7e4eb86ca798e1ec7132cef3daf7c3fa5099a8a23ee8e0a254c1f3e30347e9473b26eef18a6c52f1512277e895782b2fd42b6e33ef9d9cf&CHRESPONSE=45adf9dd10066a70021331d1a437db40cd873a1c
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10042ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|35ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|64ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|70ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|57ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=703e6c00d07107c93f3f53c3f31a99fd40bd4708491823b14a42186d170ff8c596a4de2b28adb0fcbbcfa746ac0d43da6c508bde19d3157e429c275e659fbcf7&CHRESPONSE=fe2c5c5b050d851c7a2348b6bb6cde15f7c438e6
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=703e6c00d07107c93f3f53c3f31a99fd40bd4708491823b14a42186d170ff8c596a4de2b28adb0fcbbcfa746ac0d43da6c508bde19d3157e429c275e659fbcf7&CHRESPONSE=fe2c5c5b050d851c7a2348b6bb6cde15f7c438e6
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10046ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|36ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|70ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|84ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|65ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=641d5f387d9f1bef4240c5893100d4b0a6fec059a814a1bd7e5533cc042641170b913d322dac501e77bfe0fe43e865661790ef3a9815de37a68f24891ac4f2e7&CHRESPONSE=4299311e91831ddaad74fdea53ea69f5b94f751d
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=641d5f387d9f1bef4240c5893100d4b0a6fec059a814a1bd7e5533cc042641170b913d322dac501e77bfe0fe43e865661790ef3a9815de37a68f24891ac4f2e7&CHRESPONSE=4299311e91831ddaad74fdea53ea69f5b94f751d
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10046ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|41ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|79ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|109ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|33ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=893aa13a2062eb1a2d59e7a0760a4e790479b8c5f898f82c111f55faf29a403bc4a85303626badf348fc1babfb49d9f8e409b1f01342d41b6b02cae234dcdfe4&CHRESPONSE=f3a4fe979db4da9ae35b802a1d899a3bfcb837b7
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=893aa13a2062eb1a2d59e7a0760a4e790479b8c5f898f82c111f55faf29a403bc4a85303626badf348fc1babfb49d9f8e409b1f01342d41b6b02cae234dcdfe4&CHRESPONSE=f3a4fe979db4da9ae35b802a1d899a3bfcb837b7
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10043ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|115ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|78ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|64ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|28ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=77f6afc961272802c97e22cb38246827f8db13819b63be4da0fc4c67470418029b23aa03683c5ed7d46f3e9bed39a7a00fd62b143656702b5bc6a09a97c31832&CHRESPONSE=0ce11f57dff035fdd4fa69f56a5989803a92fbbc
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=77f6afc961272802c97e22cb38246827f8db13819b63be4da0fc4c67470418029b23aa03683c5ed7d46f3e9bed39a7a00fd62b143656702b5bc6a09a97c31832&CHRESPONSE=0ce11f57dff035fdd4fa69f56a5989803a92fbbc
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10044ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|35ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|61ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|70ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|193ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=ef16ce77290ae9defebafc5027704235c29bf8dd87c286ef04f3430d80e8707ad1be3d20e55105b71414b689c4f9d238ff4ddf9b430ee09603ee2e827350ccb5&CHRESPONSE=39df58bd0f84c227415b9dadacf394c81262ee85
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=ef16ce77290ae9defebafc5027704235c29bf8dd87c286ef04f3430d80e8707ad1be3d20e55105b71414b689c4f9d238ff4ddf9b430ee09603ee2e827350ccb5&CHRESPONSE=39df58bd0f84c227415b9dadacf394c81262ee85
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10033ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|85ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|78ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|79ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|78ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=3a50bf01b17acda686b412b388377e047596c929476eed73626bff051e43a7846ca8cc42e516a9491504cdf10ee104de330d794b81322c76b53c33694bbdb5d5&CHRESPONSE=76a20074f3fce627cc2bdd9eb2f0d095131884c6
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=3a50bf01b17acda686b412b388377e047596c929476eed73626bff051e43a7846ca8cc42e516a9491504cdf10ee104de330d794b81322c76b53c33694bbdb5d5&CHRESPONSE=76a20074f3fce627cc2bdd9eb2f0d095131884c6
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10035ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|71ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|78ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|69ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|63ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=88cf77c3c83e16423dfb56daf40e7ab7d654d459bdd5a7c98975c2c8c4015d4d12a55e366e2540e00c9d5ee6345de11751906a0a749371e61957795b1b66dfff&CHRESPONSE=bd149ff720501a4361df6cbeb0df530ee949a3c4
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=88cf77c3c83e16423dfb56daf40e7ab7d654d459bdd5a7c98975c2c8c4015d4d12a55e366e2540e00c9d5ee6345de11751906a0a749371e61957795b1b66dfff&CHRESPONSE=bd149ff720501a4361df6cbeb0df530ee949a3c4
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10074ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|71ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|69ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|72ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|234ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=410ab082217e82b6f7da918d18379f1556fad03812ab71cb5c0d3f54c990fb4eb539c46e921dbc9f87d59b2dc256a98feb9bfa8ec2b5f23889b0503e40f57e5d&CHRESPONSE=1123c5102afed08769ec5e162670c1e4df613020
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=410ab082217e82b6f7da918d18379f1556fad03812ab71cb5c0d3f54c990fb4eb539c46e921dbc9f87d59b2dc256a98feb9bfa8ec2b5f23889b0503e40f57e5d&CHRESPONSE=1123c5102afed08769ec5e162670c1e4df613020
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10068ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|33ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|72ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|72ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|34ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=a574b45cb7d9ce8a03539fcb4848887d92282b8c3da052119534dbc6b396649eb1c732cc39e279a558b0f7a25a653946689a626584b3ce98a1da19780cabcdab&CHRESPONSE=3cf12b2105febe711fb0c7fd23955fc90a50a36d
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=a574b45cb7d9ce8a03539fcb4848887d92282b8c3da052119534dbc6b396649eb1c732cc39e279a558b0f7a25a653946689a626584b3ce98a1da19780cabcdab&CHRESPONSE=3cf12b2105febe711fb0c7fd23955fc90a50a36d
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10069ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|33ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|70ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|72ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|34ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=bf7ae154816f0fd31d4b72477228c7adcec86be6e52d23c5708e475e0e3d255174f9d6213428e105e3e5227cc4c71cef76bf92cc7574584d4c0f9207cea156cb&CHRESPONSE=bdfc3d53288ce22f0f629a79d990622e965fba17
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=bf7ae154816f0fd31d4b72477228c7adcec86be6e52d23c5708e475e0e3d255174f9d6213428e105e3e5227cc4c71cef76bf92cc7574584d4c0f9207cea156cb&CHRESPONSE=bdfc3d53288ce22f0f629a79d990622e965fba17
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10039ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|32ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|74ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|100ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|105ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=bd0e166410ff78fdfacbfb5265bfa8d8cf9967d638b1787672286eb161864d1fee3f812dfea0866a69aa1480d9b94bc5db87c44b98accdc4165fd142906bac52&CHRESPONSE=2c70cddaf50e0ab5ed75cb9c93353caef7dc7d82
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=bd0e166410ff78fdfacbfb5265bfa8d8cf9967d638b1787672286eb161864d1fee3f812dfea0866a69aa1480d9b94bc5db87c44b98accdc4165fd142906bac52&CHRESPONSE=2c70cddaf50e0ab5ed75cb9c93353caef7dc7d82
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10036ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|30ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|70ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|67ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|45ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=1d110a575017e8a4cb9bddbed9e80236c799066dc59f44a1bb49e36c7b3e85a74554a6dd66d26749c821bd6dcd20f09cb8943123520b510b0ee3f7302b29d8f1&CHRESPONSE=bbcc825b124a51df45dc3760017435e031c9888c
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=1d110a575017e8a4cb9bddbed9e80236c799066dc59f44a1bb49e36c7b3e85a74554a6dd66d26749c821bd6dcd20f09cb8943123520b510b0ee3f7302b29d8f1&CHRESPONSE=bbcc825b124a51df45dc3760017435e031c9888c
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10044ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|40ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|77ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10080ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /sso/Templates/otp-responsive.css?1638881634884
+-> GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+<- 200 GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1638881634884
+-> GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+-> GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+-> GET /scripts/common/js/switchery/switchery.min.js
+<- 200 GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery/switchery-init.js
+<- 200 GET /scripts/common/js/switchery/switchery-init.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+<- 200 GET /scripts/common/js/switchery/switchery.min.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+-> GET /sso/images/2fa.png
+<- 200 GET /sso/images/2fa.png
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+<- 200 GET /sso/CombineFiles
+-> POST /sso/Authenticator?74146
+<- 200 POST /sso/Authenticator?74146
+-> POST /sso/Authenticator?55899
+<- 200 POST /sso/Authenticator?55899
+-> POST /sso/Authenticator?35589
+<- 200 POST /sso/Authenticator?35589
+-> POST /sso/Authenticator?92467
+-> GET /fonts/sourcesanspro-regular-webfont.woff2
+<- 200 POST /sso/Authenticator?92467
+<- 200 GET /fonts/sourcesanspro-regular-webfont.woff2
+-> GET /fonts/sourcesanspro-semibold-webfont.woff2
+<- 200 GET /fonts/sourcesanspro-semibold-webfont.woff2
+-> POST /sso/Authenticator?65279
+<- 200 POST /sso/Authenticator?65279
+-> POST /sso/Authenticator?5645
+<- 200 POST /sso/Authenticator?5645
+-> POST /sso/Authenticator?46640
+<- 200 POST /sso/Authenticator?46640
+-> POST /sso/Authenticator?49223
+<- 200 POST /sso/Authenticator?49223
+-> POST /sso/Authenticator?51944
+<- 200 POST /sso/Authenticator?51944
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /sso/Templates/otp-responsive.css?1638881673905
+-> GET /sso/CombineFiles
+<- 200 GET /sso/Templates/otp-responsive.css?1638881673905
+<- 200 GET /sso/CombineFiles
+-> GET /images/web/favicons/home-screen-icon-128x128.png
+<- 200 GET /images/web/favicons/home-screen-icon-128x128.png
+-> POST /sso/Authenticator?95342
+<- 200 POST /sso/Authenticator?95342
+-> POST /sso/Authenticator?18280
+<- 200 POST /sso/Authenticator?18280
+-> POST /sso/Authenticator?10222
+<- 200 POST /sso/Authenticator?10222
+-> POST /sso/Authenticator?20398
+<- 200 POST /sso/Authenticator?20398
+-> POST /sso/Authenticator?80100
+<- 200 POST /sso/Authenticator?80100
+-> POST /sso/Authenticator?1550
+<- 200 POST /sso/Authenticator?1550
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /v1/api/sso/validate?gw=1,200|63ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|100ms
+-> GET /v1/api/one/user,200|61ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=a574b45cb7d9ce8a03539fcb4848887d92282b8c3da052119534dbc6b396649eb1c732cc39e279a558b0f7a25a653946689a626584b3ce98a1da19780cabcdab&CHRESPONSE=646c174ed1f4a151b48c27210d09bff2cc1b0e2e
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=a574b45cb7d9ce8a03539fcb4848887d92282b8c3da052119534dbc6b396649eb1c732cc39e279a558b0f7a25a653946689a626584b3ce98a1da19780cabcdab&CHRESPONSE=646c174ed1f4a151b48c27210d09bff2cc1b0e2e
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|34ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|59ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10041ms
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|74ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|35ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=396958dd48e660c9ae3cc4bf186eabc3082412e023197caa8b10e31d77dcdd1d376d5dc72c6760b833645f827c3c223c3c5c79cc6d550ba026b059f8a4494cdf&CHRESPONSE=b4eca5bad1d4784efb0350fe7b9a513978567f4f
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=396958dd48e660c9ae3cc4bf186eabc3082412e023197caa8b10e31d77dcdd1d376d5dc72c6760b833645f827c3c223c3c5c79cc6d550ba026b059f8a4494cdf&CHRESPONSE=b4eca5bad1d4784efb0350fe7b9a513978567f4f
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|36ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|69ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|71ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|37ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=69f99d525334f47374e3643912f7e2c93da37d9b813c3d9a503b04371dd2a9dd4ca0bd958d2d16dab99a8a08def18927839f165b68ff42af1c000694f8701463&CHRESPONSE=9a78f5c05b59ed287fc8865bac6d96d9084ec234
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=69f99d525334f47374e3643912f7e2c93da37d9b813c3d9a503b04371dd2a9dd4ca0bd958d2d16dab99a8a08def18927839f165b68ff42af1c000694f8701463&CHRESPONSE=9a78f5c05b59ed287fc8865bac6d96d9084ec234
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10051ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|34ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|81ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|65ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|61ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=56425f954235ae9980ffb9aa518a4df04774eb638fa73367af47c5f5116e984221d05b34baea05164b47af41f4138ed19c997cb659f51c932f642ba867b5757e&CHRESPONSE=995b72b20597afbdd4cac04f23f26da72c083ec1
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=56425f954235ae9980ffb9aa518a4df04774eb638fa73367af47c5f5116e984221d05b34baea05164b47af41f4138ed19c997cb659f51c932f642ba867b5757e&CHRESPONSE=995b72b20597afbdd4cac04f23f26da72c083ec1
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10048ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|44ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|75ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|71ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|38ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=703e6c00d07107c93f3f53c3f31a99fd40bd4708491823b14a42186d170ff8c596a4de2b28adb0fcbbcfa746ac0d43da6c508bde19d3157e429c275e659fbcf7&CHRESPONSE=b6482dd14f3dd0f469915bfb89b4d0560115cd7e
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=703e6c00d07107c93f3f53c3f31a99fd40bd4708491823b14a42186d170ff8c596a4de2b28adb0fcbbcfa746ac0d43da6c508bde19d3157e429c275e659fbcf7&CHRESPONSE=b6482dd14f3dd0f469915bfb89b4d0560115cd7e
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10049ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|40ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|68ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|70ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|35ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=755678d85862d9af126e571990ded1bc1e782ec7fe319529561266bc377cd7fea137fd6c559adccd4cfb61e81d9c4f010e42605f6007edff155f2bc81d3680f4&CHRESPONSE=2da496dd4d4062b8c6e3ea8c70c4b4b7e496b703
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=755678d85862d9af126e571990ded1bc1e782ec7fe319529561266bc377cd7fea137fd6c559adccd4cfb61e81d9c4f010e42605f6007edff155f2bc81d3680f4&CHRESPONSE=2da496dd4d4062b8c6e3ea8c70c4b4b7e496b703
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10068ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|34ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|75ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|72ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|200ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=ac8bb838b7788c41d63fe219d34fd72a11ab8a8bb9332c82b0c0ecf6c3a7547fdc93c7db652259ced0586accce67b1e9616fad7565e2e6b7d2df30145a83b5a4&CHRESPONSE=74bbcb029b1db6193eabf81c8c9e1d625a80abe2
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=ac8bb838b7788c41d63fe219d34fd72a11ab8a8bb9332c82b0c0ecf6c3a7547fdc93c7db652259ced0586accce67b1e9616fad7565e2e6b7d2df30145a83b5a4&CHRESPONSE=74bbcb029b1db6193eabf81c8c9e1d625a80abe2
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10058ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|61ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|65ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|71ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|70ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=ef16ce77290ae9defebafc5027704235c29bf8dd87c286ef04f3430d80e8707ad1be3d20e55105b71414b689c4f9d238ff4ddf9b430ee09603ee2e827350ccb5&CHRESPONSE=f8753d51d92fd7b6537d1f0ce0c5ddd5b7b9a66b
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=ef16ce77290ae9defebafc5027704235c29bf8dd87c286ef04f3430d80e8707ad1be3d20e55105b71414b689c4f9d238ff4ddf9b430ee09603ee2e827350ccb5&CHRESPONSE=f8753d51d92fd7b6537d1f0ce0c5ddd5b7b9a66b
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10033ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|78ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|69ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+-> GET /sso/Templates/otp-responsive.css?1638881855305
+<- 200 GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+-> GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1638881855305
+-> GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+-> GET /scripts/common/js/switchery/switchery.min.js
+<- 200 GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery/switchery-init.js
+<- 200 GET /scripts/common/js/switchery/switchery.min.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+<- 200 GET /scripts/common/js/switchery/switchery-init.js
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+-> GET /sso/images/2fa.png
+<- 200 GET /sso/images/2fa.png
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+<- 200 GET /sso/CombineFiles
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?76841
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?76841
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?78841
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?78841
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?94527
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?94527
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?20287
+-> GET /fonts/sourcesanspro-regular-webfont.woff2
+-> GET /fonts/sourcesanspro-semibold-webfont.woff2
+<- 200 GET /fonts/sourcesanspro-regular-webfont.woff2
+<- 200 GET /fonts/sourcesanspro-semibold-webfont.woff2
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?20287
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?35680
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?35680
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?21341
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?21341
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?30719
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?30719
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?36707
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?36707
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?14776
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?14776
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?57906
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?57906
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?4192
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?4192
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?51700
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?51700
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?80725
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?80725
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?43306
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?43306
+-> POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?86558
+<- 200 POST /sso/Authenticator;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet?86558
+-> POST /sso/Dispatcher;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet
+<- 200 POST /sso/Dispatcher;jsessionid=173B44AD00D9412C8731511684C39A84.ny5wwwdam1-internet
+-> GET /sso/Templates/otp-responsive.css?1638881924153
+-> GET /sso/CombineFiles
+<- 200 GET /sso/Templates/otp-responsive.css?1638881924153
+<- 200 GET /sso/CombineFiles
+-> POST /sso/Authenticator?95222
+<- 200 POST /sso/Authenticator?95222
+-> POST /sso/Authenticator?99029
+<- 200 POST /sso/Authenticator?99029
+-> POST /sso/Authenticator?75617
+<- 200 POST /sso/Authenticator?75617
+-> POST /sso/Authenticator?76886
+<- 200 POST /sso/Authenticator?76886
+-> POST /sso/Authenticator?79524
+<- 200 POST /sso/Authenticator?79524
+-> POST /sso/Authenticator?9587
+<- 200 POST /sso/Authenticator?9587
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|84ms
+-> GET /v1/api/sso/validate?gw=1,200|198ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|88ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=7b3805fa82d6d65fbd2ce0142040db2618e0da090d8c9b1af3a42d81f0c1ade3ef9a8c1fa6ad199cfd5b4e8fc5c36c521de41c6df8207bf120c74cfdf9b9e338&CHRESPONSE=ac79e29a577f46d65eb15950211eab72702461e1
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=7b3805fa82d6d65fbd2ce0142040db2618e0da090d8c9b1af3a42d81f0c1ade3ef9a8c1fa6ad199cfd5b4e8fc5c36c521de41c6df8207bf120c74cfdf9b9e338&CHRESPONSE=ac79e29a577f46d65eb15950211eab72702461e1
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=3533cc67|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=3533cc67|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=3533cc67|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|74ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|76ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10071ms
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|71ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|315ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=28b6c0c315361560126f3a00523c0add1d31448018efaeca751521c9c6a5892cb0ca85cc2a0680d976a99ce91b4e826e3b8f47a81c7de9b12130b968c6b25096&CHRESPONSE=f6b13c6fad1a5c19d501e82e2f952a2d69f5cd80
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=28b6c0c315361560126f3a00523c0add1d31448018efaeca751521c9c6a5892cb0ca85cc2a0680d976a99ce91b4e826e3b8f47a81c7de9b12130b968c6b25096&CHRESPONSE=f6b13c6fad1a5c19d501e82e2f952a2d69f5cd80
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|72ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|84ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|63ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|59ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=1d46042edb5efba666ccba37f0f1e5ee73ad474e05384c1600a9415e5abed4e06436648f6c7e455bbd5c48bc930a5ac04f36a865d2063063d17732dcaadc5958&CHRESPONSE=238b294943b003646627bd4db4c7ca276d64f0e2
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=1d46042edb5efba666ccba37f0f1e5ee73ad474e05384c1600a9415e5abed4e06436648f6c7e455bbd5c48bc930a5ac04f36a865d2063063d17732dcaadc5958&CHRESPONSE=238b294943b003646627bd4db4c7ca276d64f0e2
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10066ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|61ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|67ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|78ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|68ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=b62582fb86f12d92498fc76359c45df70a180da1cb1c6c1cbd49955c6a64a55af09cb3c1f8d6760d07fb03974a957cfca6ed2dee340d6cdd493c957a7f24fe11&CHRESPONSE=4f3bb8b6ec685627830e506cd25e979644527bcd
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=b62582fb86f12d92498fc76359c45df70a180da1cb1c6c1cbd49955c6a64a55af09cb3c1f8d6760d07fb03974a957cfca6ed2dee340d6cdd493c957a7f24fe11&CHRESPONSE=4f3bb8b6ec685627830e506cd25e979644527bcd
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10080ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|93ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|81ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|64ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|82ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=77f6afc961272802c97e22cb38246827f8db13819b63be4da0fc4c67470418029b23aa03683c5ed7d46f3e9bed39a7a00fd62b143656702b5bc6a09a97c31832&CHRESPONSE=7fc9c3ebe136148061345b999a1235c11b4972b8
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=77f6afc961272802c97e22cb38246827f8db13819b63be4da0fc4c67470418029b23aa03683c5ed7d46f3e9bed39a7a00fd62b143656702b5bc6a09a97c31832&CHRESPONSE=7fc9c3ebe136148061345b999a1235c11b4972b8
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10073ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|62ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|66ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|61ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|62ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=62be668616ca1cb7caeb36f23e9bf616adf29def959ae5cd268b1e8aa96f7f13058ae81697ffb76f9e57aa841b69a4e01e6f681f45c0bfe34d8f2082d3b43852&CHRESPONSE=6d3e44e504aa0bf1ffafaa48077c538d02dbabc2
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=62be668616ca1cb7caeb36f23e9bf616adf29def959ae5cd268b1e8aa96f7f13058ae81697ffb76f9e57aa841b69a4e01e6f681f45c0bfe34d8f2082d3b43852&CHRESPONSE=6d3e44e504aa0bf1ffafaa48077c538d02dbabc2
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10068ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|72ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|88ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|77ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|74ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=3a50bf01b17acda686b412b388377e047596c929476eed73626bff051e43a7846ca8cc42e516a9491504cdf10ee104de330d794b81322c76b53c33694bbdb5d5&CHRESPONSE=9a4e8583b655672d5f5c293d28b60d1da3dee032
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=3a50bf01b17acda686b412b388377e047596c929476eed73626bff051e43a7846ca8cc42e516a9491504cdf10ee104de330d794b81322c76b53c33694bbdb5d5&CHRESPONSE=9a4e8583b655672d5f5c293d28b60d1da3dee032
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10069ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|607ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> GET /v1/portal/iserver/accounts
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|65ms
+<- 401 GET /v1/portal/iserver/accounts
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|74ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|138ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=5d945b6afa299bcc5ccc8579a521a050dae599a3dcca5bfc5b1d987f7ac5028e7c46d329ebf24f2048c8bef194c5ff91fc55fbd4b09665ed3804c6b69b08069f&CHRESPONSE=6939b0b3b8c148ef186b5994c582f5ad63ee19ff
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=5d945b6afa299bcc5ccc8579a521a050dae599a3dcca5bfc5b1d987f7ac5028e7c46d329ebf24f2048c8bef194c5ff91fc55fbd4b09665ed3804c6b69b08069f&CHRESPONSE=6939b0b3b8c148ef186b5994c582f5ad63ee19ff
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10066ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|62ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|70ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|78ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|72ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=cb347ad47ab02d4b15eb8fdfb83d4b59541ba465d4ae254a9b3803879a637e656a082bb6a2bf1ad322195f4bd9bdc7e828af2786701e7e34b3060b030b3fd0e8&CHRESPONSE=3425f049e871eaebec25c4192ff8556004801e29
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=cb347ad47ab02d4b15eb8fdfb83d4b59541ba465d4ae254a9b3803879a637e656a082bb6a2bf1ad322195f4bd9bdc7e828af2786701e7e34b3060b030b3fd0e8&CHRESPONSE=3425f049e871eaebec25c4192ff8556004801e29
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10071ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|67ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|62ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|78ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|78ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=ca39d74f3c36157b84a821a9195138005b672ed99ddbf54d28ad0efb5629f48ce567b9632d25ae2193268d37ad5691d0e1747de29a6cf73837045dc31605d50d&CHRESPONSE=e912aa58e0006818ec1689b9d6b6acc7308458f5
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=ca39d74f3c36157b84a821a9195138005b672ed99ddbf54d28ad0efb5629f48ce567b9632d25ae2193268d37ad5691d0e1747de29a6cf73837045dc31605d50d&CHRESPONSE=e912aa58e0006818ec1689b9d6b6acc7308458f5
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10072ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|61ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|60ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|119ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|282ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=641d5f387d9f1bef4240c5893100d4b0a6fec059a814a1bd7e5533cc042641170b913d322dac501e77bfe0fe43e865661790ef3a9815de37a68f24891ac4f2e7&CHRESPONSE=99cd836961edef06b21219189732a6d45f0cb711
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=641d5f387d9f1bef4240c5893100d4b0a6fec059a814a1bd7e5533cc042641170b913d322dac501e77bfe0fe43e865661790ef3a9815de37a68f24891ac4f2e7&CHRESPONSE=99cd836961edef06b21219189732a6d45f0cb711
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10056ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|119ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|112ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|84ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|75ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=5851cb6fbacea2a76f5e7c96124c00d0ac2f1ba4942e3658c6cdd92a9b4ebfb1e4b990089383aa5dad56cf2c6d19353fc5e3e54ea43ef18d0fbeccbee905d0ba&CHRESPONSE=3f25aae3869388c354dbf2e5f8f6b991fca53178
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=5851cb6fbacea2a76f5e7c96124c00d0ac2f1ba4942e3658c6cdd92a9b4ebfb1e4b990089383aa5dad56cf2c6d19353fc5e3e54ea43ef18d0fbeccbee905d0ba&CHRESPONSE=3f25aae3869388c354dbf2e5f8f6b991fca53178
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10068ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|69ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|75ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|76ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|65ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=275db85284d9be253625c1d557784f6345f363f7749dd447bffef48ca31a7b4c988217435b2a606e4313e99d7002de4deb4e9332f0462f8ec6f3a1fa581b75dc&CHRESPONSE=db0912b7ab578219dabd5f4c35877779ac71fa7c
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=275db85284d9be253625c1d557784f6345f363f7749dd447bffef48ca31a7b4c988217435b2a606e4313e99d7002de4deb4e9332f0462f8ec6f3a1fa581b75dc&CHRESPONSE=db0912b7ab578219dabd5f4c35877779ac71fa7c
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10079ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|71ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|87ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|80ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|300ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=4d8127a8dfe85045a665eef721959d1dd91e25c1ddbcfe317010aa2933e0f998dc420a9c9629242620c29f7c6bf98131c3d6b62709592ff5c6663c704908ba3&CHRESPONSE=3e0556a5aff560d1ddffd8536a7c32235c87b16c
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=4d8127a8dfe85045a665eef721959d1dd91e25c1ddbcfe317010aa2933e0f998dc420a9c9629242620c29f7c6bf98131c3d6b62709592ff5c6663c704908ba3&CHRESPONSE=3e0556a5aff560d1ddffd8536a7c32235c87b16c
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10079ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|70ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|67ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|70ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|74ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=e88e1002d1fb1f43253b828a9a808f35663d7dae531e446b1846680b61ef7d33ebde9717edaffca20f3b36d3e6e5c8b485a7931566e5ac4fe85401af2cef9ef9&CHRESPONSE=3b864e5898ea8594b23a98a5686de855e073bf08
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=e88e1002d1fb1f43253b828a9a808f35663d7dae531e446b1846680b61ef7d33ebde9717edaffca20f3b36d3e6e5c8b485a7931566e5ac4fe85401af2cef9ef9&CHRESPONSE=3b864e5898ea8594b23a98a5686de855e073bf08
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10088ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|73ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|78ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|73ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|69ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=ef16ce77290ae9defebafc5027704235c29bf8dd87c286ef04f3430d80e8707ad1be3d20e55105b71414b689c4f9d238ff4ddf9b430ee09603ee2e827350ccb5&CHRESPONSE=11b92a7bc1be30103c8474023a2ac3d2f9862a07
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=ef16ce77290ae9defebafc5027704235c29bf8dd87c286ef04f3430d80e8707ad1be3d20e55105b71414b689c4f9d238ff4ddf9b430ee09603ee2e827350ccb5&CHRESPONSE=11b92a7bc1be30103c8474023a2ac3d2f9862a07
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10065ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|57ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|86ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|746ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|233ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=8772e7d180c665eff8707731384d6404e2d81fe2154e09dab8e3b11806a1644dc24586ee31466f2d53f03e77c9e3f6e295954a0df5329297dc772874fb620674&CHRESPONSE=d7430ee55b5cac53d7fdbe728c86d52aae56b986
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=8772e7d180c665eff8707731384d6404e2d81fe2154e09dab8e3b11806a1644dc24586ee31466f2d53f03e77c9e3f6e295954a0df5329297dc772874fb620674&CHRESPONSE=d7430ee55b5cac53d7fdbe728c86d52aae56b986
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10093ms
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|92ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|73ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|66ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|66ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=36492cc969641b085a4a1cd62c4aa7aa47ad3dc6e1c0b517f2fcab27b11ae105d78416351b12c09f0304c682b975504e0e5a7641f24aa4555670100ff90a7d1d&CHRESPONSE=9b4f3b946f1145b8151743db69d0fcc3f243d494
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=36492cc969641b085a4a1cd62c4aa7aa47ad3dc6e1c0b517f2fcab27b11ae105d78416351b12c09f0304c682b975504e0e5a7641f24aa4555670100ff90a7d1d&CHRESPONSE=9b4f3b946f1145b8151743db69d0fcc3f243d494
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|69ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|68ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10073ms
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|78ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|105ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=7b3805fa82d6d65fbd2ce0142040db2618e0da090d8c9b1af3a42d81f0c1ade3ef9a8c1fa6ad199cfd5b4e8fc5c36c521de41c6df8207bf120c74cfdf9b9e338&CHRESPONSE=6d19b0655a18fe89567f8d41c47ebad9b3aabf35
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=7b3805fa82d6d65fbd2ce0142040db2618e0da090d8c9b1af3a42d81f0c1ade3ef9a8c1fa6ad199cfd5b4e8fc5c36c521de41c6df8207bf120c74cfdf9b9e338&CHRESPONSE=6d19b0655a18fe89567f8d41c47ebad9b3aabf35
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10074ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|112ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|74ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|72ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|237ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=4c874d5597bd5c59dc93d2e3450e1ecc0e8117743633963d2e44b132d5a49e9b9c4ec064e70c9b193d50ae26870f34b5ae50f00d0f6b434a418de225cc527e2a&CHRESPONSE=9a0244748a788ea1a38a2f3429a9b50ea06bb921
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=4c874d5597bd5c59dc93d2e3450e1ecc0e8117743633963d2e44b132d5a49e9b9c4ec064e70c9b193d50ae26870f34b5ae50f00d0f6b434a418de225cc527e2a&CHRESPONSE=9a0244748a788ea1a38a2f3429a9b50ea06bb921
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10063ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|61ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|80ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|65ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|88ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=5d945b6afa299bcc5ccc8579a521a050dae599a3dcca5bfc5b1d987f7ac5028e7c46d329ebf24f2048c8bef194c5ff91fc55fbd4b09665ed3804c6b69b08069f&CHRESPONSE=697e4787a1350bc2868f8ee11e3a5c868d3ff034
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=5d945b6afa299bcc5ccc8579a521a050dae599a3dcca5bfc5b1d987f7ac5028e7c46d329ebf24f2048c8bef194c5ff91fc55fbd4b09665ed3804c6b69b08069f&CHRESPONSE=697e4787a1350bc2868f8ee11e3a5c868d3ff034
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10079ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|62ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|76ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|87ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|98ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=6a6bcc5f633b7b02d23ae8695a2c6a9a7adaab73fd1bb030b2134045d4be119e055d4309ef82fe01da8bf551bc2d56b39e1eb41bac514fa079e872cec37a417f&CHRESPONSE=851c0aea7d64fdb19455d24266e98863edd825f7
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=6a6bcc5f633b7b02d23ae8695a2c6a9a7adaab73fd1bb030b2134045d4be119e055d4309ef82fe01da8bf551bc2d56b39e1eb41bac514fa079e872cec37a417f&CHRESPONSE=851c0aea7d64fdb19455d24266e98863edd825f7
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10073ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|95ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|84ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|65ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|101ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=1d452b41c8a9a8b98b76955cc47bc5c46d2659b321e6c9fd397b5492462605018d8106ecc2cfcab87eb3a376e9dce525058bb209bfe60fe9a364249ad0374905&CHRESPONSE=2f1eb6f400063db855e582a96795780ccc295330
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=1d452b41c8a9a8b98b76955cc47bc5c46d2659b321e6c9fd397b5492462605018d8106ecc2cfcab87eb3a376e9dce525058bb209bfe60fe9a364249ad0374905&CHRESPONSE=2f1eb6f400063db855e582a96795780ccc295330
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10069ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|99ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|82ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|69ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|66ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=330f6c45189085ef8adfe98effba3b9b51e12d054ef08f5675f0416f68512a86c63669563e3b1db39dce30328595c94b7720216568b7b776eea24a90e87e68f7&CHRESPONSE=3cd53519f54306eaf22845a2404c64b5ad3f9a72
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=330f6c45189085ef8adfe98effba3b9b51e12d054ef08f5675f0416f68512a86c63669563e3b1db39dce30328595c94b7720216568b7b776eea24a90e87e68f7&CHRESPONSE=3cd53519f54306eaf22845a2404c64b5ad3f9a72
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,503|10121ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|66ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|78ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> GET /v1/portal/iserver/accounts
+<- 401 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|63ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|67ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=a574b45cb7d9ce8a03539fcb4848887d92282b8c3da052119534dbc6b396649eb1c732cc39e279a558b0f7a25a653946689a626584b3ce98a1da19780cabcdab&CHRESPONSE=e92948b706597722742bd38c53db8ec039f61404
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=a574b45cb7d9ce8a03539fcb4848887d92282b8c3da052119534dbc6b396649eb1c732cc39e279a558b0f7a25a653946689a626584b3ce98a1da19780cabcdab&CHRESPONSE=e92948b706597722742bd38c53db8ec039f61404
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+-> GET /sso/Templates/otp-responsive.css?1638896061879
+<- 200 GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1638896061879
+-> GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+-> GET /sso/CombineFiles
+-> GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+<- 200 GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+-> GET /scripts/common/js/switchery/switchery.min.js
+<- 200 GET /scripts/common/js/switchery/switchery.min.js
+-> GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery/switchery-init.js
+<- 200 GET /scripts/common/js/switchery/switchery-init.js
+-> GET /sso/images/2fa.png
+<- 200 GET /sso/images/2fa.png
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /sso/CombineFiles
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?86649
+<- 200 POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?86649
+-> POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?39126
+<- 200 POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?39126
+-> POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?93769
+<- 200 POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?93769
+-> POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?7988
+-> GET /fonts/sourcesanspro-regular-webfont.woff2
+-> GET /fonts/sourcesanspro-semibold-webfont.woff2
+<- 200 GET /fonts/sourcesanspro-regular-webfont.woff2
+<- 200 GET /fonts/sourcesanspro-semibold-webfont.woff2
+<- 200 POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?7988
+-> POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?97243
+<- 200 POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?97243
+-> POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?4920
+<- 200 POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?4920
+-> POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?17213
+<- 200 POST /sso/Authenticator;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet?17213
+-> POST /sso/Dispatcher;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet
+<- 302 POST /sso/Dispatcher;jsessionid=EBC95535E05DA11B0E30343B6C12A630.ny5wwwdam2-internet
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|83ms
+-> GET /v1/api/sso/validate?gw=1,200|191ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=28b6c0c315361560126f3a00523c0add1d31448018efaeca751521c9c6a5892cb0ca85cc2a0680d976a99ce91b4e826e3b8f47a81c7de9b12130b968c6b25096&CHRESPONSE=8504ba0afc16b27e4ed16e820d00fe68d6831369
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=28b6c0c315361560126f3a00523c0add1d31448018efaeca751521c9c6a5892cb0ca85cc2a0680d976a99ce91b4e826e3b8f47a81c7de9b12130b968c6b25096&CHRESPONSE=8504ba0afc16b27e4ed16e820d00fe68d6831369
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=2c398bfb|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=2c398bfb|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=2c398bfb|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|74ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|402ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|172ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|61ms
+-> GET /v1/api/one/user,503|10073ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|78ms
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> POST /v1/portal/pa/performance
+<- 200 POST /v1/portal/pa/performance
+-> POST /v1/portal/pa/performance
+<- 200 POST /v1/portal/pa/performance
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /sso/ping
+-> GET /sso/ping,200|245ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|77ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|95ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|75ms
+-> request: /sso/ping
+-> GET /sso/ping,200|268ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|120ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|159ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /sso/ping
+-> GET /sso/ping,200|243ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|89ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|113ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|186ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|74ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|110ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /sso/ping
+-> GET /sso/ping,200|313ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|78ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|74ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|75ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|80ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|95ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|57ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|57ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /sso/ping
+-> GET /sso/ping,200|243ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|90ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|108ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|75ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|85ms
+-> request: /sso/ping
+-> GET /sso/ping,200|228ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|132ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|78ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|119ms
+-> request: /sso/ping
+-> GET /sso/ping,200|237ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|78ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|113ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|77ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|55ms
+-> request: /sso/ping
+-> GET /sso/ping,200|209ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|77ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|76ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|74ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|99ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /sso/ping
+-> GET /sso/ping,200|236ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|117ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /sso/ping
+-> GET /sso/ping,200|235ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|87ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|96ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|73ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /sso/ping
+-> GET /sso/ping,200|236ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|74ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|170ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1397ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|585ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|75ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /sso/ping
+-> GET /sso/ping,200|231ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|82ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|94ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|83ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|777ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|77ms
+-> request: /sso/ping
+-> GET /sso/ping,200|243ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|311ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|203ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|78ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|77ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /sso/ping
+-> GET /sso/ping,200|173ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|89ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|406ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|119ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|78ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|120ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|88ms
+-> request: /sso/ping
+-> GET /sso/ping,200|229ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|88ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|86ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|77ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|91ms
+-> request: /sso/ping
+-> GET /sso/ping,200|268ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|89ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|80ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|86ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|100ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|82ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|84ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|85ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|77ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|313ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|83ms
+-> request: /sso/ping
+-> GET /sso/ping,200|169ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|75ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|162ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|92ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1165ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|103ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|81ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|93ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|108ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|95ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|594ms
+-> request: /sso/ping
+-> GET /sso/ping,200|274ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|88ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|103ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|92ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|149ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|93ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|75ms
+-> request: /v1/api/tickle
+-> request: /sso/ping
+-> request: /v1/api/tickle
+-> request: /sso/ping
+-> request: /v1/api/tickle
+-> request: /sso/ping
+-> request: /v1/api/tickle
+-> request: /sso/ping
+-> request: /v1/api/tickle
+-> request: /sso/ping
+-> request: /v1/api/tickle
+-> request: /sso/ping
+-> request: /v1/api/tickle
+-> request: /sso/ping
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|469ms
+-> GET /v1/api/tickle,200|639ms
+-> GET /sso/ping,200|523ms
+-> GET /sso/ping,200|2300ms
+-> GET /sso/ping,200|511ms
+-> GET /v1/api/tickle,200|562ms
+-> GET /v1/api/tickle,200|598ms
+-> GET /v1/api/tickle,200|617ms
+-> GET /sso/ping,200|670ms
+-> GET /v1/api/tickle,200|698ms
+-> GET /v1/api/tickle,200|706ms
+-> GET /sso/ping,200|749ms
+-> GET /v1/api/tickle,200|779ms
+-> GET /v1/api/tickle,200|786ms
+-> GET /v1/api/tickle,200|818ms
+-> GET /sso/ping,200|831ms
+-> GET /v1/api/tickle,200|872ms
+-> GET /v1/api/tickle,200|892ms
+-> GET /v1/api/tickle,200|904ms
+-> GET /v1/api/tickle,200|912ms
+-> GET /v1/api/tickle,200|960ms
+-> GET /v1/api/tickle,200|974ms
+-> GET /v1/api/tickle,200|992ms
+-> GET /v1/api/tickle,200|1016ms
+-> GET /v1/api/tickle,200|1016ms
+-> GET /v1/api/tickle,200|1044ms
+-> GET /v1/api/tickle,200|1056ms
+-> GET /v1/api/tickle,200|1084ms
+-> GET /v1/api/tickle,200|1089ms
+-> GET /v1/api/tickle,200|1119ms
+-> GET /v1/api/tickle,200|1120ms
+-> GET /v1/api/tickle,200|1137ms
+-> GET /v1/api/tickle,200|1566911ms
+-> request: /v1/api/tickle
+-> request: /sso/ping
+-> GET /v1/api/tickle,200|1566914ms
+-> GET /v1/api/tickle,200|1566920ms
+-> GET /v1/api/tickle,200|1566925ms
+-> GET /v1/api/tickle,200|1566929ms
+-> request: /v1/api/tickle
+-> request: /sso/ping
+-> request: /v1/api/tickle
+-> request: /sso/ping
+-> request: /v1/api/tickle
+-> request: /sso/ping
+-> request: /v1/api/tickle
+-> request: /sso/ping
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1567698ms
+-> GET /v1/api/tickle,200|1567699ms
+-> GET /v1/api/tickle,200|1567700ms
+-> GET /v1/api/tickle,200|1567703ms
+-> GET /v1/api/tickle,200|1567708ms
+-> GET /v1/api/tickle,200|1567747ms
+-> GET /v1/api/tickle,200|1567769ms
+-> GET /v1/api/tickle,200|1567770ms
+-> GET /v1/api/tickle,200|1567771ms
+-> GET /v1/api/tickle,200|1567823ms
+-> GET /v1/api/tickle,200|1567824ms
+-> GET /v1/api/tickle,200|1567825ms
+-> GET /v1/api/tickle,200|1567850ms
+-> GET /v1/api/tickle,200|1567884ms
+-> GET /v1/api/tickle,200|1567885ms
+-> GET /v1/api/tickle,200|1567886ms
+-> GET /v1/api/tickle,200|1567887ms
+-> GET /v1/api/tickle,200|1567912ms
+-> GET /v1/api/tickle,200|1567935ms
+-> GET /v1/api/tickle,200|1567936ms
+-> GET /v1/api/tickle,200|1567938ms
+-> GET /v1/api/tickle,200|1567947ms
+-> GET /v1/api/tickle,200|1567960ms
+-> GET /v1/api/tickle,200|1567985ms
+-> GET /v1/api/tickle,200|1567986ms
+-> GET /v1/api/tickle,200|1567987ms
+-> GET /v1/api/tickle,200|1568004ms
+-> GET /v1/api/tickle,200|1568018ms
+-> GET /v1/api/tickle,200|1568054ms
+-> GET /v1/api/tickle,200|1568067ms
+-> GET /v1/api/tickle,200|1568069ms
+-> GET /v1/api/tickle,200|1568069ms
+-> GET /v1/api/tickle,200|1568071ms
+-> GET /v1/api/tickle,200|1225ms
+-> GET /v1/api/tickle,200|1208ms
+-> GET /v1/api/tickle,200|1276ms
+-> GET /sso/ping,200|1282ms
+-> GET /v1/api/tickle,200|1329ms
+-> GET /v1/api/tickle,200|1340ms
+-> GET /sso/ping,200|1359ms
+-> GET /sso/ping,200|1393ms
+-> GET /v1/api/tickle,200|1430ms
+-> GET /v1/api/tickle,200|1431ms
+-> GET /sso/ping,200|1480ms
+-> GET /v1/api/tickle,200|1480ms
+-> GET /v1/api/tickle,200|1480ms
+-> GET /v1/api/tickle,200|1510ms
+-> GET /sso/ping,200|1514ms
+-> GET /v1/api/tickle,200|1539ms
+-> GET /v1/api/tickle,200|1546ms
+-> GET /v1/api/tickle,200|1547ms
+-> GET /v1/api/tickle,200|1561ms
+-> GET /v1/api/tickle,200|1564ms
+-> GET /v1/api/tickle,200|1598ms
+-> GET /v1/api/tickle,200|1599ms
+-> GET /v1/api/tickle,200|1619ms
+-> GET /v1/api/tickle,200|1621ms
+-> GET /v1/api/tickle,200|1622ms
+-> GET /v1/api/tickle,200|1659ms
+-> GET /v1/api/tickle,200|1672ms
+-> GET /v1/api/tickle,200|1678ms
+-> GET /v1/api/tickle,200|1681ms
+-> GET /v1/api/tickle,200|1687ms
+-> GET /v1/api/tickle,200|1729ms
+-> GET /v1/api/tickle,200|1735ms
+-> GET /v1/api/tickle,200|1737ms
+-> GET /v1/api/tickle,200|1739ms
+-> GET /v1/api/tickle,200|1744ms
+-> GET /v1/api/tickle,200|1789ms
+-> GET /v1/api/tickle,200|1791ms
+-> GET /v1/api/tickle,200|1805ms
+-> GET /v1/api/tickle,200|1810ms
+-> GET /v1/api/tickle,200|1812ms
+-> GET /v1/api/tickle,200|1845ms
+-> GET /v1/api/tickle,200|1862ms
+-> GET /v1/api/tickle,200|1863ms
+-> GET /v1/api/tickle,200|1864ms
+-> GET /v1/api/tickle,200|1870ms
+-> GET /v1/api/tickle,200|1895ms
+-> GET /v1/api/tickle,200|1914ms
+-> GET /v1/api/tickle,200|1915ms
+-> GET /v1/api/tickle,200|1920ms
+-> GET /v1/api/tickle,200|1921ms
+-> GET /v1/api/tickle,200|1959ms
+-> GET /v1/api/tickle,200|1975ms
+-> GET /v1/api/tickle,200|1975ms
+-> GET /v1/api/tickle,200|1976ms
+-> GET /v1/api/tickle,200|1975ms
+-> GET /v1/api/tickle,200|2009ms
+-> GET /v1/api/tickle,200|2029ms
+-> GET /v1/api/tickle,200|2033ms
+-> request: /sso/ping
+-> GET /sso/ping,200|146ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|95ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|53ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|52ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|49ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|51ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|53ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|53ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /sso/ping
+-> GET /sso/ping,200|221ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|51ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|55ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|57ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|53ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|54ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|57ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|52ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /sso/ping
+-> GET /sso/ping,200|856ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|101ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|54ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|54ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|53ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|54ms
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /sso/Templates/otp-responsive.css?1638909404540
+-> GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1638909404540
+-> GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+<- 200 GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+-> GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+-> GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+-> GET /scripts/common/js/switchery/switchery.min.js
+<- 200 GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery/switchery-init.js
+<- 200 GET /scripts/common/js/switchery/switchery.min.js
+<- 200 GET /scripts/common/js/switchery/switchery-init.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+-> GET /sso/CombineFiles
+-> GET /sso/images/2fa.png
+<- 200 GET /sso/images/2fa.png
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+<- 200 GET /sso/CombineFiles
+-> POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?64062
+<- 200 POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?64062
+-> POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?27157
+<- 200 POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?27157
+-> POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?31264
+<- 200 POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?31264
+-> POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?56181
+-> GET /fonts/sourcesanspro-regular-webfont.woff2
+-> GET /fonts/sourcesanspro-semibold-webfont.woff2
+<- 200 GET /fonts/sourcesanspro-regular-webfont.woff2
+<- 200 POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?56181
+<- 200 GET /fonts/sourcesanspro-semibold-webfont.woff2
+-> POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?99202
+<- 200 POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?99202
+-> POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?10863
+<- 200 POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?10863
+-> POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?95205
+<- 200 POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?95205
+-> POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?34408
+<- 200 POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?34408
+-> POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?50525
+<- 200 POST /sso/Authenticator;jsessionid=59782ED71128910CF08B2624FABBC4E0.ny5wwwdam1-internet?50525
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+-> GET /sso/Templates/otp-responsive.css?1638909442932
+-> GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /sso/Templates/otp-responsive.css?1638909442932
+<- 304 GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+<- 304 GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+<- 200 GET /sso/CombineFiles
+-> GET /images/web/favicons/home-screen-icon-128x128.png
+<- 200 GET /images/web/favicons/home-screen-icon-128x128.png
+-> POST /sso/Authenticator?10866
+<- 200 POST /sso/Authenticator?10866
+-> POST /sso/Authenticator?11863
+<- 200 POST /sso/Authenticator?11863
+-> POST /sso/Authenticator?78473
+<- 200 POST /sso/Authenticator?78473
+-> POST /sso/Authenticator?95298
+<- 200 POST /sso/Authenticator?95298
+-> POST /sso/Authenticator?12824
+<- 200 POST /sso/Authenticator?12824
+-> POST /sso/Authenticator?31804
+<- 200 POST /sso/Authenticator?31804
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|68ms
+-> GET /v1/api/sso/validate?gw=1,200|477ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=262d78b824cd3eff9383910d35ac62bb4889e1e17789fa017ba7dfabc16505e8b991d4576b713d4feff9f2c84c3ee0cdad65e30ed67060e7b642805b855e4916&CHRESPONSE=2012bc95392403793d79aa13ad0c8c25685174eb
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=262d78b824cd3eff9383910d35ac62bb4889e1e17789fa017ba7dfabc16505e8b991d4576b713d4feff9f2c84c3ee0cdad65e30ed67060e7b642805b855e4916&CHRESPONSE=2012bc95392403793d79aa13ad0c8c25685174eb
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=0c3a70d6|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=0c3a70d6|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=0c3a70d6|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|69ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|58ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|50ms
+-> GET /v1/api/one/user,200|4065ms
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|56ms
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> POST /v1/portal/pa/performance
+<- 200 POST /v1/portal/pa/performance
+-> POST /v1/portal/pa/performance
+<- 200 POST /v1/portal/pa/performance
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|49ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|91ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|87ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|51ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|52ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|52ms
+-> request: /sso/ping
+-> GET /sso/ping,200|140ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1059ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|49ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|109ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|57ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|51ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|56ms
+-> request: /sso/ping
+-> GET /sso/ping,200|223ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|77ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|54ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|54ms
+-> request: /sso/ping
+-> GET /sso/ping,200|227ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|56ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|52ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|51ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|57ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|51ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|387ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|51ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|49ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /sso/ping
+-> GET /sso/ping,200|223ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|56ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|96ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|55ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|74ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|54ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|15130ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /sso/ping
+-> GET /sso/ping,200|224ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|49ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|54ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|56ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|74ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|70ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|68ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|104ms
+-> request: /sso/ping
+-> GET /sso/ping,200|139ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|52ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|65ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|51ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|49ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|171ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|54ms
+-> request: /sso/ping
+-> GET /sso/ping,200|736ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|131ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|66ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|54ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|143ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|72ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|63ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|54ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|71ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /sso/ping
+-> GET /sso/ping,200|130ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|55ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|49ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|56ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|64ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /sso/ping
+-> GET /sso/ping,200|142ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|67ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|55ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|60ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|58ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|55ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /sso/ping
+-> GET /sso/ping,200|136ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|53ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|105ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|62ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|59ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|51ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|55ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|55ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|61ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /sso/ping
+-> GET /sso/ping,200|144ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|69ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|56ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|50ms

@@ -17,117 +17,20 @@ from strategies import customweights
 
 def runOneStrat(strategy=None):
 
-    # startdate = datetime.datetime.strptime(params['startdate'], "%Y-%m-%d")
-    # enddate = datetime.datetime.strptime(params['enddate'], "%Y-%m-%d")
-    startdate = params['startdate']
-    enddate = params['enddate']
-
-    # Add the data
-    data = []
-    if params['historic'] == 'medium':
-        timeframe = bt.TimeFrame.Days
-
-        # Initialize the engine
-        cerebro = Cerebro(cheat_on_open=True, timeframe=timeframe)
-        # cerebro = Cerebro()
-        # cerebro.broker.set_coo(True)
-        # cerebro.broker.set_coc(True)
-        cerebro.broker.set_cash(params['initial_cash'])
-        cerebro.broker.set_checksubmit(False)
-        cerebro.broker.set_shortcash(True) # Can short the cash
-
-        # Import the historical assets
-        shares_list = params['shares'].split(',') # GLD,COM,SP500,LTB,ITB,TIP
-        for share in shares_list:
-            #df = import_process_hist(share, args)
-            df = import_histprices_db(share)
-            for column in ['open', 'high', 'low', 'close']:
-                df[column] = add_leverage(df[column], leverage=params['leverage'], expense_ratio=params['expense_ratio'], timeframe=timeframe)
-
-            for column in ['open', 'high', 'low']:
-                df[column] = df['close']
-
-            df['volume'] = 0
-
-            #data.append(bt.feeds.PandasData(dataname=df, fromdate=startdate, todate=enddate, timeframe=timeframe))
-            data.append(df)
-
-        if params['shareclass'] == '':
-            db = PortfolioDB(databaseName=DB_NAME)
-            shareclass = []
-            for share in shares_list:
-                thisshareinfo = db.getStockInfo(share)
-                shareclass.append(thisshareinfo['asset_class'].values[0])
-            #shareclass = [assetclass_dict[x] for x in shares_list]
-        else:
-            shareclass = params['shareclass'].split(',')
-
-    elif params['historic'] == 'long':
+    # Set the timeframe
+    if params['historic'] == 'long':
         timeframe = bt.TimeFrame.Years
-
-        # Initialize the engine
-        cerebro = Cerebro(cheat_on_open=True, timeframe=timeframe)
-        cerebro.broker.set_cash(params['initial_cash'])
-
-        # Import the historical assets
-        shares_list = params['shares'].split(',') # GLD_LNG,OIL_LNG,EQ_LNG,LTB_LNG,ITB_LNG,RE_LNG
-        for share in shares_list:
-            #df = import_process_hist(share, args)
-            df = import_histprices_db(share)
-            for column in ['open', 'high', 'low', 'close']:
-                df[column] = add_leverage(df[column], leverage=params['leverage'], expense_ratio=params['expense_ratio'], timeframe=timeframe)
-
-            for column in ['open', 'high', 'low']:
-                df[column] = df['close']
-
-            df['volume'] = 0
-
-            #data.append(bt.feeds.PandasData(dataname=df, fromdate=startdate, todate=enddate, timeframe=timeframe))
-            data.append(df)
-
-        if params['shareclass'] == '':
-            db = PortfolioDB(databaseName=DB_NAME)
-            shareclass = []
-            for share in shares_list:
-                thisshareinfo = db.getStockInfo(share)
-                shareclass.append(thisshareinfo['asset_class'].values[0])
-        else:
-            shareclass = params['shareclass'].split(',')
-
     else:
-        shares_list = params['shares'].split(',')
         timeframe = bt.TimeFrame.Days
 
-        # Initialize the engine
-        cerebro = Cerebro(cheat_on_open=True, timeframe=timeframe)
-        cerebro.broker.set_cash(params['initial_cash'])
+    params['weights'] = list(filter(None, params['weights']))
 
-        # download the datas
-        for i in range(len(shares_list)):
-            # this_assets = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
-            this_assets = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
-
-            if APPLY_LEVERAGE_ON_LIVE_STOCKS == True:
-                this_assets = add_leverage(this_assets, leverage=params['leverage'],
-                                                          expense_ratio=params['expense_ratio'],timeframe=timeframe).to_frame("close")
-            else:
-                this_assets = this_assets.to_frame("close")
-
-            for column in ['open', 'high', 'low']:
-                this_assets[column] = this_assets['close']
-
-            this_assets['volume'] = 0
-
-            #data.append(bt.feeds.PandasData(dataname=this_assets, fromdate=startdate, todate=enddate, timeframe=timeframe))
-            data.append(this_assets)
-
-        shareclass = params['shareclass'].split(',')
 
     # Set the minimum periods, lookback period (and other parameters) depending on the data used (daily or yearly) and
     # if weights are used instead of a strategy
-    if params['weights'] != '' or strategy == 'customweights':
+    if params['weights'] != [] or strategy == 'customweights':
         corrmethod = params['corrmethod_custweights']
-        reb_days = params['reb_days_custweights']
+        reb_period = params['reb_period_custweights']
         lookback_period_short = params['lookback_period_short_custweights']
         lookback_period_long = params['lookback_period_long_custweights']
         moving_average_period = params['moving_average_period_custweights']
@@ -135,7 +38,7 @@ def runOneStrat(strategy=None):
         momentum_percentile = params['momentum_percentile_custweights']
     elif timeframe == bt.TimeFrame.Days:
         corrmethod = params['corrmethod_days']
-        reb_days = params['reb_days_days']
+        reb_period = params['reb_period_days']
         lookback_period_short = params['lookback_period_short_days']
         lookback_period_long = params['lookback_period_long_days']
         moving_average_period = params['moving_average_period_days']
@@ -143,22 +46,104 @@ def runOneStrat(strategy=None):
         momentum_percentile = params['momentum_percentile_days']
     elif timeframe == bt.TimeFrame.Years:
         corrmethod = params['corrmethod_years']
-        reb_days = params['reb_days_years']
+        reb_period = params['reb_period_years']
         lookback_period_short = params['lookback_period_short_years']
         lookback_period_long = params['lookback_period_long_years']
         moving_average_period = params['moving_average_period_years']
         momentum_period = params['momentum_period_years']
         momentum_percentile = params['momentum_percentile_years']
 
-    if timeframe != bt.TimeFrame.Days and params['indicator']:
-        sys.exit('Error: Indicators can only added in backtest with daily frequency')
+    max_lookback = max(lookback_period_short, lookback_period_long, moving_average_period, momentum_period)
 
-    if params['indicator']:
+    # startdate = datetime.datetime.strptime(params['startdate'], "%Y-%m-%d")
+    # enddate = datetime.datetime.strptime(params['enddate'], "%Y-%m-%d")
+    startdate = params['startdate'] - datetime.timedelta(round(max_lookback*365/params['DAYS_IN_YEAR']))
+    enddate = params['enddate']
+
+    # Adjust the user input
+    shares_list = list(filter(None, params['shares']))
+    shareclass = list(filter(None, params['shareclass']))
+
+    # Initialize the engine
+    cerebro = Cerebro(cheat_on_open=True, timeframe=timeframe)
+    # cerebro = Cerebro()
+    # cerebro.broker.set_coo(True)
+    # cerebro.broker.set_coc(True)
+    cerebro.broker.set_cash(params['initial_cash'])
+    cerebro.broker.set_checksubmit(False)
+    cerebro.broker.set_shortcash(True)  # Can short the cash
+    # cerebro.broker.setcommission(leverage=params['leverage'], interest=0.05)
+
+    # Add the data
+    data = []
+    if params['historic'] == 'medium':
+        # Import the historical assets
+        for share in shares_list:
+            df = import_histprices_db(share)
+            for column in ['open', 'high', 'low', 'close']:
+                df[column] = add_expenses(df[column], expense_ratio=params['expense_ratio'], timeframe=timeframe)
+            for column in ['open', 'high', 'low']:
+                df[column] = df['close']
+            df['volume'] = 0
+            data.append(df)
+
+        if params['shareclass'] == '':
+            db = PortfolioDB(databaseName=DB_NAME)
+            shareclass = []
+            for share in shares_list:
+                thisshareinfo = db.getStockInfo(share)
+                shareclass.append(thisshareinfo['asset_class'].values[0])
+
+    elif params['historic'] == 'long':
+        # Import the historical assets
+        for share in shares_list:
+            df = import_histprices_db(share)
+            for column in ['open', 'high', 'low', 'close']:
+                df[column] = add_expenses(df[column], expense_ratio=params['expense_ratio'], timeframe=timeframe)
+            for column in ['open', 'high', 'low']:
+                df[column] = df['close']
+            df['volume'] = 0
+            data.append(df)
+
+        if params['shareclass'] == '':
+            db = PortfolioDB(databaseName=DB_NAME)
+            shareclass = []
+            for share in shares_list:
+                thisshareinfo = db.getStockInfo(share)
+                shareclass.append(thisshareinfo['asset_class'].values[0])
+    else:
+        # download the datas
+        for i in range(len(shares_list)):
+            if shares_list[i] == "CASH":
+                idx = pd.date_range(start=startdate, end=enddate)
+                this_assets = pd.Series(data=1, index=idx)
+            else:
+                # this_assets = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+                this_assets = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
+
+            if APPLY_LEVERAGE_ON_LIVE_STOCKS == True:
+                this_assets = add_expenses(this_assets, expense_ratio=params['expense_ratio'],timeframe=timeframe).to_frame("close")
+            else:
+                this_assets = this_assets.to_frame("close")
+
+            for column in ['open', 'high', 'low']:
+                this_assets[column] = this_assets['close']
+            this_assets['volume'] = 0
+            data.append(this_assets)
+
+    # if params['indicator'] : # if params['rotationstrat'] or params['rot_adm'] or params['acc_dualmom'] params['acc_dualmom2']:
+    if params['rotationstrat'] or params['rot_adm'] or params['acc_dualmom'] or params['acc_dualmom2'] or params['rot_adm_dual_rp'] or params['TESTING'] \
+            or params['specific_vigilant'] or params['specific_rot'] or params['specific_rot2'] or params['specific_adm'] or params['specific_adm_grad_div'] or params['specific_fabio_adm2'] \
+            or params['specific_fabiofg_adm2'] or params['specific_fabio_adm3']:
         # now import the non-tradable indexes for the rotational strategy
-        indicatorLabels = ['DFII20', 'T10Y2Y', 'T10YIE_T10Y2Y']
-        all_indicators = load_economic_curves(startdate, enddate)
+        indicatorLabels = ['DFII20', 'T10Y2Y', 'T10YIE_T10Y2Y', 'DTB3']
+        rot_indicators = load_economic_curves(startdate, enddate)
+        t_bill = load_fred_curve(startdate, enddate, indicatorLabels[3])
+        t_bill['DTB3'] = t_bill['DTB3']/100
+        rot_indicators = pd.merge(rot_indicators[['DFII20', 'T10Y2Y', 'T10YIE_T10Y2Y']], t_bill, how="left", left_index=True, right_index=True)
+
         for indicatorLabel in indicatorLabels:
-            df = all_indicators[[indicatorLabel]]
+            df = rot_indicators[[indicatorLabel]]
             for column in ['open', 'high', 'low', 'close']:
                 df[column] = df[indicatorLabel]
 
@@ -167,7 +152,7 @@ def runOneStrat(strategy=None):
             #data.append(bt.feeds.PandasData(dataname=df, fromdate=startdate, todate=enddate, timeframe=bt.TimeFrame.Days))
             data.append(df)
 
-        shareclass = shareclass + ['non-tradable', 'non-tradable', 'non-tradable']
+        shareclass = shareclass + ['non-tradable', 'non-tradable', 'non-tradable', 'non-tradable']
         shares_list = shares_list + indicatorLabels
 
     if params['benchmark'] != '':
@@ -193,6 +178,20 @@ def runOneStrat(strategy=None):
         shareclass = shareclass + ['benchmark']
         shares_list = shares_list + [params['benchmark']]
 
+    if params['leverage'] > 0:
+        cash_df = get_loan(startdate, enddate, BM_rate_flg, params['interest_rate'])
+
+        if cash_df is not None:
+            for column in ['open', 'high', 'low']:
+                cash_df[column] = cash_df['close']
+            cash_df['volume'] = 0
+
+        # data.append(bt.feeds.PandasData(dataname=benchmark_df, fromdate=startdate, todate=enddate, timeframe=timeframe))
+        data.append(cash_df)
+
+        shareclass = shareclass + ['loan']
+        shares_list = shares_list + ['loan']
+
     data = common_dates(data=data, fromdate=startdate, todate=enddate, timeframe=timeframe)
 
     i = 0
@@ -201,46 +200,50 @@ def runOneStrat(strategy=None):
         cerebro.adddata(dt_feed, name=shares_list[i])
         i = i + 1
 
-    n_assets = len([x for x in shareclass if x not in ['non-tradable', 'benchmark']])
+    n_assets = len([x for x in shareclass if x not in ['non-tradable', 'benchmark', 'loan']])
     cerebro.addobserver(targetweightsobserver, n_assets=n_assets)
     cerebro.addobserver(effectiveweightsobserver, n_assets=n_assets)
 
     # if you provide the weights, use them
-    if params['weights'] != '' and strategy == 'customweights':
-        weights_list = params['weights'].split(',')
+    if params['weights'] != [] and strategy == 'customweights':
+        weights_list = params['weights']
         weights_listt = [float(i) for i in weights_list]
 
         cerebro.addstrategy(customweights,
                             n_assets=n_assets,
+                            shares=shares_list,
                             initial_cash=params['initial_cash'],
                             contribution=params['contribution'],
                             assetweights=weights_listt,
                             shareclass=shareclass,
                             printlog=True,
                             corrmethod=corrmethod,
-                            reb_days=reb_days,
+                            reb_period=reb_period,
                             lookback_period_short=lookback_period_short,
                             lookback_period_long=lookback_period_long,
                             moving_average_period=moving_average_period,
                             momentum_period=momentum_period,
-                            momentum_percentile=momentum_percentile
+                            momentum_percentile=momentum_percentile,
+                            leverage=params['leverage']
                             )
 
     # otherwise, rely on the weights of a strategy
     else:
         cerebro.addstrategy(eval(strategy),
                             n_assets=n_assets,
+                            shares=shares_list,
                             initial_cash=params['initial_cash'],
                             contribution=params['contribution'],
                             shareclass=shareclass,
                             printlog=True,
                             corrmethod=corrmethod,
-                            reb_days=reb_days,
+                            reb_period=reb_period,
                             lookback_period_short=lookback_period_short,
                             lookback_period_long=lookback_period_long,
                             moving_average_period=moving_average_period,
                             momentum_period=momentum_period,
-                            momentum_percentile=momentum_percentile
+                            momentum_percentile=momentum_percentile,
+                            leverage=params['leverage']
                             )
 
     # Run backtest
@@ -301,6 +304,32 @@ def main(params):
         strategy_list.append('acc_dualmom')
     if params['acc_dualmom2']:
         strategy_list.append('acc_dualmom2')
+    if params['rot_adm']:
+        strategy_list.append('rot_adm')
+    if params['rot_adm_dual_rp']:
+        strategy_list.append('rot_adm_dual_rp')
+    if params['vigilant']:
+        strategy_list.append('vigilant')
+    if params['TESTING']:
+        strategy_list.append('TESTING')
+    if params['specific_vigilant']:
+        strategy_list.append('specific_vigilant')
+    if params['specific_rot']:
+        strategy_list.append('specific_rot')
+    if params['specific_rot2']:
+        strategy_list.append('specific_rot2')
+    if params['specific_adm']:
+        strategy_list.append('specific_adm')
+    if params['specific_adm_grad_div']:
+        strategy_list.append('specific_adm_grad_div')
+    if params['specific_fabio_adm2']:
+        strategy_list.append('specific_fabio_adm2')
+    if params['specific_fabiofg_adm2']:
+        strategy_list.append('specific_fabiofg_adm2')
+    if params['specific_fabio_adm3']:
+        strategy_list.append('specific_fabio_adm3')
+    if params['specific']:
+        strategy_list.append('specific')
     if not strategy_list:
         strategy_list = ["customweights"]
     if params['benchmark'] != '':

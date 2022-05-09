@@ -1,0 +1,2585 @@
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1614036453348
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /stylesheet/web/switchery.min.css
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614036453348
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/switchery.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /images/2015/btn-app-tws.png
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /images/2015/btn-app-google.png
+-> POST /sso/Authenticator;jsessionid=FFF3930B58876F6F13CE778364127D5D.ny5wwwdamsso2?95366
+<- 200 POST /sso/Authenticator;jsessionid=FFF3930B58876F6F13CE778364127D5D.ny5wwwdamsso2?95366
+-> POST /sso/Authenticator;jsessionid=FFF3930B58876F6F13CE778364127D5D.ny5wwwdamsso2?66401
+<- 200 POST /sso/Authenticator;jsessionid=FFF3930B58876F6F13CE778364127D5D.ny5wwwdamsso2?66401
+-> POST /sso/Dispatcher;jsessionid=FFF3930B58876F6F13CE778364127D5D.ny5wwwdamsso2
+<- 302 POST /sso/Dispatcher;jsessionid=FFF3930B58876F6F13CE778364127D5D.ny5wwwdamsso2
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|435ms
+-> GET /v1/api/sso/validate?gw=1,200|475ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=30367fc7af602b57b948692b7f07803dedb16b9d2a7637de6d6044a6a0addac6595887db7eed75737dace6e95fcbb8399988ae4b1b6df079773bd6140744c69&CHRESPONSE=fec44c3ebf2cfba61da749dcf24dda08c2371616
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=30367fc7af602b57b948692b7f07803dedb16b9d2a7637de6d6044a6a0addac6595887db7eed75737dace6e95fcbb8399988ae4b1b6df079773bd6140744c69&CHRESPONSE=fec44c3ebf2cfba61da749dcf24dda08c2371616
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=087af743|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=087af743|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=087af743|F0-6E-0B-BD-A2-D6 0
+-> GET /v1/api/one/user,200|3160ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|165ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|224ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|612ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=af09f7d5bd09020df9e03de5f1679446183c50a29623a734c87678da53e2a43afef0cb187c51dac33d3919b2a99d326c09560f86f7de648eef392b01bdd45340&CHRESPONSE=3547238d7ada2202b5ff3eaecc43411f43209d99
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=af09f7d5bd09020df9e03de5f1679446183c50a29623a734c87678da53e2a43afef0cb187c51dac33d3919b2a99d326c09560f86f7de648eef392b01bdd45340&CHRESPONSE=3547238d7ada2202b5ff3eaecc43411f43209d99
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,503|10158ms
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+-> GET /v1/api/iserver/auth/status,200|167ms
+-> request: /v1/api/iserver/auth/ssodh/init
+<- 401 GET /v1/portal/iserver/accounts
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|155ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|237ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|203ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1015ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1834ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|214ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1034ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2265ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|832ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2378ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|839ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1156ms
+-> request: /sso/ping
+-> GET /sso/ping,200|918ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|230ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1061ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|552ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|973ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|870ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|974ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|989ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|981ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|170ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|792ms
+-> request: /sso/ping
+-> GET /sso/ping,200|759ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|173ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+-> request: /v1/api/tickle
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/api/tickle,200|760ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|699ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|115ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|715ms
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|731ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|726ms
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|833ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1043ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|834ms
+-> request: /sso/ping
+-> GET /sso/ping,200|808ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1247ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1451ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|339ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1153ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|962ms
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|942ms
+-> request: /v1/api/tickle
+-> GET /v1/portal/iserver/auth/status
+-> GET /v1/api/tickle,200|2168ms
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|857ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|959ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1483ms
+-> request: /sso/ping
+-> GET /sso/ping,200|2062ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|160ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1078ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2312ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1293ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|791ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|955ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1112ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1313ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1004ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|905ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> request: /sso/ping
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> GET /sso/ping,200|582ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1218ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|122ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1124ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|722ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1036ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|829ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|959ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|982ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|4325ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> POST /v1/portal/iserver/account/DU2971300/order
+<- 200 POST /v1/portal/iserver/account/DU2971300/order
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|237ms
+-> request: /sso/ping
+-> GET /sso/ping,200|1033ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|168ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1466ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|864ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|710ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|868ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1788ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|970ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|768ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1177ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|554ms
+-> request: /sso/ping
+-> GET /sso/ping,200|967ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|136ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1203ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|897ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|181ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|808ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|851ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1122ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1839ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|729ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|725ms
+-> request: /sso/ping
+-> GET /sso/ping,200|699ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|213ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|734ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1141ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|833ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1125ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|751ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1059ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/tickle
+-> GET /v1/portal/iserver/accounts
+-> GET /v1/api/tickle,200|237ms
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|957ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1275ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /sso/ping
+-> GET /sso/ping,200|737ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|151ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|147ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2105ms
+-> request: /v1/api/tickle
+-> GET /v1/portal/iserver/auth/status
+-> GET /v1/api/tickle,200|798ms
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|782ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|130ms
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|517ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|896ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|989ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|865ms
+-> request: /sso/ping
+-> GET /sso/ping,200|2013ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|205ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|810ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1741ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|823ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|725ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|739ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|769ms
+-> POST /v1/portal/logout
+<- 200 POST /v1/portal/logout
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+uri /sso/Login?forwardTo=22&RL=1&ip2loc=on failed
+java.net.UnknownHostException: api.ibkr.com
+	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method) ~[na:1.8.0_282]
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929) ~[na:1.8.0_282]
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324) ~[na:1.8.0_282]
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277) ~[na:1.8.0_282]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193) ~[na:1.8.0_282]
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127) ~[na:1.8.0_282]
+	at java.net.InetAddress.getByName(InetAddress.java:1077) ~[na:1.8.0_282]
+	at io.netty.util.internal.SocketUtils$8.run(SocketUtils.java:146) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.internal.SocketUtils$8.run(SocketUtils.java:143) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_282]
+	at io.netty.util.internal.SocketUtils.addressByName(SocketUtils.java:143) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.resolver.DefaultNameResolver.doResolve(DefaultNameResolver.java:43) ~[netty-resolver-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.resolver.SimpleNameResolver.resolve(SimpleNameResolver.java:63) ~[netty-resolver-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.resolver.SimpleNameResolver.resolve(SimpleNameResolver.java:55) ~[netty-resolver-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.resolver.InetSocketAddressResolver.doResolve(InetSocketAddressResolver.java:57) ~[netty-resolver-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.resolver.InetSocketAddressResolver.doResolve(InetSocketAddressResolver.java:32) ~[netty-resolver-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.resolver.AbstractAddressResolver.resolve(AbstractAddressResolver.java:108) ~[netty-resolver-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.bootstrap.Bootstrap.doResolveAndConnect0(Bootstrap.java:208) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.bootstrap.Bootstrap.doResolveAndConnect(Bootstrap.java:170) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.bootstrap.Bootstrap.connect(Bootstrap.java:145) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.vertx.core.net.impl.ChannelProvider.connect(ChannelProvider.java:38) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.ConnectionManager$ChannelConnector.connect(ConnectionManager.java:537) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.ConnectionManager$ConnQueue.createNewConnection(ConnectionManager.java:294) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.ConnectionManager$ConnQueue.getConnection(ConnectionManager.java:237) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.ConnectionManager.getConnectionForRequest(ConnectionManager.java:171) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.HttpClientImpl.getConnectionForRequest(HttpClientImpl.java:950) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.HttpClientRequestImpl.connect(HttpClientRequestImpl.java:745) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.HttpClientRequestImpl.write(HttpClientRequestImpl.java:867) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.HttpClientRequestImpl.end(HttpClientRequestImpl.java:358) ~[vertx-core-3.5.0.jar:na]
+	at ibgroup.web.core.clientportal.gw.http.HttpProxy.lambda$internalProxy$9(HttpProxy.java:151) ~[ibgroup.web.core.iblink.router.clientportal.gw.jar:na]
+	at io.vertx.core.http.impl.HttpServerRequestImpl.handleEnd(HttpServerRequestImpl.java:418) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.ServerConnection.handleLastHttpContent(ServerConnection.java:475) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.ServerConnection.processMessage(ServerConnection.java:446) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.ServerConnection.handleMessage(ServerConnection.java:156) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.HttpServerImpl$ServerHandlerWithWebSockets.handleMessage(HttpServerImpl.java:705) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.http.impl.HttpServerImpl$ServerHandlerWithWebSockets.handleMessage(HttpServerImpl.java:614) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.lambda$channelRead$1(VertxHandler.java:150) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:148) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:86) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:310) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:284) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1336) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /sso/Templates/otp-responsive.css?1614115611318
+<- 200 GET /sso/Templates/otp-responsive.css?1614115611318
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/switchery.min.js
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+-> POST /sso/Authenticator;jsessionid=2F72A58E0B5187E03CBAD06A84AD8FEB.ny5wwwdamsso1?41553
+<- 200 POST /sso/Authenticator;jsessionid=2F72A58E0B5187E03CBAD06A84AD8FEB.ny5wwwdamsso1?41553
+-> POST /sso/Authenticator;jsessionid=2F72A58E0B5187E03CBAD06A84AD8FEB.ny5wwwdamsso1?83435
+<- 200 POST /sso/Authenticator;jsessionid=2F72A58E0B5187E03CBAD06A84AD8FEB.ny5wwwdamsso1?83435
+-> POST /sso/Dispatcher;jsessionid=2F72A58E0B5187E03CBAD06A84AD8FEB.ny5wwwdamsso1
+<- 302 POST /sso/Dispatcher;jsessionid=2F72A58E0B5187E03CBAD06A84AD8FEB.ny5wwwdamsso1
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|664ms
+-> GET /v1/api/sso/validate?gw=1,200|709ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=af079f35bf869d4dceee40dfea38035d0864f4979eb23e3fa08fff29eae2b84dff0c5beec70dcfe9bfab1d6617182cb66e05eb8d3fcb7f8d89f9081064d6d667&CHRESPONSE=dedd5bb4a5cf12929c82945afa7ce5a00e800b92
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=af079f35bf869d4dceee40dfea38035d0864f4979eb23e3fa08fff29eae2b84dff0c5beec70dcfe9bfab1d6617182cb66e05eb8d3fcb7f8d89f9081064d6d667&CHRESPONSE=dedd5bb4a5cf12929c82945afa7ce5a00e800b92
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=33db7393|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=33db7393|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=33db7393|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|152ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> GET /v1/api/one/user,200|3734ms
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|451ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|177ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|191ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1037ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|361ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|119ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1093ms
+-> POST /v1/portal/logout
+<- 200 POST /v1/portal/logout
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1614115804795
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614115804795
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/switchery.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/switchery.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+uri /images/2015/btn-app-google.png failed
+io.vertx.core.VertxException: Connection was closed
+	at io.vertx.core.http.impl.ClientConnection.handleClosed(ClientConnection.java:406) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:134) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:420) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:281) ~[netty-codec-http-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:223) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.channelInactive(SslHandler.java:978) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:763) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> GET /images/2015/btn-app-tws.png
+uri /images/2015/btn-app-tws.png failed
+io.vertx.core.VertxException: Connection was closed
+	at io.vertx.core.http.impl.ClientConnection.handleClosed(ClientConnection.java:406) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:134) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:420) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:281) ~[netty-codec-http-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:223) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.channelInactive(SslHandler.java:978) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:763) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+-> POST /sso/Authenticator;jsessionid=7C695716388EC729321976F43FE81E00.ny5wwwdamsso1?11518
+uri /sso/Authenticator;jsessionid=7C695716388EC729321976F43FE81E00.ny5wwwdamsso1?11518 failed
+io.vertx.core.VertxException: Connection was closed
+	at io.vertx.core.http.impl.ClientConnection.handleClosed(ClientConnection.java:406) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:134) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:420) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:281) ~[netty-codec-http-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:223) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.channelInactive(SslHandler.java:978) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:763) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614115893890
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614115893890
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> POST /sso/Authenticator?63569
+<- 200 POST /sso/Authenticator?63569
+-> POST /sso/Authenticator?45350
+<- 200 POST /sso/Authenticator?45350
+-> POST /sso/Dispatcher
+<- 200 POST /sso/Dispatcher
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614115913239
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /sso/CombineFiles
+<- 200 GET /sso/Templates/otp-responsive.css?1614115913239
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> POST /sso/Authenticator?70068
+<- 200 POST /sso/Authenticator?70068
+-> POST /sso/Authenticator?69088
+<- 200 POST /sso/Authenticator?69088
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /v1/api/sso/validate?gw=1,200|711ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|302ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=76df8003442eb71d45013815a429124524f6c7c8be199e1a588fc11f4238db8a68ae18e4ddda03f967f16ee048d5d4d70705512894f970008d7b03f6cf7fe0e0&CHRESPONSE=f1e84a11d4e91a28565f51c8ffcc578e9da1a553
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=76df8003442eb71d45013815a429124524f6c7c8be199e1a588fc11f4238db8a68ae18e4ddda03f967f16ee048d5d4d70705512894f970008d7b03f6cf7fe0e0&CHRESPONSE=f1e84a11d4e91a28565f51c8ffcc578e9da1a553
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=3a093d71|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=3a093d71|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=3a093d71|F0-6E-0B-BD-A2-D6 0
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|3675ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|238ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|216ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|183ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|125ms
+-> GET /v1/portal/iserver/auth/status
+uri /v1/portal/iserver/auth/status failed
+io.vertx.core.VertxException: Connection was closed
+	at io.vertx.core.http.impl.ClientConnection.handleClosed(ClientConnection.java:406) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:134) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:420) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:281) ~[netty-codec-http-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:223) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.channelInactive(SslHandler.java:978) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:763) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1325ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|932ms
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614116041871
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614116041871
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/switchery.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+-> POST /sso/Authenticator;jsessionid=59DF39CF00593D54BF66799719B75F94.ny5wwwdamsso2?36766
+<- 200 POST /sso/Authenticator;jsessionid=59DF39CF00593D54BF66799719B75F94.ny5wwwdamsso2?36766
+-> POST /sso/Authenticator;jsessionid=59DF39CF00593D54BF66799719B75F94.ny5wwwdamsso2?38662
+<- 200 POST /sso/Authenticator;jsessionid=59DF39CF00593D54BF66799719B75F94.ny5wwwdamsso2?38662
+-> POST /sso/Dispatcher;jsessionid=59DF39CF00593D54BF66799719B75F94.ny5wwwdamsso2
+<- 200 POST /sso/Dispatcher;jsessionid=59DF39CF00593D54BF66799719B75F94.ny5wwwdamsso2
+-> GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614116070617
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /sso/CombineFiles
+<- 200 GET /sso/Templates/otp-responsive.css?1614116070617
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> POST /sso/Authenticator?54849
+<- 200 POST /sso/Authenticator?54849
+-> POST /sso/Authenticator?13739
+<- 200 POST /sso/Authenticator?13739
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /v1/api/sso/validate?gw=1,200|1135ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|1528ms
+-> GET /v1/api/one/user,200|229ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=3299aac054f953fd1d75842ed4b98c9091961a194d36eba8d9965be4cb5f7ba3937fca392560d488c5f38e4c69eaf24079699275b16aa8e1901b512eed21f33b&CHRESPONSE=3788d87d8a3c6ff9af200f295460aefcdc7a6224
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=3299aac054f953fd1d75842ed4b98c9091961a194d36eba8d9965be4cb5f7ba3937fca392560d488c5f38e4c69eaf24079699275b16aa8e1901b512eed21f33b&CHRESPONSE=3788d87d8a3c6ff9af200f295460aefcdc7a6224
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=07bc37d3|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=07bc37d3|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=07bc37d3|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|225ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|236ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|114ms
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> POST /v1/portal/logout
+<- 200 POST /v1/portal/logout
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /sso/Templates/otp-responsive.css?1614116213004
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1614116213004
+-> GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/switchery.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/switchery.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+-> POST /sso/Authenticator;jsessionid=40497450D6DC065EED600B13BAB64347.ny5wwwdamsso1?95557
+<- 200 POST /sso/Authenticator;jsessionid=40497450D6DC065EED600B13BAB64347.ny5wwwdamsso1?95557
+-> POST /sso/Authenticator;jsessionid=40497450D6DC065EED600B13BAB64347.ny5wwwdamsso1?76365
+<- 200 POST /sso/Authenticator;jsessionid=40497450D6DC065EED600B13BAB64347.ny5wwwdamsso1?76365
+-> POST /sso/Dispatcher;jsessionid=40497450D6DC065EED600B13BAB64347.ny5wwwdamsso1
+<- 200 POST /sso/Dispatcher;jsessionid=40497450D6DC065EED600B13BAB64347.ny5wwwdamsso1
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1614116237122
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /sso/CombineFiles
+<- 200 GET /sso/Templates/otp-responsive.css?1614116237122
+-> POST /sso/Authenticator?23991
+<- 200 POST /sso/Authenticator?23991
+-> POST /sso/Authenticator?90349
+<- 200 POST /sso/Authenticator?90349
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|483ms
+-> GET /v1/api/sso/validate?gw=1,200|1495ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|243ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=356c9231c3079f6250c1bf186d6e5662b2614701b0dd2406dfb60e965985a5c81f4e1a320b17720f890fa106744c1c1610dda49520b7c6cb5c9cdc7503f52098&CHRESPONSE=383ac291e363fb3fa7c6ff181f4fb2bd12a1f0ea
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=356c9231c3079f6250c1bf186d6e5662b2614701b0dd2406dfb60e965985a5c81f4e1a320b17720f890fa106744c1c1610dda49520b7c6cb5c9cdc7503f52098&CHRESPONSE=383ac291e363fb3fa7c6ff181f4fb2bd12a1f0ea
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=1d0f772a|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=1d0f772a|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=1d0f772a|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|199ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|357ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|316ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|151ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|339ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> POST /v1/portal/logout
+<- 200 POST /v1/portal/logout
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614116363030
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614116363030
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/switchery.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/button_discover_apis.png
+-> POST /sso/Authenticator;jsessionid=94A87E8482FA5D5184AA9EF85AE7C4B5.ny5wwwdamsso1?51760
+<- 200 POST /sso/Authenticator;jsessionid=94A87E8482FA5D5184AA9EF85AE7C4B5.ny5wwwdamsso1?51760
+-> POST /sso/Authenticator;jsessionid=94A87E8482FA5D5184AA9EF85AE7C4B5.ny5wwwdamsso1?22214
+<- 200 POST /sso/Authenticator;jsessionid=94A87E8482FA5D5184AA9EF85AE7C4B5.ny5wwwdamsso1?22214
+-> POST /sso/Dispatcher;jsessionid=94A87E8482FA5D5184AA9EF85AE7C4B5.ny5wwwdamsso1
+<- 200 POST /sso/Dispatcher;jsessionid=94A87E8482FA5D5184AA9EF85AE7C4B5.ny5wwwdamsso1
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614116386633
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /sso/CombineFiles
+<- 200 GET /sso/Templates/otp-responsive.css?1614116386633
+-> POST /sso/Authenticator?88605
+<- 200 POST /sso/Authenticator?88605
+-> POST /sso/Authenticator?14022
+<- 200 POST /sso/Authenticator?14022
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|491ms
+-> GET /v1/api/sso/validate?gw=1,200|532ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|501ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=698773de4bcf6cb940f05c02b305a96986ea7261b26e39272975fec23a8592b34e9f131125dcad7863cf4ccae914371d0f6019b56392803cb0cc01dad4860306&CHRESPONSE=3fa81bbd7af116819f1a8b84b2041182e2d5d1f7
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=698773de4bcf6cb940f05c02b305a96986ea7261b26e39272975fec23a8592b34e9f131125dcad7863cf4ccae914371d0f6019b56392803cb0cc01dad4860306&CHRESPONSE=3fa81bbd7af116819f1a8b84b2041182e2d5d1f7
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=22a89316|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=22a89316|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=22a89316|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|216ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|214ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|255ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|187ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> request: /v1/api/tickle
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2131ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|791ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2175ms
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614116569244
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614116569244
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/switchery.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+-> POST /sso/Authenticator;jsessionid=CA0A730D85433EB1D5E49AFB66313309.ny5wwwdamsso2?2054
+<- 200 POST /sso/Authenticator;jsessionid=CA0A730D85433EB1D5E49AFB66313309.ny5wwwdamsso2?2054
+-> POST /sso/Authenticator;jsessionid=CA0A730D85433EB1D5E49AFB66313309.ny5wwwdamsso2?8541
+<- 200 POST /sso/Authenticator;jsessionid=CA0A730D85433EB1D5E49AFB66313309.ny5wwwdamsso2?8541
+-> POST /sso/Dispatcher;jsessionid=CA0A730D85433EB1D5E49AFB66313309.ny5wwwdamsso2
+<- 200 POST /sso/Dispatcher;jsessionid=CA0A730D85433EB1D5E49AFB66313309.ny5wwwdamsso2
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1614116604214
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614116604214
+<- 200 GET /sso/CombineFiles
+-> POST /sso/Authenticator?5011
+<- 200 POST /sso/Authenticator?5011
+-> POST /sso/Authenticator?42683
+<- 200 POST /sso/Authenticator?42683
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|1028ms
+-> GET /v1/api/sso/validate?gw=1,200|1095ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=2d1df6d0504cc58f8fe04817bae126d0d3fe879836bcdd11d8b7b19b1410fe276476545fd52dc6d8e55b921d910a7c60dba56f5ee2930e05fe06b3690cf9a4b1&CHRESPONSE=f7a45c25f611c227f40fc0f9e5994edf58c70344
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=2d1df6d0504cc58f8fe04817bae126d0d3fe879836bcdd11d8b7b19b1410fe276476545fd52dc6d8e55b921d910a7c60dba56f5ee2930e05fe06b3690cf9a4b1&CHRESPONSE=f7a45c25f611c227f40fc0f9e5994edf58c70344
+-> GET /v1/api/one/user,200|445ms
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=0949b6d2|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=0949b6d2|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=0949b6d2|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|164ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|194ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+uri /v1/portal/iserver/account/orders failed
+io.vertx.core.VertxException: Connection was closed
+	at io.vertx.core.http.impl.ClientConnection.handleClosed(ClientConnection.java:406) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:134) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:420) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:281) ~[netty-codec-http-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:223) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.channelInactive(SslHandler.java:978) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:763) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1204ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|783ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1606ms
+-> GET /v1/portal/iserver/auth/status
+<- 401 GET /v1/portal/iserver/auth/status
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614116865866
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/login.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1614116865866
+-> GET /scripts/common/js/switchery.min.js
+-> GET /sso/CombineFiles
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+-> POST /sso/Authenticator;jsessionid=E89A27F66A1275FC454CC8599196999A.ny5wwwdamsso1?69573
+uri /sso/Authenticator;jsessionid=E89A27F66A1275FC454CC8599196999A.ny5wwwdamsso1?69573 failed
+io.vertx.core.VertxException: Connection was closed
+	at io.vertx.core.http.impl.ClientConnection.handleClosed(ClientConnection.java:406) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:134) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:420) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:281) ~[netty-codec-http-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:223) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.channelInactive(SslHandler.java:978) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:763) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614116944402
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614116944402
+<- 200 GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/ib-common.css
+-> POST /sso/Authenticator?74504
+<- 200 POST /sso/Authenticator?74504
+-> POST /sso/Authenticator?8228
+<- 200 POST /sso/Authenticator?8228
+-> POST /sso/Dispatcher
+<- 200 POST /sso/Dispatcher
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614116962897
+<- 200 GET /sso/Templates/otp-responsive.css?1614116962897
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /stylesheet/web/switchery.min.css
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /sso/CombineFiles
+-> POST /sso/Authenticator?60616
+<- 200 POST /sso/Authenticator?60616
+-> POST /sso/Authenticator?21527
+<- 200 POST /sso/Authenticator?21527
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|527ms
+-> GET /v1/api/sso/validate?gw=1,200|543ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|333ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=356c9231c3079f6250c1bf186d6e5662b2614701b0dd2406dfb60e965985a5c81f4e1a320b17720f890fa106744c1c1610dda49520b7c6cb5c9cdc7503f52098&CHRESPONSE=ebc8956d2cdd698f7973d4ef937563750b93744c
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=356c9231c3079f6250c1bf186d6e5662b2614701b0dd2406dfb60e965985a5c81f4e1a320b17720f890fa106744c1c1610dda49520b7c6cb5c9cdc7503f52098&CHRESPONSE=ebc8956d2cdd698f7973d4ef937563750b93744c
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=2b66307c|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=2b66307c|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=2b66307c|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|261ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|168ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/api/tickle,200|714ms
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|291ms
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+-> POST /v1/portal/iserver/secdef/search
+<- 500 POST /v1/portal/iserver/secdef/search
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|857ms
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /sso/Templates/otp-responsive.css?1614117115283
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614117115283
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/login.css
+-> GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/switchery.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> POST /sso/Authenticator;jsessionid=E061260CBF7DB911403333E7EED33237.ny5wwwdamsso1?47210
+uri /sso/Authenticator;jsessionid=E061260CBF7DB911403333E7EED33237.ny5wwwdamsso1?47210 failed
+io.vertx.core.VertxException: Connection was closed
+	at io.vertx.core.http.impl.ClientConnection.handleClosed(ClientConnection.java:406) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:134) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:420) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:281) ~[netty-codec-http-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:223) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.channelInactive(SslHandler.java:978) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:763) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614117247577
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614117247577
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /sso/CombineFiles
+-> POST /sso/Authenticator?65672
+<- 200 POST /sso/Authenticator?65672
+-> POST /sso/Authenticator?74678
+<- 200 POST /sso/Authenticator?74678
+-> POST /sso/Dispatcher
+<- 200 POST /sso/Dispatcher
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1614117265354
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614117265354
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /sso/CombineFiles
+-> POST /sso/Authenticator?98840
+<- 200 POST /sso/Authenticator?98840
+-> POST /sso/Authenticator?57016
+<- 200 POST /sso/Authenticator?57016
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /v1/api/sso/validate?gw=1,200|1186ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|327ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=62c391757787efeda0c2fa92fb70f6670044ee69a70e207254066f64a2180b50ec605852b3efe62aa67398a0e0e105bb89d4a9cbab11388e3a674ae57cd63b0f&CHRESPONSE=d255123667d349cb54a1b67987143ccc332f27e3
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=62c391757787efeda0c2fa92fb70f6670044ee69a70e207254066f64a2180b50ec605852b3efe62aa67398a0e0e105bb89d4a9cbab11388e3a674ae57cd63b0f&CHRESPONSE=d255123667d349cb54a1b67987143ccc332f27e3
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=13edca3e|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=13edca3e|F0-6E-0B-BD-A2-D6
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|3477ms
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=13edca3e|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|314ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/portal/iserver/auth/status
+-> GET /v1/api/iserver/accounts,200|244ms
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|175ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2319ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2204ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1265ms
+-> POST /v1/portal/iserver/secdef/search
+<- 500 POST /v1/portal/iserver/secdef/search
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1099ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1481ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1347ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1180ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1038ms
+-> request: /sso/ping
+-> GET /sso/ping,200|772ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|356ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|994ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|797ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|3562ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|6124ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1532ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|956ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2180ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1217ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1982ms
+-> request: /sso/ping
+-> GET /sso/ping,200|1167ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|224ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1563ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2629ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2097ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|672ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2274ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1270ms
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614118100852
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614118100852
+-> GET /stylesheet/web/switchery.min.css
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+-> POST /sso/Authenticator;jsessionid=E2DAF0C4E6656F716C3848E0C5BECE2A.ny5wwwdamsso1?88796
+<- 200 POST /sso/Authenticator;jsessionid=E2DAF0C4E6656F716C3848E0C5BECE2A.ny5wwwdamsso1?88796
+-> POST /sso/Authenticator;jsessionid=E2DAF0C4E6656F716C3848E0C5BECE2A.ny5wwwdamsso1?58515
+<- 200 POST /sso/Authenticator;jsessionid=E2DAF0C4E6656F716C3848E0C5BECE2A.ny5wwwdamsso1?58515
+-> POST /sso/Authenticator;jsessionid=E2DAF0C4E6656F716C3848E0C5BECE2A.ny5wwwdamsso1?58764
+<- 200 POST /sso/Authenticator;jsessionid=E2DAF0C4E6656F716C3848E0C5BECE2A.ny5wwwdamsso1?58764
+-> POST /sso/Dispatcher;jsessionid=E2DAF0C4E6656F716C3848E0C5BECE2A.ny5wwwdamsso1
+<- 200 POST /sso/Dispatcher;jsessionid=E2DAF0C4E6656F716C3848E0C5BECE2A.ny5wwwdamsso1
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /sso/Templates/otp-responsive.css?1614118127626
+-> GET /stylesheet/web/login.css
+-> GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /sso/CombineFiles
+<- 200 GET /sso/Templates/otp-responsive.css?1614118127626
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> POST /sso/Authenticator?2689
+<- 200 POST /sso/Authenticator?2689
+-> POST /sso/Authenticator?48157
+<- 200 POST /sso/Authenticator?48157
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /v1/api/sso/validate?gw=1,200|626ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|843ms
+-> GET /v1/api/one/user,200|753ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=698773de4bcf6cb940f05c02b305a96986ea7261b26e39272975fec23a8592b34e9f131125dcad7863cf4ccae914371d0f6019b56392803cb0cc01dad4860306&CHRESPONSE=a4f821a4d57942f254a5db3ddd7d302bd5cc7bfb
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=698773de4bcf6cb940f05c02b305a96986ea7261b26e39272975fec23a8592b34e9f131125dcad7863cf4ccae914371d0f6019b56392803cb0cc01dad4860306&CHRESPONSE=a4f821a4d57942f254a5db3ddd7d302bd5cc7bfb
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=36166344|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=36166344|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=36166344|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|220ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|187ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C85
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|344ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C85
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C85
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2588ms
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1614118284421
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614118284421
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/switchery.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /sso/CombineFiles
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> POST /sso/Authenticator;jsessionid=907C60045FB660C50CEC7CFD86F295B7.ny5wwwdamsso1?74373
+<- 200 POST /sso/Authenticator;jsessionid=907C60045FB660C50CEC7CFD86F295B7.ny5wwwdamsso1?74373
+-> POST /sso/Authenticator;jsessionid=907C60045FB660C50CEC7CFD86F295B7.ny5wwwdamsso1?54076
+<- 200 POST /sso/Authenticator;jsessionid=907C60045FB660C50CEC7CFD86F295B7.ny5wwwdamsso1?54076
+-> POST /sso/Dispatcher;jsessionid=907C60045FB660C50CEC7CFD86F295B7.ny5wwwdamsso1
+<- 200 POST /sso/Dispatcher;jsessionid=907C60045FB660C50CEC7CFD86F295B7.ny5wwwdamsso1
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /sso/Templates/otp-responsive.css?1614118315329
+<- 200 GET /sso/Templates/otp-responsive.css?1614118315329
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/login.css
+-> POST /sso/Authenticator?75607
+<- 200 POST /sso/Authenticator?75607
+-> POST /sso/Authenticator?822
+<- 200 POST /sso/Authenticator?822
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|559ms
+-> GET /v1/api/sso/validate?gw=1,200|756ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|171ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=83a33ab72946455fd05adfd65f0a0ca26fce4157392fa8dce980a2fdfe08b83a8d2ff02ff66fc9e2dc3e9fa89c8e8506d08e02f88d3045c2d1e9eb927494a485&CHRESPONSE=1805556d2068569f991bea47cefd9eadfc38c4f9
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=83a33ab72946455fd05adfd65f0a0ca26fce4157392fa8dce980a2fdfe08b83a8d2ff02ff66fc9e2dc3e9fa89c8e8506d08e02f88d3045c2d1e9eb927494a485&CHRESPONSE=1805556d2068569f991bea47cefd9eadfc38c4f9
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=0ef8d6f7|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=0ef8d6f7|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=0ef8d6f7|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|229ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|220ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C85
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1215ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C85
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C85
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|109ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|3167ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|717ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2286ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|715ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1455ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|832ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|840ms
+-> request: /sso/ping
+-> GET /sso/ping,200|1298ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|250ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|955ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|667ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|805ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1218ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1653ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|838ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1015ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|867ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1412ms
+-> request: /sso/ping
+-> GET /sso/ping,200|851ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|210ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|166ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C85
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C85
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C85
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1007ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1142ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2025ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|901ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1932ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|870ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1323ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1871ms
+-> request: /sso/ping
+-> GET /sso/ping,200|977ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1218ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2102ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|971ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1147ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> POST /v1/portal/iserver/account/DU2971300/order
+<- 200 POST /v1/portal/iserver/account/DU2971300/order
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1040ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> POST /v1/portal/iserver/account/DU2971300/order
+<- 200 POST /v1/portal/iserver/account/DU2971300/order
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> POST /v1/portal/iserver/account/DU2971300/order
+<- 200 POST /v1/portal/iserver/account/DU2971300/order
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1202ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> POST /v1/portal/iserver/account/DU2971300/order
+<- 200 POST /v1/portal/iserver/account/DU2971300/order
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1483ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|3875ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1062ms
+-> request: /v1/api/tickle
+-> POST /v1/portal/iserver/account/DU2971300/order
+-> GET /v1/api/tickle,200|1589ms
+<- 200 POST /v1/portal/iserver/account/DU2971300/order
+-> request: /sso/ping
+-> GET /sso/ping,200|1964ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|504ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1003ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|798ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2317ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1182ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|920ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|812ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1105ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|690ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1408ms
+-> request: /sso/ping
+-> GET /sso/ping,200|671ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|125ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1316ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|839ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1052ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1065ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1895ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1179ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2056ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1236ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1345ms
+-> request: /sso/ping
+-> GET /sso/ping,200|2146ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|233ms
+-> POST /v1/portal/logout
+<- 200 POST /v1/portal/logout
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1614120537546
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614120537546
+-> GET /scripts/common/js/2015/jquery.min.js
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+uri /images/2015/btn-app-google.png failed
+io.vertx.core.VertxException: Connection was closed
+	at io.vertx.core.http.impl.ClientConnection.handleClosed(ClientConnection.java:406) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:134) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:420) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:281) ~[netty-codec-http-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:223) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.channelInactive(SslHandler.java:978) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:763) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+-> POST /sso/Authenticator;jsessionid=7D80346E2B865F1331D9C29AE4F8EA52.ny5wwwdamsso2?86256
+<- 200 POST /sso/Authenticator;jsessionid=7D80346E2B865F1331D9C29AE4F8EA52.ny5wwwdamsso2?86256
+-> POST /sso/Authenticator;jsessionid=7D80346E2B865F1331D9C29AE4F8EA52.ny5wwwdamsso2?90254
+<- 200 POST /sso/Authenticator;jsessionid=7D80346E2B865F1331D9C29AE4F8EA52.ny5wwwdamsso2?90254
+-> POST /sso/Dispatcher;jsessionid=7D80346E2B865F1331D9C29AE4F8EA52.ny5wwwdamsso2
+<- 302 POST /sso/Dispatcher;jsessionid=7D80346E2B865F1331D9C29AE4F8EA52.ny5wwwdamsso2
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|514ms
+-> GET /v1/api/sso/validate?gw=1,200|577ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=68f396cdea14a212c8ade0bcd460c65bb00a045c789313df8f1649b70def4b145ee2b4d42f741d53261659a79babe2f7b87befdb80eadef17c9b80d44ff2a6ba&CHRESPONSE=1a9852ee42bfe0f59a117357141a5fd383772531
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=68f396cdea14a212c8ade0bcd460c65bb00a045c789313df8f1649b70def4b145ee2b4d42f741d53261659a79babe2f7b87befdb80eadef17c9b80d44ff2a6ba&CHRESPONSE=1a9852ee42bfe0f59a117357141a5fd383772531
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=328923ea|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=328923ea|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=328923ea|F0-6E-0B-BD-A2-D6 0
+-> GET /v1/api/one/user,200|2540ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|237ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|225ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|250ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|401ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+uri /v1/portal/iserver/account/orders failed
+io.vertx.core.VertxException: Connection was closed
+	at io.vertx.core.http.impl.ClientConnection.handleClosed(ClientConnection.java:406) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:134) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:420) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:281) ~[netty-codec-http-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:223) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.channelInactive(SslHandler.java:978) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:763) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|820ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1225ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1004ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|679ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2023ms
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1614120796366
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /sso/Templates/otp-responsive.css?1614120796366
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/switchery.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> POST /sso/Authenticator;jsessionid=1CF269D479161E032862019A5335D963.ny5wwwdamsso1?91480
+<- 200 POST /sso/Authenticator;jsessionid=1CF269D479161E032862019A5335D963.ny5wwwdamsso1?91480
+-> POST /sso/Authenticator;jsessionid=1CF269D479161E032862019A5335D963.ny5wwwdamsso1?39966
+<- 200 POST /sso/Authenticator;jsessionid=1CF269D479161E032862019A5335D963.ny5wwwdamsso1?39966
+-> POST /sso/Dispatcher;jsessionid=1CF269D479161E032862019A5335D963.ny5wwwdamsso1
+<- 302 POST /sso/Dispatcher;jsessionid=1CF269D479161E032862019A5335D963.ny5wwwdamsso1
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /v1/api/sso/validate?gw=1,200|382ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|178ms
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|783ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=58467ae318e10fe99fa671fd4868e44af5180c379651275bc225f35fd492ef39f65bf0cec6a6bbbf7b85de2c791761ff95215d72c10f1f3474fd4264b533c364&CHRESPONSE=d993f8d3215edaa145cc448c1f27a0dca043c346
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=58467ae318e10fe99fa671fd4868e44af5180c379651275bc225f35fd492ef39f65bf0cec6a6bbbf7b85de2c791761ff95215d72c10f1f3474fd4264b533c364&CHRESPONSE=d993f8d3215edaa145cc448c1f27a0dca043c346
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=062ec43f|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=062ec43f|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=062ec43f|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|113ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|126ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C85
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|3773ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|588ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|140ms
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C85
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C85
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|2231ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|633ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|925ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/DU2971300/ledger
+<- 200 GET /v1/portal/portfolio/DU2971300/ledger
+-> GET /v1/portal/portfolio/DU2971300/positions/0
+<- 200 GET /v1/portal/portfolio/DU2971300/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C85
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|191ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C85
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C85
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C85
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|5711ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|582ms
+-> request: /sso/ping
+-> GET /sso/ping,200|920ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|695ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|561ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|639ms

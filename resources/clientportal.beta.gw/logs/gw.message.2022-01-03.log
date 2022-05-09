@@ -1,0 +1,75 @@
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /sso/Templates/otp-responsive.css?1641233764205
+-> GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1641233764205
+-> GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js
+<- 200 GET /scripts/common/js/jquery-3.4.1/jquery.min.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+-> GET /scripts/common/js/switchery/switchery.min.js
+<- 200 GET /scripts/common/js/switchery/switchery.min.js
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck.min.js
+-> GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+-> GET /scripts/common/js/switchery/switchery-init.js
+-> GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+<- 200 GET /scripts/common/js/switchery/switchery-init.js
+<- 200 GET /scripts/common/js/icheck-1.0.2/icheck-init.js
+-> GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js
+<- 200 GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js
+-> GET /sso/images/2fa.png
+<- 200 GET /sso/images/2fa.png
+<- 200 GET /sso/CombineFiles
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/web/favicons/home-screen-icon-128x128.png
+<- 200 GET /images/web/favicons/home-screen-icon-128x128.png
+-> POST /sso/Authenticator;jsessionid=10CD068FABE013E3CCA2D8B119EA5384.ny5wwwdam2-internet?25753
+<- 200 POST /sso/Authenticator;jsessionid=10CD068FABE013E3CCA2D8B119EA5384.ny5wwwdam2-internet?25753
+-> POST /sso/Authenticator;jsessionid=10CD068FABE013E3CCA2D8B119EA5384.ny5wwwdam2-internet?35443
+<- 200 POST /sso/Authenticator;jsessionid=10CD068FABE013E3CCA2D8B119EA5384.ny5wwwdam2-internet?35443
+-> POST /sso/Dispatcher;jsessionid=10CD068FABE013E3CCA2D8B119EA5384.ny5wwwdam2-internet
+<- 302 POST /sso/Dispatcher;jsessionid=10CD068FABE013E3CCA2D8B119EA5384.ny5wwwdam2-internet
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|227ms
+-> GET /v1/api/sso/validate?gw=1,200|442ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=5baf5483164cc7c325449223e7bcb07a19baa8952db4a46875ae95bc396414130f47722ee16d667aab40dae87da047d301a0423eec61101f26c564da2341f648&CHRESPONSE=b897658f145c0967fcd7d64d5e1df27491ad2ed8
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=5baf5483164cc7c325449223e7bcb07a19baa8952db4a46875ae95bc396414130f47722ee16d667aab40dae87da047d301a0423eec61101f26c564da2341f648&CHRESPONSE=b897658f145c0967fcd7d64d5e1df27491ad2ed8
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=278d2aa8|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=278d2aa8|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=278d2aa8|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|162ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> GET /v1/api/one/user,200|4058ms
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|440ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|214ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|169ms
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|151ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|137ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|119ms
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|119ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|189ms

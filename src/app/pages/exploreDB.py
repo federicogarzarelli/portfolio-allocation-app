@@ -1,6 +1,7 @@
 import streamlit as st
 import os, sys
-from pages.home import session_state
+# from pages.home import session_state
+import pages.home
 from datetime import date, datetime
 from GLOBAL_VARS import *
 from PortfolioDB import PortfolioDB
@@ -12,7 +13,7 @@ import pandas as pd
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # import ../db.py
-import SessionState
+# import SessionState
 
 def app():
     st.title('Explore Prices DB')
@@ -32,30 +33,30 @@ def app():
 
     with st.form("assets_input_params"):
 
-        col1, col2 = st.beta_columns(2)
-        session_state.assets_startdate = col1.date_input('start date', value=session_state.assets_startdate,
+        col1, col2 = st.columns(2)
+        st.session_state.assets_startdate = col1.date_input('start date', value=st.session_state.assets_startdate,
                                                         min_value=datetime.strptime('1900-01-01', '%Y-%m-%d'),
-                                                        max_value=date.today(), key='assets_startdate',
+                                                        max_value=date.today(), key='assets_startdate_box',
                                                         help='start date for the asset chart')
-        session_state.assets_enddate = col2.date_input('end date', value=session_state.assets_enddate,
+        st.session_state.assets_enddate = col2.date_input('end date', value=st.session_state.assets_enddate,
                                                       min_value=datetime.strptime('1900-01-01', '%Y-%m-%d'),
-                                                      max_value=date.today(), key='assets_enddate',
+                                                      max_value=date.today(), key='assets_enddate_box',
                                                       help='end date for the asset chart')
 
-        session_state.assets_multiselect = st.multiselect("Select the assets", options=data['ticker'],
-                                                          default=None, key='assets_multiselect',
+        st.session_state.assets_multiselect = st.multiselect("Select the assets", options=data['ticker'],
+                                                          default=None, key='assets_multiselect_box',
                                                           help="Select the assets to display")
 
         launch_assets_btn = st.form_submit_button("check assets")
 
     if launch_assets_btn:
-        assets = session_state.assets_multiselect
+        assets = st.session_state.assets_multiselect
         assets_str = '","'.join([str(elem) for elem in assets])
         assets_str = '"' + assets_str + '"'
         sqlQry="SELECT A.date, A.ticker, A.close as price, B.frequency, B.name, B.asset_class, B.treatment_type FROM FACT_HISTPRICES AS A" \
                " INNER JOIN DIM_STOCKS AS B ON A.ticker = B.ticker WHERE A.ticker IN (" + \
-               assets_str + ") and A.date BETWEEN '" + session_state.assets_startdate.strftime("%Y-%m-%d") + \
-               "' and '" + session_state.assets_enddate.strftime("%Y-%m-%d") + "'"
+               assets_str + ") and A.date BETWEEN '" + st.session_state.assets_startdate.strftime("%Y-%m-%d") + \
+               "' and '" + st.session_state.assets_enddate.strftime("%Y-%m-%d") + "'"
 
         # Plot the price
         asset_data = db.readDatabase(sqlQry)

@@ -1,0 +1,179 @@
+00:00:15.049 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|604ms
+00:00:15.060 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":570104,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:00:45.061 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|616ms
+00:00:45.062 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":540074,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:01:15.067 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|610ms
+00:01:15.067 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":510081,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:01:46.249 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|1794ms
+00:01:46.251 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":479895,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:02:14.938 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|490ms
+00:02:14.938 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":450219,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:02:45.113 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|655ms
+00:02:45.113 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":420025,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:03:11.147 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|424ms
+00:03:11.148 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+00:03:14.602 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|149ms
+00:03:14.602 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":390565,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:03:45.085 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|630ms
+00:03:45.086 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":360055,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:04:14.871 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|422ms
+00:04:14.871 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":330270,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:04:45.178 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|726ms
+00:04:45.178 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":299971,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:05:16.030 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|1572ms
+00:05:16.031 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":269151,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:05:45.204 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|753ms
+00:05:45.204 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":239979,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:06:15.080 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|632ms
+00:06:15.080 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":210123,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:06:45.223 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|775ms
+00:06:45.223 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":179920,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:07:14.905 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|451ms
+00:07:14.905 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":150244,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:07:45.059 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|609ms
+00:07:45.059 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":120085,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:08:12.503 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|1782ms
+00:08:12.504 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+00:08:14.552 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|108ms
+00:08:14.553 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":90591,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:08:45.264 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|807ms
+00:08:45.264 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":59915,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:09:14.911 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|461ms
+00:09:14.911 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":30235,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:09:45.468 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|1023ms
+00:09:45.469 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":0,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:10:14.887 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|430ms
+00:10:14.887 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":570609,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:10:45.648 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|1193ms
+00:10:45.649 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":539898,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:11:15.020 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|561ms
+00:11:15.021 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":510543,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:11:45.068 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|612ms
+00:11:45.068 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":480431,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:12:16.356 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|1898ms
+00:12:16.356 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":449168,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:12:45.078 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|619ms
+00:12:45.078 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":420425,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:13:11.336 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|611ms
+00:13:11.337 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+00:13:14.566 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|117ms
+00:13:14.566 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":390932,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:13:45.201 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|754ms
+00:13:45.202 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":360312,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:14:14.979 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|523ms
+00:14:14.980 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":330529,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:14:45.043 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|588ms
+00:14:45.043 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":300458,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:15:14.932 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|477ms
+00:15:14.933 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":270575,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:15:45.066 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|614ms
+00:15:45.067 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":240435,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:16:14.943 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|487ms
+00:16:14.943 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":210561,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:16:45.029 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|572ms
+00:16:45.030 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":180472,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:17:14.876 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|431ms
+00:17:14.876 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":150627,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:17:48.337 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|3884ms
+00:17:48.337 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":117201,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:18:11.174 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|457ms
+00:18:11.174 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+00:18:14.641 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|186ms
+00:18:14.641 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":90912,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:18:45.063 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|611ms
+00:18:45.063 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":60443,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:19:15.031 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|581ms
+00:19:15.031 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":30474,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:19:45.016 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|562ms
+00:19:45.016 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":489,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:20:15.054 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|600ms
+00:20:15.054 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":0,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:20:45.034 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|577ms
+00:20:45.035 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":570059,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:21:15.398 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|951ms
+00:21:15.398 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":539696,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:21:45.143 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|698ms
+00:21:45.143 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":509957,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:22:16.021 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|1576ms
+00:22:16.022 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":480103,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:22:45.083 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|627ms
+00:22:45.083 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":450014,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:23:11.286 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|562ms
+00:23:11.286 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+00:23:14.659 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|214ms
+00:23:14.659 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":420499,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:23:45.178 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|726ms
+00:23:45.178 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":389951,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:24:14.941 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|492ms
+00:24:14.942 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":360159,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:24:45.286 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|831ms
+00:24:45.288 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":329878,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:25:18.444 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|3988ms
+00:25:18.444 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":296784,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:25:45.166 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|714ms
+00:25:45.167 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":269939,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:26:14.877 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|428ms
+00:26:14.878 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":240223,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:26:45.267 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|813ms
+00:26:45.267 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":209883,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:27:14.977 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|526ms
+00:27:14.977 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":180124,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:27:45.159 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|711ms
+00:27:45.160 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":150001,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:28:11.213 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|494ms
+00:28:11.214 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+00:28:14.642 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|192ms
+00:28:14.642 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":120510,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:28:45.019 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|575ms
+00:28:45.019 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":90082,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:29:14.942 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|485ms
+00:29:14.943 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":60161,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:29:45.092 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|647ms
+00:29:45.092 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":30010,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:30:14.984 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|536ms
+00:30:15.011 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":118,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:30:45.097 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|640ms
+00:30:45.097 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":0,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:31:14.928 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|477ms
+00:31:14.928 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":570211,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:31:45.257 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|805ms
+00:31:45.257 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":539882,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:32:15.061 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|615ms
+00:32:15.062 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":510080,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:32:45.109 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|664ms
+00:32:45.110 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":480043,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:33:11.195 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|480ms
+00:33:11.195 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+00:33:14.635 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|186ms
+00:33:14.635 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":450572,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:33:45.140 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|685ms
+00:33:45.140 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":420000,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:34:14.915 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|464ms
+00:34:14.915 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":390227,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:34:45.305 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|848ms
+00:34:45.305 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":359842,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:35:15.086 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|629ms
+00:35:15.086 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":330062,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:35:48.561 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|4110ms
+00:35:48.561 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":296582,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:36:14.922 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|469ms
+00:36:14.922 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":270239,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:36:45.402 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|956ms
+00:36:45.402 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":239793,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:37:15.078 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|625ms
+00:37:15.078 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":210069,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:37:45.184 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|739ms
+00:37:45.184 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":179961,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:38:11.198 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|474ms
+00:38:11.199 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+00:38:14.582 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|128ms
+00:38:14.582 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":150574,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:38:45.109 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|657ms
+00:38:45.109 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":120097,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:39:14.971 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|524ms
+00:39:14.971 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":90175,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:39:45.121 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|675ms
+00:39:45.122 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":60025,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:40:14.920 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|474ms
+00:40:14.920 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"9fab28066e1174173969053820c5af3d","ssoExpires":30227,"collission":false,"userId":55063530,"iserver":{"tickle":true,"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"98:F2:B3:23:CF:10"}}}
+00:40:36.803 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/portal/logout,200|483ms

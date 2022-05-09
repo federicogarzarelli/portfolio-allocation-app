@@ -1,9 +1,10 @@
 import streamlit as st
 from app.multiapp import MultiApp
-from app.pages import home, settings, exploreDB, signals # import your app modules here
+from app.pages import home, settings, exploreDB, signals, IBKR, IBKR_connection # import your app modules here
 from PIL import Image
 import utils
 import os, sys
+import resources
 
 app = MultiApp()
 
@@ -20,15 +21,19 @@ st.image(logo)
 # utils.delete_output_first()
 
 st.markdown("""
-# Backtest engine
-This app backtests portfolio allocation strategies using historical data.   
+# Backtest and live trading
+This app backtests portfolio allocation strategies using historical data; provides live market signals for some strategies and 
+allows to automatically trade the strats.   
 """)
 
 # Add all your application here
-app.add_app("Home", home.app)
-app.add_app("Advanced Settings", settings.app)
+app.add_app("Backtest", home.app)
+app.add_app("Backtest Advanced Settings", settings.app)
 app.add_app("Explore Prices DB", exploreDB.app)
 app.add_app("Market signals", signals.app)
+app.add_app("IBKR connection", IBKR_connection.app)
+app.add_app("IBKR automation", IBKR.app)
+
 # The main app
 app.run()
 

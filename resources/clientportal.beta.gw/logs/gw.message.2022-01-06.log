@@ -1,0 +1,16 @@
+-> POST /v1/portal/iserver/auth/status
+<- 401 POST /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 401 POST /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 401 POST /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 401 POST /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 401 POST /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 401 POST /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 401 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/auth/status
+<- 401 GET /v1/portal/iserver/auth/status

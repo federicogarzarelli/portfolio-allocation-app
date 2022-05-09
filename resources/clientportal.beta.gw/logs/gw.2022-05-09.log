@@ -1,0 +1,24 @@
+16:48:38.480 INFO  main GatewayStart         : config conf.yaml !!ibgroup.web.core.clientportal.gw.Config
+authDelay: 3000
+cors: {origin.allowed: '*', allowCredentials: false}
+ip2loc: US
+ips:
+  allow: [192.*, 131.216.*, 127.0.0.1]
+  deny: [212.90.324.10]
+listenPort: 5000
+listenSsl: true
+portalBaseURL: ''
+proxyRemoteHost: https://api.ibkr.com
+proxyRemoteSsl: true
+sslCert: vertx.jks
+sslPwd: mywebapi
+ssoPing: 5
+svcEnvironment: v1
+tst: false
+twsBaseURL: /tws.proxy
+webApps:
+- {cache: true, index: index.html, listing: false, name: demo, proxy: ''}
+
+16:48:38.851 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     :  -> mount demo on /demo
+16:48:38.894 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : version: f0ac9e2075f850a3d6951fb9a769c9b16fa4df1f Tue, 18 Aug 2020 15:26:30 -0400
+16:48:38.898 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : Java Version: 1.8.0_282

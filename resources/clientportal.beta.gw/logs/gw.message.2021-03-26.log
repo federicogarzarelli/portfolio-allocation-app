@@ -1,0 +1,1603 @@
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1616774302958
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1616774302958
+-> GET /scripts/common/js/switchery.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /sso/CombineFiles
+-> GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Regular.woff2
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /images/2015/template/home-screen-icon-128x128.png
+<- 200 GET /images/2015/template/home-screen-icon-128x128.png
+-> POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?82186
+<- 200 POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?82186
+-> POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?79028
+<- 200 POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?79028
+-> POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?60664
+<- 200 POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?60664
+-> POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?62325
+<- 200 POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?62325
+-> POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?91664
+<- 200 POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?91664
+-> POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?3687
+<- 200 POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?3687
+-> POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?77691
+<- 200 POST /sso/Authenticator;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet?77691
+-> POST /sso/Dispatcher;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet
+<- 302 POST /sso/Dispatcher;jsessionid=63EBCBE67CD49B70CF96FFD82EC255FF.ny5wwwdam2-internet
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|406ms
+-> GET /v1/api/sso/validate?gw=1,200|486ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|193ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=f84ab65aff8f52fe58a4202b42f47c8b9c0e4b6679c7f0108adf33a0f0185eef4bdf8d0d155f5a2e47ec7f010baef37c524d49a8b08bbd4523d90f60723364c&CHRESPONSE=9ccf4d9c95088f1601c88dfcd7a8268f21b06fb1
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=f84ab65aff8f52fe58a4202b42f47c8b9c0e4b6679c7f0108adf33a0f0185eef4bdf8d0d155f5a2e47ec7f010baef37c524d49a8b08bbd4523d90f60723364c&CHRESPONSE=9ccf4d9c95088f1601c88dfcd7a8268f21b06fb1
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=1d88822a|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=1d88822a|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=1d88822a|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|120ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|187ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|139ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|112ms
+-> GET /v1/portal/iserver/auth/status
+uri /v1/portal/iserver/auth/status failed
+io.vertx.core.VertxException: Connection was closed
+	at io.vertx.core.http.impl.ClientConnection.handleClosed(ClientConnection.java:406) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:134) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:420) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:281) ~[netty-codec-http-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:223) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.channelInactive(SslHandler.java:978) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:763) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|697ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|559ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|654ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|497ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|541ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|532ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|570ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|638ms
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1616774619688
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+-> GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /stylesheet/web/login.css
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1616774619688
+-> GET /scripts/common/js/switchery.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?87416
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?87416
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?81803
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?81803
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?47572
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?47572
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?40737
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?40737
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?90649
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?90649
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?62540
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?62540
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?97491
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?97491
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?64581
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?64581
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?32254
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?32254
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?27310
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?27310
+-> GET /v1/portal/iserver/auth/status
+<- 401 GET /v1/portal/iserver/auth/status
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?38211
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?38211
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?51330
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?51330
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?47121
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?47121
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?27289
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?27289
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?27219
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?27219
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?97607
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?97607
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?40494
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?40494
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?61993
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?61993
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?24366
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?24366
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?23469
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?23469
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?49622
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?49622
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?16137
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?16137
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?64123
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?64123
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?76480
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?76480
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?69443
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?69443
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?15576
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?15576
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?78858
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?78858
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?59470
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?59470
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?73102
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?73102
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?2585
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?2585
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?81130
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?81130
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?34819
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?34819
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?1319
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?1319
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?93679
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?93679
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?5850
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?5850
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?27871
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?27871
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?24940
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?24940
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?1155
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?1155
+-> POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?27727
+<- 200 POST /sso/Authenticator;jsessionid=98809BFBE2717985D30F5365E26162CD.ny5wwwdam2-internet?27727
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1616776028846
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1616776028846
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /images/2015/template/home-screen-icon-128x128.png
+<- 200 GET /images/2015/template/home-screen-icon-128x128.png
+-> POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?37171
+<- 200 POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?37171
+-> POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?82335
+<- 200 POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?82335
+-> POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?33391
+<- 200 POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?33391
+-> POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?76663
+<- 200 POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?76663
+-> POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?77528
+<- 200 POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?77528
+-> POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?16033
+<- 200 POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?16033
+-> POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?62284
+<- 200 POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?62284
+-> POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?72671
+<- 200 POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?72671
+-> POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?88993
+<- 200 POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?88993
+-> POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?17008
+<- 200 POST /sso/Authenticator;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet?17008
+-> POST /sso/Dispatcher;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet
+<- 302 POST /sso/Dispatcher;jsessionid=D276B8F50B83382466E328047C47E122.ny5wwwdam1-internet
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|388ms
+-> GET /v1/api/sso/validate?gw=1,200|461ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|114ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=8a5c954a4fe112ce495bceea1acaecbfe2b9a0c6a718c024094f55690114629806474a888c3f27c5c365b2b2ebacb6eeb8346758367914b313539f2c4f39552d&CHRESPONSE=a9bd13aee31cd8b3686d69b0179bc31c53fc8223
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=8a5c954a4fe112ce495bceea1acaecbfe2b9a0c6a718c024094f55690114629806474a888c3f27c5c365b2b2ebacb6eeb8346758367914b313539f2c4f39552d&CHRESPONSE=a9bd13aee31cd8b3686d69b0179bc31c53fc8223
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=26e597b9|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=26e597b9|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=26e597b9|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|120ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|183ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|137ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|121ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|507ms
+-> POST /v1/portal/logout
+<- 200 POST /v1/portal/logout
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1616776166693
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1616776166693
+-> GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+-> POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?95028
+<- 200 POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?95028
+-> POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?15785
+<- 200 POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?15785
+-> POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?49538
+<- 200 POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?49538
+-> POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?79285
+<- 200 POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?79285
+-> POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?63850
+<- 200 POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?63850
+-> POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?87036
+<- 200 POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?87036
+-> POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?66257
+<- 200 POST /sso/Authenticator;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet?66257
+-> POST /sso/Dispatcher;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet
+<- 302 POST /sso/Dispatcher;jsessionid=C24797485DDD44C44162FA87D1151F37.ny5wwwdam2-internet
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|396ms
+-> GET /v1/api/sso/validate?gw=1,200|454ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|143ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=303dad0a43cfd866f027f273718e29c5bec71fe3756ed33ac7459638ec05b018fbc71b4d148141f756e0f6f35e0d5de89733c78c0b2f7118111decdc2d14830e&CHRESPONSE=a5b1841ff05751b2b36813dc76ee67da5bd09fa2
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=303dad0a43cfd866f027f273718e29c5bec71fe3756ed33ac7459638ec05b018fbc71b4d148141f756e0f6f35e0d5de89733c78c0b2f7118111decdc2d14830e&CHRESPONSE=a5b1841ff05751b2b36813dc76ee67da5bd09fa2
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=197c57c6|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=197c57c6|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=197c57c6|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|146ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|182ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|131ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|112ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/U4804550/ledger
+<- 200 GET /v1/portal/portfolio/U4804550/ledger
+-> GET /v1/portal/portfolio/U4804550/positions/0
+<- 200 GET /v1/portal/portfolio/U4804550/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|114ms
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /sso/Templates/otp-responsive.css?1616776539681
+<- 200 GET /sso/Templates/otp-responsive.css?1616776539681
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?70590
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?70590
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?4699
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?4699
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?8422
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?8422
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?58330
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?58330
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?23830
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?23830
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?41077
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?41077
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?34540
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?34540
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?48951
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?48951
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?31798
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?31798
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?78292
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?78292
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?99153
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?99153
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?68473
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?68473
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?45769
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?45769
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?61887
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?61887
+-> GET /v1/portal/iserver/auth/status
+<- 401 GET /v1/portal/iserver/auth/status
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?55894
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?55894
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?98435
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?98435
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?60291
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?60291
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?52708
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?52708
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?93027
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?93027
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?23822
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?23822
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?17383
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?17383
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?64293
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?64293
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?69528
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?69528
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?81447
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?81447
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?56520
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?56520
+-> GET /v1/portal/iserver/auth/status
+<- 401 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 401 POST /v1/portal/iserver/auth/status
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?78793
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?78793
+-> POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?46780
+<- 200 POST /sso/Authenticator;jsessionid=35402246DAA8B7C4F015D6B39C6725BD.ny5wwwdam2-internet?46780
+-> POST /v1/portal/logout
+<- 401 POST /v1/portal/logout
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1616776718136
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery.min.js
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /sso/Templates/otp-responsive.css?1616776718136
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+-> POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?40037
+<- 200 POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?40037
+-> POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?64028
+<- 200 POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?64028
+-> POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?72393
+<- 200 POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?72393
+-> POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?12242
+<- 200 POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?12242
+-> POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?82638
+<- 200 POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?82638
+-> POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?97150
+<- 200 POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?97150
+-> POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?15077
+<- 200 POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?15077
+-> POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?32632
+<- 200 POST /sso/Authenticator;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet?32632
+-> POST /sso/Dispatcher;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet
+<- 302 POST /sso/Dispatcher;jsessionid=5FA6E6631547CD194EA30F7125A2CF4F.ny5wwwdam1-internet
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|454ms
+-> GET /v1/api/sso/validate?gw=1,200|496ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|225ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=346513b0f4f29e9d94d8d656c3e8660f66906b31082645c486a3a84691121adde9a9e37e56ae82a91dfdc749fd7a83109b7ff812ad54d541273b20c8f282c04f&CHRESPONSE=01dc72c9fc8ab7ef0e07c7868d95ca406504fbd3
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=346513b0f4f29e9d94d8d656c3e8660f66906b31082645c486a3a84691121adde9a9e37e56ae82a91dfdc749fd7a83109b7ff812ad54d541273b20c8f282c04f&CHRESPONSE=01dc72c9fc8ab7ef0e07c7868d95ca406504fbd3
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=3cfc88e3|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=3cfc88e3|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=3cfc88e3|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|161ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|1175ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|128ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|131ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/sso/validate
+<- 200 GET /v1/portal/sso/validate
+-> request: /v1/api/sso/validate?gw=1
+-> GET /v1/api/sso/validate?gw=1,200|117ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|537ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=8407594e00603198bd8c8a237c70508e79963572d0764981b9a7045fb22584578478d69a3b64b31c5006520ab1fe43216daff738d5d39c68addb748cfa160acc&CHRESPONSE=9c58465c0c204232bd4b6e8efc249a6a9418ce5b
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=8407594e00603198bd8c8a237c70508e79963572d0764981b9a7045fb22584578478d69a3b64b31c5006520ab1fe43216daff738d5d39c68addb748cfa160acc&CHRESPONSE=9c58465c0c204232bd4b6e8efc249a6a9418ce5b
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|127ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|199ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|142ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|117ms
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/U4804550/ledger
+<- 200 GET /v1/portal/portfolio/U4804550/ledger
+-> GET /v1/portal/portfolio/U4804550/positions/0
+<- 200 GET /v1/portal/portfolio/U4804550/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> request: /v1/api/tickle
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+-> GET /v1/api/tickle,200|180ms
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /sso/Templates/otp-responsive.css?1616777172543
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /sso/Templates/otp-responsive.css?1616777172543
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/login.css
+-> GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /stylesheet/web/login.css
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/switchery.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?20134
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?20134
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?19068
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?19068
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?77890
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?77890
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?45713
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?45713
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?78414
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?78414
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?44423
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?44423
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?41853
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?41853
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?8100
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?8100
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?18914
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?18914
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?84970
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?84970
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?37331
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?37331
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?18416
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?18416
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?69329
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?69329
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?13885
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?13885
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?83678
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?83678
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?49826
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?49826
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?52980
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?52980
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?39711
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?39711
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?12030
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?12030
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?78934
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?78934
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?19763
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?19763
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?12278
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?12278
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?84677
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?84677
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?71120
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?71120
+-> POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?28816
+<- 200 POST /sso/Authenticator;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet?28816
+-> POST /sso/Dispatcher;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet
+<- 200 POST /sso/Dispatcher;jsessionid=53F03630249427E0F30B15E089F13B96.ny5wwwdam2-internet
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1616777310127
+<- 200 GET /sso/Templates/otp-responsive.css?1616777310127
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> POST /sso/Authenticator?97719
+<- 200 POST /sso/Authenticator?97719
+-> POST /sso/Authenticator?93203
+<- 200 POST /sso/Authenticator?93203
+-> POST /sso/Authenticator?85275
+<- 200 POST /sso/Authenticator?85275
+-> POST /sso/Authenticator?11050
+<- 200 POST /sso/Authenticator?11050
+-> POST /sso/Authenticator?13160
+<- 200 POST /sso/Authenticator?13160
+-> POST /sso/Authenticator?11145
+<- 200 POST /sso/Authenticator?11145
+-> POST /sso/Authenticator?96097
+<- 200 POST /sso/Authenticator?96097
+-> POST /sso/Authenticator?62836
+<- 200 POST /sso/Authenticator?62836
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|363ms
+-> GET /v1/api/sso/validate?gw=1,200|401ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|213ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=8d841bbad751d2720016491a4d141fe556620d14a7eecf1109f62173e867a8e966db100542cd8bf22403df58c137d7a177eb68c422a2fb74ea7642863744aa30&CHRESPONSE=f418e835ee00c8da3bc6979a7948cdf69d9f5d9e
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=8d841bbad751d2720016491a4d141fe556620d14a7eecf1109f62173e867a8e966db100542cd8bf22403df58c137d7a177eb68c422a2fb74ea7642863744aa30&CHRESPONSE=f418e835ee00c8da3bc6979a7948cdf69d9f5d9e
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=1a3ce675|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=1a3ce675|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=1a3ce675|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|170ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|177ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|140ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|108ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+uri /v1/portal/iserver/accounts failed
+io.vertx.core.VertxException: Connection was closed
+	at io.vertx.core.http.impl.ClientConnection.handleClosed(ClientConnection.java:406) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:134) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:420) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:281) ~[netty-codec-http-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:223) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.channelInactive(SslHandler.java:978) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:763) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|610ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|503ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1530ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|598ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|670ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|694ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|592ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|591ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|498ms
+-> request: /sso/ping
+-> GET /sso/ping,200|463ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|110ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1059ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|586ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|1129ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|482ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|616ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|451ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|651ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|526ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|684ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 200 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> request: /sso/ping
+-> POST /v1/portal/logout
+-> GET /sso/ping,200|496ms
+<- 200 POST /v1/portal/logout
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1616777992391
+-> GET /stylesheet/web/login.css
+-> GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1616777992391
+-> GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?3122
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?3122
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?90337
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?90337
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?56141
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?56141
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?49403
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?49403
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?23273
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?23273
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?66459
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?66459
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?75846
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?75846
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?66086
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?66086
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?52743
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?52743
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?85448
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?85448
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?27960
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?27960
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?61228
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?61228
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?66931
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?66931
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?88576
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?88576
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?65066
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?65066
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?57640
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?57640
+-> POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?99497
+<- 200 POST /sso/Authenticator;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet?99497
+-> POST /sso/Dispatcher;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet
+<- 200 POST /sso/Dispatcher;jsessionid=10C150A7BA8F4DF3FC70929181E5A262.ny5wwwdam2-internet
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1616778075580
+-> GET /sso/CombineFiles
+<- 200 GET /sso/Templates/otp-responsive.css?1616778075580
+<- 200 GET /stylesheet/web/login.css
+<- 200 GET /sso/CombineFiles
+-> POST /sso/Authenticator?8327
+<- 200 POST /sso/Authenticator?8327
+-> POST /sso/Authenticator?87443
+<- 200 POST /sso/Authenticator?87443
+-> POST /sso/Authenticator?63725
+<- 200 POST /sso/Authenticator?63725
+-> POST /sso/Authenticator?45060
+<- 200 POST /sso/Authenticator?45060
+-> POST /sso/Authenticator?25884
+<- 200 POST /sso/Authenticator?25884
+-> POST /sso/Authenticator?98506
+<- 200 POST /sso/Authenticator?98506
+-> POST /sso/Authenticator?94368
+<- 200 POST /sso/Authenticator?94368
+-> POST /sso/Authenticator?26106
+<- 200 POST /sso/Authenticator?26106
+-> POST /sso/Dispatcher
+<- 302 POST /sso/Dispatcher
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|501ms
+-> GET /v1/api/sso/validate?gw=1,200|527ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=a53d053eb37d42ad60fbf6fd988b215bea7bd6f072c265d3d7ff8280812a6c5ff72177944f795eaf1f208040b86768edc36fbbc011a0ca4acc9366e68b0c1dbd&CHRESPONSE=acb5f5b25636e8db5eb46db44aa982d96066fcf9
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=a53d053eb37d42ad60fbf6fd988b215bea7bd6f072c265d3d7ff8280812a6c5ff72177944f795eaf1f208040b86768edc36fbbc011a0ca4acc9366e68b0c1dbd&CHRESPONSE=acb5f5b25636e8db5eb46db44aa982d96066fcf9
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=0b7be0ca|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=0b7be0ca|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=0b7be0ca|F0-6E-0B-BD-A2-D6 0
+-> GET /v1/api/one/user,200|2128ms
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|115ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|198ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|137ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|162ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/U4804550/ledger
+<- 200 GET /v1/portal/portfolio/U4804550/ledger
+-> GET /v1/portal/portfolio/U4804550/positions/0
+<- 200 GET /v1/portal/portfolio/U4804550/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|120ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> POST /v1/portal/iserver/account/U4804550/order
+<- 200 POST /v1/portal/iserver/account/U4804550/order
+-> POST /v1/portal/iserver/reply/93a59d89-5903-42cb-a5e0-f91a413efbbc
+<- 200 POST /v1/portal/iserver/reply/93a59d89-5903-42cb-a5e0-f91a413efbbc
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|107ms
+-> GET /v1/portal//iserver/contract/72065355/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/72065355/info-and-rules
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=72065355&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=72065355&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=72065355&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=72065355&since=0&fields=31%2C84%2C86
+-> GET /v1/portal//iserver/contract/72065355/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/72065355/info-and-rules
+-> GET /v1/portal//iserver/contract/72065355/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/72065355/info-and-rules
+-> GET /v1/portal//iserver/contract/416180812/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/416180812/info-and-rules
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=416180812&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=416180812&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=416180812&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=416180812&since=0&fields=31%2C84%2C86
+-> GET /v1/portal//iserver/contract/416180812/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/416180812/info-and-rules
+-> GET /v1/portal//iserver/contract/416180812/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/416180812/info-and-rules
+-> GET /v1/portal//iserver/contract/173505234/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/173505234/info-and-rules
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=173505234&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=173505234&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=173505234&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=173505234&since=0&fields=31%2C84%2C86
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|109ms
+-> GET /v1/portal//iserver/contract/173505234/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/173505234/info-and-rules
+-> GET /v1/portal//iserver/contract/173505234/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/173505234/info-and-rules
+-> GET /v1/portal//iserver/contract/42808840/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/42808840/info-and-rules
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=42808840&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=42808840&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=42808840&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=42808840&since=0&fields=31%2C84%2C86
+-> GET /v1/portal//iserver/contract/42808840/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/42808840/info-and-rules
+-> GET /v1/portal//iserver/contract/42808840/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/42808840/info-and-rules
+-> GET /v1/portal//iserver/contract/72065358/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/72065358/info-and-rules
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=72065358&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=72065358&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=72065358&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=72065358&since=0&fields=31%2C84%2C86
+-> GET /v1/portal//iserver/contract/72065358/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/72065358/info-and-rules
+-> GET /v1/portal//iserver/contract/72065358/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/72065358/info-and-rules
+-> GET /v1/portal//iserver/contract/416180809/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/416180809/info-and-rules
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|115ms
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=416180809&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=416180809&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=416180809&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=416180809&since=0&fields=31%2C84%2C86
+-> GET /v1/portal//iserver/contract/416180809/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/416180809/info-and-rules
+-> GET /v1/portal//iserver/contract/416180809/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/416180809/info-and-rules
+-> GET /v1/portal//iserver/contract/56347260/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/56347260/info-and-rules
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=56347260&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=56347260&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=56347260&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=56347260&since=0&fields=31%2C84%2C86
+-> GET /v1/portal//iserver/contract/56347260/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/56347260/info-and-rules
+-> GET /v1/portal//iserver/contract/56347260/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/56347260/info-and-rules
+-> GET /v1/portal//iserver/contract/39622933/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/39622933/info-and-rules
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=39622933&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=39622933&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=39622933&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=39622933&since=0&fields=31%2C84%2C86
+-> GET /v1/portal//iserver/contract/39622933/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/39622933/info-and-rules
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|176ms
+-> GET /v1/portal//iserver/contract/39622933/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/39622933/info-and-rules
+-> GET /v1/portal//iserver/contract/42808839/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/42808839/info-and-rules
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=42808839&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=42808839&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=42808839&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=42808839&since=0&fields=31%2C84%2C86
+-> GET /v1/portal//iserver/contract/42808839/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/42808839/info-and-rules
+-> GET /v1/portal//iserver/contract/42808839/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/42808839/info-and-rules
+-> GET /v1/portal//iserver/contract/52170893/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/52170893/info-and-rules
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=52170893&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=52170893&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=52170893&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=52170893&since=0&fields=31%2C84%2C86
+-> GET /v1/portal//iserver/contract/52170893/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/52170893/info-and-rules
+-> GET /v1/portal//iserver/contract/52170893/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/52170893/info-and-rules
+-> GET /v1/portal//iserver/contract/42808827/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/42808827/info-and-rules
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=42808827&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=42808827&since=0&fields=31%2C84%2C86
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|107ms
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=42808827&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=42808827&since=0&fields=31%2C84%2C86
+-> GET /v1/portal//iserver/contract/42808827/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/42808827/info-and-rules
+-> GET /v1/portal//iserver/contract/42808827/info-and-rules
+<- 200 GET /v1/portal//iserver/contract/42808827/info-and-rules
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|717ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|607ms
+-> POST /v1/portal/iserver/account/U4804550/order
+<- 200 POST /v1/portal/iserver/account/U4804550/order
+-> POST /v1/portal/iserver/reply/a776b9ce-0dfd-42ae-9dcf-5c99cd679502
+<- 200 POST /v1/portal/iserver/reply/a776b9ce-0dfd-42ae-9dcf-5c99cd679502
+-> POST /v1/portal/iserver/reply/a989365c-e256-449d-b6dd-55413eaa1e72
+<- 200 POST /v1/portal/iserver/reply/a989365c-e256-449d-b6dd-55413eaa1e72
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|482ms
+-> POST /v1/portal/logout
+<- 200 POST /v1/portal/logout
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/login.css
+-> GET /sso/Templates/otp-responsive.css?1616779760636
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /sso/Templates/otp-responsive.css?1616779760636
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+-> GET /scripts/common/js/switchery.min.js
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/switchery.min.js
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?12081
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?12081
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?21542
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?21542
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?51905
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?51905
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?10017
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?10017
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?67772
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?67772
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?34429
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?34429
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?95941
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?95941
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?62690
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?62690
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?84374
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?84374
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?24228
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?24228
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?77625
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?77625
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?88930
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?88930
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?60409
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?60409
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?16554
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?16554
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?97053
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?97053
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?42148
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?42148
+-> POST /sso/Dispatcher;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet
+-> POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?84605
+<- 200 POST /sso/Dispatcher;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+<- 200 POST /sso/Authenticator;jsessionid=C799D6D91DD4FD3E3213BB19EB1E2536.ny5wwwdam2-internet?84605
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /sso/Templates/otp-responsive.css?1616779842377
+<- 200 GET /sso/Templates/otp-responsive.css?1616779842377
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+-> GET /stylesheet/web/login.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+-> GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/switchery.min.css
+<- 200 GET /sso/CombineFiles
+<- 200 GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/login.css
+-> POST /sso/Authenticator?66165
+uri /sso/Authenticator?66165 failed
+io.vertx.core.VertxException: Connection was closed
+	at io.vertx.core.http.impl.ClientConnection.handleClosed(ClientConnection.java:406) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.lambda$wrapTask$2(ContextImpl.java:342) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:200) ~[vertx-core-3.5.0.jar:na]
+	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:134) ~[vertx-core-3.5.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:420) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:281) ~[netty-codec-http-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:223) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:377) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:342) ~[netty-codec-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.handler.ssl.SslHandler.channelInactive(SslHandler.java:978) ~[netty-handler-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:224) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1354) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:245) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:231) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:917) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:763) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463) ~[netty-transport-4.1.15.Final.jar:4.1.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858) ~[netty-common-4.1.15.Final.jar:4.1.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_282]
+-> GET /v1/portal/iserver/account/orders
+<- 401 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/auth/status
+<- 401 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 401 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/auth/status
+<- 401 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 401 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/auth/status
+<- 401 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/iserver/auth/status
+<- 401 POST /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/auth/status
+<- 401 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/auth/status
+<- 401 GET /v1/portal/iserver/auth/status
+-> POST /v1/portal/logout
+<- 401 POST /v1/portal/logout
+-> POST /v1/portal/logout
+<- 401 POST /v1/portal/logout
+-> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+<- 200 GET /sso/Login?forwardTo=22&RL=1&ip2loc=on
+-> GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+<- 200 GET /stylesheet/web/bootstrap-switch.v3.3.2.min.css
+-> GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/font-awesome.v4.7.0.css
+<- 200 GET /stylesheet/web/bootstrap.v3.3.6.css
+-> GET /stylesheet/web/switchery.min.css
+<- 200 GET /stylesheet/web/switchery.min.css
+-> GET /stylesheet/web/ib-common.css
+<- 200 GET /stylesheet/web/ib-common.css
+-> GET /sso/Templates/otp-responsive.css?1616780239767
+-> GET /stylesheet/web/login.css
+-> GET /scripts/common/js/2015/jquery.min.js
+<- 200 GET /stylesheet/web/login.css
+-> GET /scripts/common/js/jquery-ui-1.12.1.min.js
+-> GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /scripts/common/js/2015/bootstrap-switch.min.js
+-> GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/Templates/otp-responsive.css?1616780239767
+<- 200 GET /scripts/common/js/2015/jquery.min.js
+-> GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/jquery-ui-1.12.1.min.js
+<- 200 GET /scripts/common/js/switchery.min.js
+<- 200 GET /sso/CombineFiles
+<- 200 GET /scripts/common/js/2015/bootstrap-switch.min.js
+<- 200 GET /scripts/common/js/2015/bootstrap.min.js
+-> GET /images/2015/btn-app-apple.png
+<- 200 GET /images/2015/btn-app-apple.png
+-> GET /images/2015/btn-app-google.png
+-> GET /images/2015/btn-app-tws.png
+-> GET /images/2015/button_discover_apis.png
+-> GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+<- 200 GET /images/2015/btn-app-google.png
+-> GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /images/2015/btn-app-tws.png
+<- 200 GET /images/2015/button_discover_apis.png
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtwht.svg
+-> GET /fonts/Proxima-Nova-Light.woff2
+-> GET /fonts/Proxima-Nova-Semibold.woff2
+-> GET /fonts/Proxima-Nova-Regular.woff2
+-> GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+<- 200 GET /images/2015/template/logo-ib-ibkr-txtblk.svg
+<- 200 GET /fonts/Proxima-Nova-Light.woff2
+<- 200 GET /fonts/Proxima-Nova-Regular.woff2
+<- 200 GET /fonts/Proxima-Nova-Semibold.woff2
+<- 200 GET /fonts/fontawesome-webfont.woff2?v=4.6.1
+-> POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?97745
+<- 200 POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?97745
+-> POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?21015
+<- 200 POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?21015
+-> POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?87925
+<- 200 POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?87925
+-> POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?12118
+<- 200 POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?12118
+-> GET /v1/portal/iserver/account/orders
+<- 401 GET /v1/portal/iserver/account/orders
+-> POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?26480
+<- 200 POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?26480
+-> POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?82384
+<- 200 POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?82384
+-> POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?2958
+<- 200 POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?2958
+-> POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?5482
+<- 200 POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?5482
+-> POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?43971
+<- 200 POST /sso/Authenticator;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet?43971
+-> POST /sso/Dispatcher;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet
+<- 302 POST /sso/Dispatcher;jsessionid=A5950F5F5F03F7E707C674375FE5E0C1.ny5wwwdam2-internet
+-> request: /v1/api/sso/validate?gw=1
+-> request: /AccountManagement/OneBarAuthentication?json=1
+-> GET /AccountManagement/OneBarAuthentication?json=1,404|458ms
+-> GET /v1/api/sso/validate?gw=1,200|495ms
+-> request: /v1/api/one/user
+-> request: /sso/AuthenticateSSODH?ACTION=INIT
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+-> GET /v1/api/one/user,200|136ms
+-> request: /sso/AuthenticateSSODH?ACTION=COMPLETE&B=c22341887a25d48ed3007cb11718d4624b3953b8d3ae01cb80a2ef417a34f3a2f21d8a0f08fbc22076f438e8799a77649bf2218507192da02bfedd16170507ac&CHRESPONSE=2ca6fb5dc2457bd1f87d1d46fbda92ccd77c95b7
+-> sso GET https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=c22341887a25d48ed3007cb11718d4624b3953b8d3ae01cb80a2ef417a34f3a2f21d8a0f08fbc22076f438e8799a77649bf2218507192da02bfedd16170507ac&CHRESPONSE=2ca6fb5dc2457bd1f87d1d46fbda92ccd77c95b7
+-> request: /sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=1f5a30b1|F0-6E-0B-BD-A2-D6
+-> sso GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=1f5a30b1|F0-6E-0B-BD-A2-D6
+<- 200 GET https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=1f5a30b1|F0-6E-0B-BD-A2-D6 0
+-> request: /v1/api/iserver/auth/status
+-> GET /v1/api/iserver/auth/status,200|120ms
+-> request: /v1/api/iserver/auth/ssodh/init
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|194ms
+-> request: /v1/api/iserver/auth/ssodh/response
+-> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|136ms
+-> request: /v1/api/iserver/accounts
+-> GET /v1/api/iserver/accounts,200|116ms
+-> GET /v1/portal/iserver/auth/status
+<- 200 GET /v1/portal/iserver/auth/status
+-> GET /v1/portal/iserver/accounts
+<- 200 GET /v1/portal/iserver/accounts
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> GET /v1/portal/portfolio/U4804550/ledger
+<- 200 GET /v1/portal/portfolio/U4804550/ledger
+-> GET /v1/portal/portfolio/U4804550/positions/0
+<- 200 GET /v1/portal/portfolio/U4804550/positions/0
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087792&since=0&fields=31%2C84%2C86
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087802&since=0&fields=31%2C84%2C86
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|115ms
+-> POST /v1/portal/iserver/secdef/search
+<- 200 POST /v1/portal/iserver/secdef/search
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+-> GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+<- 200 GET /v1/portal/iserver/marketdata/snapshot?conids=12087817&since=0&fields=31%2C84%2C86
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|692ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|732ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|573ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|707ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|491ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|625ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|550ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|110ms
+-> request: /sso/ping
+-> GET /sso/ping,200|451ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|113ms
+-> GET /v1/portal/iserver/account/orders
+<- 200 GET /v1/portal/iserver/account/orders
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|542ms
+-> request: /v1/api/tickle
+-> GET /v1/api/tickle,200|620ms
+-> POST /v1/portal/logout
+<- 200 POST /v1/portal/logout

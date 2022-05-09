@@ -15,6 +15,15 @@ class PerformanceReport:
         self.timeframe = timeframe
         self.logreturns = params['logreturns']
 
+    # def safe_withdrawal_rate(self, v0, timeret, fail_rate, tolerance, perc_abs_flg):
+    #     df = pd.DataFrame(timeret.items(), columns=['date', 'return'])
+    #     df.set_index('date',drop=True, inplace=True)
+    #     returns_sampled = df['return'].sample(frac=1)
+    #     df_sampled = pd.DataFrame(returns_sampled, columns=['return'], index=df.index)
+    #
+    #     v0 = self.get_startcash()
+
+
     def get_performance_stats(self):
         """ Return dict with performance stats for given strategy withing backtest
         """

@@ -1,0 +1,677 @@
+08:15:42.881 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/portal/iserver/auth/status,401|1178ms
+08:15:53.791 INFO  main GatewayStart         : config conf.yaml !!ibgroup.web.core.clientportal.gw.Config
+authDelay: 3000
+cors: {origin.allowed: '*', allowCredentials: false}
+ip2loc: US
+ips:
+  allow: [192.*, 131.216.*, 127.0.0.1]
+  deny: [212.90.324.10]
+listenPort: 5000
+listenSsl: true
+portalBaseURL: ''
+proxyRemoteHost: https://api.ibkr.com
+proxyRemoteSsl: true
+sslCert: vertx.jks
+sslPwd: mywebapi
+ssoPing: 5
+svcEnvironment: v1
+tst: false
+twsBaseURL: /tws.proxy
+webApps:
+- {cache: true, index: index.html, listing: false, name: demo, proxy: ''}
+
+08:15:54.448 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     :  -> mount demo on /demo
+08:15:54.568 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : version: f0ac9e2075f850a3d6951fb9a769c9b16fa4df1f Tue, 18 Aug 2020 15:26:30 -0400
+08:15:54.568 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : Java Version: 1.8.0_282
+08:15:56.332 ERROR vert.x-eventloop-thread-0 DeploymentManager    : Address already in use: bind
+io.vertx.core.impl.NoStackTraceThrowable: Address already in use: bind
+18:22:59.646 INFO  main GatewayStart         : config conf.yaml !!ibgroup.web.core.clientportal.gw.Config
+authDelay: 3000
+cors: {origin.allowed: '*', allowCredentials: false}
+ip2loc: US
+ips:
+  allow: [192.*, 131.216.*, 127.0.0.1]
+  deny: [212.90.324.10]
+listenPort: 5000
+listenSsl: true
+portalBaseURL: ''
+proxyRemoteHost: https://api.ibkr.com
+proxyRemoteSsl: true
+sslCert: vertx.jks
+sslPwd: mywebapi
+ssoPing: 5
+svcEnvironment: v1
+tst: false
+twsBaseURL: /tws.proxy
+webApps:
+- {cache: true, index: index.html, listing: false, name: demo, proxy: ''}
+
+18:23:00.072 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     :  -> mount demo on /demo
+18:23:00.117 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : version: f0ac9e2075f850a3d6951fb9a769c9b16fa4df1f Tue, 18 Aug 2020 15:26:30 -0400
+18:23:00.123 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : Java Version: 1.8.0_282
+18:23:00.622 WARN  vert.x-eventloop-thread-0 MacAddressUtil       : Failed to find a usable hardware address from the network interfaces; using random bytes: 13:7c:6d:48:63:30:d8:09
+18:23:25.384 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:311)
+	at sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at sun.security.ssl.TransportContext.dispatch(TransportContext.java:185)
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:149)
+	at sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:575)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:531)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:398)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:377)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:626)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+18:23:25.386 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:311)
+	at sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at sun.security.ssl.TransportContext.dispatch(TransportContext.java:185)
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:149)
+	at sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:575)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:531)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:398)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:377)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:626)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+18:23:25.408 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:311)
+	at sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at sun.security.ssl.TransportContext.dispatch(TransportContext.java:185)
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:149)
+	at sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:575)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:531)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:398)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:377)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:626)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+18:54:52.353 INFO  main GatewayStart         : config conf.yaml !!ibgroup.web.core.clientportal.gw.Config
+authDelay: 3000
+cors: {origin.allowed: '*', allowCredentials: false}
+ip2loc: US
+ips:
+  allow: [192.*, 131.216.*, 127.0.0.1]
+  deny: [212.90.324.10]
+listenPort: 5000
+listenSsl: true
+portalBaseURL: ''
+proxyRemoteHost: https://api.ibkr.com
+proxyRemoteSsl: true
+sslCert: vertx.jks
+sslPwd: mywebapi
+ssoPing: 5
+svcEnvironment: v1
+tst: false
+twsBaseURL: /tws.proxy
+webApps:
+- {cache: true, index: index.html, listing: false, name: demo, proxy: ''}
+
+18:54:52.599 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     :  -> mount demo on /demo
+18:54:52.620 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : version: f0ac9e2075f850a3d6951fb9a769c9b16fa4df1f Tue, 18 Aug 2020 15:26:30 -0400
+18:54:52.623 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : Java Version: 1.8.0_282
+18:54:56.412 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:311)
+	at sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at sun.security.ssl.TransportContext.dispatch(TransportContext.java:185)
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:149)
+	at sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:575)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:531)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:398)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:377)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:626)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+18:54:56.414 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:311)
+	at sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at sun.security.ssl.TransportContext.dispatch(TransportContext.java:185)
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:149)
+	at sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:575)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:531)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:398)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:377)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:626)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+18:54:56.432 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:311)
+	at sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at sun.security.ssl.TransportContext.dispatch(TransportContext.java:185)
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:149)
+	at sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:575)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:531)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:398)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:377)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:626)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+18:54:57.609 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Login?forwardTo=22&RL=1&ip2loc=on,200|644ms
+18:54:57.617 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [XYZAB_AM.LOGIN=""; Domain=.ibkr.com; Path=/;Secure;SameSite=None, XYZAB=""; Domain=.ibkr.com; Path=/;Secure;SameSite=None, URL_PARAM="forwardTo=22&RL=1&ip2loc=on"; Version=1; Domain=.ibkr.com; Path=/;Secure;HttpOnly, JSESSIONID=7537E5C0A18CA646C31CA55DF0F74F70.ny5wwwdam1-internet; Path=/sso; HttpOnly;Secure;SameSite=None]
+18:54:57.630 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [XYZAB_AM.LOGIN=""; Domain=.ibkr.com; Path=/;Secure;SameSite=None, XYZAB=""; Domain=.ibkr.com; Path=/;Secure;SameSite=None, URL_PARAM="forwardTo=22&RL=1&ip2loc=on"; Version=1; Domain=.ibkr.com; Path=/;Secure;HttpOnly, JSESSIONID=7537E5C0A18CA646C31CA55DF0F74F70.ny5wwwdam1-internet; Path=/sso; HttpOnly;Secure;SameSite=None] -> 
+18:54:57.822 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Templates/otp-responsive.css?1638726898855,200|39ms
+18:54:57.858 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/jquery-3.4.1/jquery.min.js,200|67ms
+18:54:57.877 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/jquery-ui-1.12.1/jquery-ui.min.js,200|41ms
+18:54:57.961 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/bootstrap-4.3.1/bootstrap.bundle.min.js,200|27ms
+18:54:57.987 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/bootstrap-switch-3.3.2/bootstrap-switch.min.js,200|41ms
+18:54:58.027 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/switchery/switchery.min.js,200|32ms
+18:54:58.032 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/switchery/switchery-init.js,200|34ms
+18:54:58.055 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/icheck-1.0.2/icheck.min.js,200|19ms
+18:54:58.059 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/icheck-1.0.2/icheck-init.js,200|21ms
+18:54:58.097 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:311)
+	at sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at sun.security.ssl.TransportContext.dispatch(TransportContext.java:185)
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:149)
+	at sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:575)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:531)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:398)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:377)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:626)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+18:54:58.098 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:311)
+	at sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at sun.security.ssl.TransportContext.dispatch(TransportContext.java:185)
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:149)
+	at sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:575)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:531)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:398)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:377)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:626)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+18:54:58.100 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:311)
+	at sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at sun.security.ssl.TransportContext.dispatch(TransportContext.java:185)
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:149)
+	at sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:575)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:531)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:398)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:377)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:626)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+18:54:58.113 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at sun.security.ssl.Alert.createSSLException(Alert.java:131)
+	at sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at sun.security.ssl.TransportContext.fatal(TransportContext.java:311)
+	at sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:293)
+	at sun.security.ssl.TransportContext.dispatch(TransportContext.java:185)
+	at sun.security.ssl.SSLTransport.decode(SSLTransport.java:149)
+	at sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:575)
+	at sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:531)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:398)
+	at sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:377)
+	at javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:626)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+18:54:58.271 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/images/2fa.png,200|38ms
+18:54:58.338 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /images/2015/btn-app-apple.png,200|30ms
+18:54:58.394 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /images/2015/btn-app-google.png,200|30ms
+18:54:58.469 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /images/2015/btn-app-tws.png,200|21ms
+18:54:58.509 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /images/2015/button_discover_apis.png,200|26ms
+18:54:58.748 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/CombineFiles,200|685ms
+18:54:59.195 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /images/web/favicons/home-screen-icon-128x128.png,200|29ms
+18:55:04.389 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Authenticator;jsessionid=7537E5C0A18CA646C31CA55DF0F74F70.ny5wwwdam1-internet?27014,200|198ms
+18:55:07.746 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Authenticator;jsessionid=7537E5C0A18CA646C31CA55DF0F74F70.ny5wwwdam1-internet?49506,200|470ms
+18:55:07.746 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [web=775521666; Domain=.ibkr.com; Expires=Mon, 05-Dec-2022 17:55:08 GMT; Path=/; Secure;Secure;SameSite=None]
+18:55:07.746 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [web=775521666; Domain=.ibkr.com; Expires=Mon, 05-Dec-2022 17:55:08 GMT; Path=/; Secure;Secure;SameSite=None] -> 
+18:55:08.058 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Dispatcher;jsessionid=7537E5C0A18CA646C31CA55DF0F74F70.ny5wwwdam1-internet,302|177ms
+18:55:08.060 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [USERID=55063530; Domain=.ibkr.com; Path=/;Secure;SameSite=None, REGION=us; Domain=.ibkr.com; Path=/;Secure;HttpOnly;SameSite=None, USERID=55063530; Domain=.interactiveadvisors.com; Path=/; Secure;Secure;SameSite=None, REGION=us; Domain=.interactiveadvisors.com; Path=/; Secure;Secure;HttpOnly;SameSite=None, XYZAB_AM.LOGIN=793c67cdf90f0daa5e67ea422445ce9c64c78613; Domain=.interactiveadvisors.com; Path=/; Secure;Secure;SameSite=None, XYZAB=793c67cdf90f0daa5e67ea422445ce9c64c78613; Domain=.interactiveadvisors.com; Path=/; Secure;Secure;SameSite=None]
+18:55:08.063 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [USERID=55063530; Domain=.ibkr.com; Path=/;Secure;SameSite=None, REGION=us; Domain=.ibkr.com; Path=/;Secure;HttpOnly;SameSite=None, USERID=55063530; Domain=.interactiveadvisors.com; Path=/; Secure;Secure;SameSite=None, REGION=us; Domain=.interactiveadvisors.com; Path=/; Secure;Secure;HttpOnly;SameSite=None, XYZAB_AM.LOGIN=793c67cdf90f0daa5e67ea422445ce9c64c78613; Domain=.interactiveadvisors.com; Path=/; Secure;Secure;SameSite=None, XYZAB=793c67cdf90f0daa5e67ea422445ce9c64c78613; Domain=.interactiveadvisors.com; Path=/; Secure;Secure;SameSite=None] -> 
+18:55:08.072 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     : Client login succeeds
+18:55:08.106 INFO  vert.x-eventloop-thread-0 AmService            : authenticating with AM https://api.ibkr.com/AccountManagement/OneBarAuthentication?json=1
+18:55:08.230 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /AccountManagement/OneBarAuthentication?json=1,404|118ms
+18:55:08.232 WARN  vert.x-eventloop-thread-0 BaseServiceProxy     : failed /AccountManagement/OneBarAuthentication?json=1 | reason <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+<p>Additionally, a 404 Not Found
+error was encountered while trying to use an ErrorDocument to handle the request.</p>
+</body></html>
+
+18:55:08.233 ERROR vert.x-eventloop-thread-0 AmService            : am authentication failed
+io.vertx.core.impl.NoStackTraceThrowable: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+<p>Additionally, a 404 Not Found
+error was encountered while trying to use an ErrorDocument to handle the request.</p>
+</body></html>
+
+18:55:08.233 WARN  vert.x-eventloop-thread-0 BaseServiceProxy     : failed /AccountManagement/OneBarAuthentication?json=1 | reason 404
+18:55:08.234 ERROR vert.x-eventloop-thread-0 AmService            : am authentication failed
+io.vertx.core.impl.NoStackTraceThrowable: 404
+18:55:08.295 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/sso/validate?gw=1,200|216ms
+18:55:08.295 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : portal validate response: {"PAPER_USER_NAME":"fire663x","LOGIN_TYPE":2,"LANDING_APP":"AM","IS_PENDING_APPLICANT":false,"SF_ENABLED":false,"AUTH_TIME":1638726908890,"CREDENTIAL":"fire663x","SF_CONFIG":"","USER_NAME":"fire663x","CREDENTIAL_TYPE":0,"RESULT":true,"IS_FREE_TRIAL":false,"IP":"81.221.196.91","USER_ID":55063530,"EXPIRES":1638726909697,"TOKEN":"793c67cdf90f0daa5e67ea422445ce9c64c78613","took":108,"features":{"env":"PROD","wlms":true,"realtime":true,"bond":true,"optionChains":true,"calendar":true,"newMf":true}}
+18:55:08.689 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     : authenticated to cp
+18:55:08.690 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : cancel timer SsoService 0
+18:55:08.690 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : start timer 300000 SsoService
+18:55:08.694 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : forward event ON_SSO_VALIDATION, payload 55063530
+18:55:08.955 INFO  vert.x-eventloop-thread-0 SsoService           : sso init status=200, url=https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=INIT
+18:55:08.970 DEBUG vert.x-eventloop-thread-0 SsoService           : sso init reponse: <ib_auth_res>
+<dh_params>
+<hash>SHA-1</hash>
+<p>d56d113cba6d02d9b7924d229f99bfe0891d66dc6bf2c7f41f5e132ef3cb719ceb524a04297efb6152d1584632b957e60d97d855acbd9e6c42946feba0b0d94d</p>
+<g>8b27ac27a9b6c981229c7d38068cc577e7a39c4f37cb531025fd033f44de0d1f2626cad70bfa078be812b2538b4c23d50647b842de48a1c97ab8af7548c03bdb</g>
+<A>6aec0cc93e6cf728d1a3374f1936ec210cbbe10eaac0a8e60c6fe08e1edb027ff147d430058e621c1412dec097431a8568df0b767e23c87e9e970455d830572e</A>
+<challenge>df7e0638e71b7c5164c9de713183fda32b93ddf7</challenge>
+<info></info>
+</dh_params>
+</ib_auth_res>
+
+18:55:08.970 DEBUG vert.x-eventloop-thread-0 SsoService           : p d56d113cba6d02d9b7924d229f99bfe0891d66dc6bf2c7f41f5e132ef3cb719ceb524a04297efb6152d1584632b957e60d97d855acbd9e6c42946feba0b0d94d
+18:55:08.970 DEBUG vert.x-eventloop-thread-0 SsoService           : K bbe69df2dbea9856a77b8b3f005def5af2586192
+18:55:08.970 DEBUG vert.x-eventloop-thread-0 SsoService           : chlRes 7093c0e3da0ad4541e27107c2e36654458972b50
+18:55:08.970 DEBUG vert.x-eventloop-thread-0 SsoService           : B 21728216e965c72c84a397ffc845d31e02082921c7cb6a98a2613a46f6b9a1bce484946320eb624af606bcd939df10abacc54819e4b0cb15247549cd77d58d10
+18:55:09.191 INFO  vert.x-eventloop-thread-0 SsoService           : sso complete url status=200, url=https://api.ibkr.com/sso/AuthenticateSSODH?ACTION=COMPLETE&B=21728216e965c72c84a397ffc845d31e02082921c7cb6a98a2613a46f6b9a1bce484946320eb624af606bcd939df10abacc54819e4b0cb15247549cd77d58d10&CHRESPONSE=7093c0e3da0ad4541e27107c2e36654458972b50
+18:55:09.199 DEBUG vert.x-eventloop-thread-0 SsoService           : challenge reply:
+<ib_auth_res>
+<dh_params>
+<enc>AES</enc>
+<einfo>-2395a873708c335301038f8c6d18fd1a</einfo>
+<info></info>
+</dh_params>
+</ib_auth_res>
+
+18:55:09.200 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : forward event ON_SSODH_COMPLETED, payload none
+18:55:09.202 DEBUG vert.x-eventloop-thread-0 GatewayHttpProxy     : delaying authentication for 3000
+18:55:09.404 INFO  vert.x-eventloop-thread-0 TstTokenUtils        : Current MAC address : F0-6E-0B-BD-A2-D6
+18:55:09.404 DEBUG vert.x-eventloop-thread-0 SsoService           : tst token generated: ce27985cf63b739c4c9982844090955225b09ffd
+18:55:09.614 INFO  vert.x-eventloop-thread-0 SsoService           : publish tst token status=200, url=https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=117ed633|F0-6E-0B-BD-A2-D6
+18:55:09.619 DEBUG vert.x-eventloop-thread-0 SsoService           : publish tst token reply:
+{"ST_EXPIRY_TIME":108000,"ST_EXPIRY_END":1638834910917,"USER_ID":55063530,"RESULT":true}
+18:55:12.246 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/iserver/auth/status,200|38ms
+18:55:12.248 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : status {"authenticated":false,"competing":false,"connected":false,"MAC":"F4:03:43:E6:57:70"}
+18:55:12.251 INFO  vert.x-eventloop-thread-0 ClientPortalService  : process auth status {"authenticated":false,"competing":false,"connected":false,"MAC":"F4:03:43:E6:57:70"}
+18:55:12.354 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : auth brokerage, k=bbe69df2dbea9856a77b8b3f005def5af2586192, post={"username":"fire663x","machineId":"2bbb6cd9","compete":true}
+18:55:12.656 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|301ms
+18:55:12.671 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : iserver init : {"challenge":"a5d244d23ab1cf116acad274b6c8ec6cd7297512"}
+18:55:12.671 INFO  vert.x-eventloop-thread-0 ClientPortalService  : sending sso dh response, k=7dca5fcbdb48d359a69c5c8dd8b08ec2f821c6a9
+18:55:12.809 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/response,200|138ms
+18:55:12.811 INFO  vert.x-eventloop-thread-0 ClientPortalService  : server sso dh response {"passed":true,"authenticated":true,"connected":true,"competing":false}
+18:55:12.813 INFO  vert.x-eventloop-thread-0 ClientPortalService  : process auth status {"passed":true,"authenticated":true,"connected":true,"competing":false}
+18:55:12.817 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : start timer 30000 ClientPortalService
+18:55:12.866 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/iserver/accounts,200|51ms
+18:55:12.866 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : iserver accounts {}
+18:55:15.616 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/portal/iserver/auth/status,200|53ms
+18:55:16.970 INFO  main GatewayStart         : config conf.yaml !!ibgroup.web.core.clientportal.gw.Config
+authDelay: 3000
+cors: {origin.allowed: '*', allowCredentials: false}
+ip2loc: US
+ips:
+  allow: [192.*, 131.216.*, 127.0.0.1]
+  deny: [212.90.324.10]
+listenPort: 5000
+listenSsl: true
+portalBaseURL: ''
+proxyRemoteHost: https://api.ibkr.com
+proxyRemoteSsl: true
+sslCert: vertx.jks
+sslPwd: mywebapi
+ssoPing: 5
+svcEnvironment: v1
+tst: false
+twsBaseURL: /tws.proxy
+webApps:
+- {cache: true, index: index.html, listing: false, name: demo, proxy: ''}
+
+18:55:17.213 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     :  -> mount demo on /demo
+18:55:17.233 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : version: f0ac9e2075f850a3d6951fb9a769c9b16fa4df1f Tue, 18 Aug 2020 15:26:30 -0400
+18:55:17.244 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : Java Version: 1.8.0_282
+18:55:17.735 ERROR vert.x-eventloop-thread-0 DeploymentManager    : Address already in use: bind
+io.vertx.core.impl.NoStackTraceThrowable: Address already in use: bind
+18:55:17.887 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/portal/iserver/auth/status,200|41ms
+18:55:18.719 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/one/user,503|10029ms
+18:55:18.719 WARN  vert.x-eventloop-thread-0 BaseServiceProxy     : failed /v1/api/one/user | reason 503
+18:55:18.719 INFO  vert.x-eventloop-thread-0 ClientPortalService  : get user reply null
+18:55:18.719 ERROR vert.x-eventloop-thread-0 ClientPortalService  : get user failed {}
+io.vertx.core.impl.NoStackTraceThrowable: 503
+18:55:20.134 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/portal/iserver/accounts,200|31ms
+18:55:42.857 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|32ms
+18:55:42.857 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":565407,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+18:56:12.863 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|31ms
+18:56:12.863 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":535409,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+18:56:42.862 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|31ms
+18:56:42.862 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":505411,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+18:57:12.865 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|47ms
+18:57:12.865 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":475415,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+18:57:42.864 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|31ms
+18:57:42.864 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":445407,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+18:58:12.869 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|47ms
+18:58:12.869 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":415405,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+18:58:42.863 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|31ms
+18:58:42.863 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":385407,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+18:59:12.885 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|63ms
+18:59:12.885 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":355405,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+18:59:42.868 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|41ms
+18:59:42.868 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":325408,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:00:08.816 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|123ms
+19:00:08.818 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+19:00:12.867 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|45ms
+19:00:12.867 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":295414,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:00:42.864 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|30ms
+19:00:42.864 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":265405,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:00:46.777 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/portal/iserver/auth/status,200|31ms
+19:01:04.699 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/portal/iserver/auth/status,200|31ms
+19:01:12.875 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|47ms
+19:01:12.875 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":235397,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:01:42.856 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|28ms
+19:01:42.856 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":205417,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:02:12.868 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|44ms
+19:02:12.868 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":175411,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:02:42.850 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|28ms
+19:02:42.850 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":145424,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:03:12.879 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|60ms
+19:03:12.879 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":115416,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:03:42.876 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|45ms
+19:03:42.876 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":85399,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:04:12.997 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|169ms
+19:04:13.000 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":55313,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:04:42.853 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|30ms
+19:04:42.868 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":25420,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:05:08.812 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|119ms
+19:05:08.812 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+19:05:12.872 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|42ms
+19:05:12.875 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":0,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:05:44.304 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|38ms
+19:05:44.304 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":570102,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:06:14.290 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|46ms
+19:06:14.292 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":540120,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:07:26.383 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|289ms
+19:07:26.383 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":468026,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:07:26.383 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|289ms
+19:07:26.383 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":468024,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:07:44.291 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|38ms
+19:07:44.291 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":450122,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:08:14.295 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|51ms
+19:08:14.296 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":420124,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:08:44.288 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|41ms
+19:08:44.288 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":390125,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:09:14.276 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|35ms
+19:09:14.276 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":360135,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:09:44.304 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|60ms
+19:09:44.304 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":330116,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:10:10.318 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|193ms
+19:10:10.318 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+19:10:14.279 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|38ms
+19:10:14.279 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":300132,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:10:44.294 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|46ms
+19:10:44.294 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":270122,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:11:14.292 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|45ms
+19:11:14.292 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":240128,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:11:44.305 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|52ms
+19:11:44.305 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":210118,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:12:14.280 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|39ms
+19:12:14.283 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":180137,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:12:44.302 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|50ms
+19:12:44.302 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":150116,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:13:14.307 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|54ms
+19:13:14.307 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":120118,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:13:44.296 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|38ms
+19:13:44.296 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":90118,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:14:14.293 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|49ms
+19:14:14.296 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":60126,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:14:44.303 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|57ms
+19:14:44.303 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":30119,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:15:10.360 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/ping,200|233ms
+19:15:10.372 INFO  vert.x-eventloop-thread-0 SsoService           : sso ping {"result": "true"}
+19:15:14.283 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|40ms
+19:15:14.283 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":137,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
+19:15:44.282 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/tickle,200|33ms
+19:15:44.282 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : tickle {"session":"e9392693891bcfb2a3a7439522579a59","ssoExpires":0,"collission":false,"userId":55063530,"iserver":{"authStatus":{"authenticated":true,"competing":false,"connected":true,"message":"","MAC":"F4:03:43:E6:57:70"}}}
