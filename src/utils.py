@@ -1,7 +1,6 @@
 import pandas as pd
 import os
 import backtrader as bt
-import numpy as np
 from strategies import *
 import matplotlib.pyplot as plt
 import numpy as np
@@ -22,6 +21,7 @@ import pandas as pd
 import requests
 from pprint import pprint
 from scipy.stats import kurtosis, skew
+from dateutil.relativedelta import relativedelta
 
 
 import yfinance as yf
@@ -47,7 +47,7 @@ def download_link(object_to_download, download_filename, download_link_text):
 
     """
     if isinstance(object_to_download,pd.DataFrame):
-        object_to_download = object_to_download.to_csv(index=False)
+        object_to_download = object_to_download.to_csv(index=True)
 
     # some strings <-> bytes conversions necessary here
     b64 = base64.b64encode(object_to_download.encode()).decode()
@@ -97,7 +97,6 @@ def delete_in_dir(mydir, *args, **kwargs):
 
     for f in filelist:
         os.remove(os.path.join(mydir, f))
-
 
 def print_section_divider(strategy_name):
     """
@@ -156,7 +155,6 @@ def import_histprices_db(dataLabel):
 
     return df
 
-
 def get_loan(startdate, enddate, BM_rate_flg, interest):
     """
     Simulates the interests paid for a margin loan taken with the broker
@@ -175,7 +173,6 @@ def get_loan(startdate, enddate, BM_rate_flg, interest):
     benchmark_rate_dates["close"] = 1 * (1 + benchmark_rate_dates["daily_rate"]).cumprod()
     cash_df = benchmark_rate_dates[['close']]
     return cash_df
-
 
 def add_expenses(proxy, expense_ratio=0.0, timeframe=bt.TimeFrame.Days):
     """
@@ -242,13 +239,16 @@ def bond_total_return(ytm, dt, maturity):
     total_return_df.columns = ["total_return"]
     return total_return_df
 
-def common_dates(data, fromdate, todate, timeframe):
+def common_dates(data, shareclass, fromdate, todate, timeframe):
     # Get latest startdate and earlier end date
     start = fromdate
     end = todate
-    for i in range(0, len(data)):
-        start = max(data[i].index[0], start)
-        end = min(data[i].index[-1], end)
+    n_tradable = sum(1 for n in shareclass if n != 'non-tradable' and n != 'loan')
+    for i in range(0, n_tradable):
+        this_start = max(data[i].index[0].date(), fromdate)
+        start = max(this_start, start)
+        this_end = min(data[i].index[-1].date(), todate)
+        end = min(this_end, end)
 
     if timeframe == bt.TimeFrame.Days: # 5
         dates = pd.bdate_range(start, end)
@@ -264,7 +264,6 @@ def common_dates(data, fromdate, todate, timeframe):
         data_dates.append(this_data_dates)
     return data_dates
 
-
 class WeightsObserver(bt.observer.Observer):
     params = (('n_assets', 100),)  # set conservatively to 100 as the dynamic assignment does not work
     lines = tuple(['asset_' + str(i) for i in range(0, params[0][1])])
@@ -274,7 +273,6 @@ class WeightsObserver(bt.observer.Observer):
     def next(self):
         for asset in range(0, self.params.n_assets):
             self.lines[asset][0] = self._owner.weights[asset]
-
 
 class GetDate(bt.observer.Observer):
     lines = ('year', 'month', 'day',)
@@ -286,11 +284,9 @@ class GetDate(bt.observer.Observer):
         self.lines.month[0] = self._owner.datas[0].datetime.date(0).month
         self.lines.day[0] = self._owner.datas[0].datetime.date(0).day
 
-
 def calculate_portfolio_var(w, cov):
     # function that calculates portfolio risk
     return (w.T @ cov @ w)
-
 
 def risk_contribution(w, cov):
     """
@@ -301,7 +297,6 @@ def risk_contribution(w, cov):
     # Risk Contribution
     RC = np.multiply(MRC, w.T) / calculate_portfolio_var(w, cov)
     return RC
-
 
 def target_risk_contribution(target_risk, cov):
     """
@@ -329,7 +324,6 @@ def target_risk_contribution(target_risk, cov):
                  constraints=weights_sum_to_1,
                  bounds=bounds)
     return w.x
-
 
 def covariances(shares, start, end):
     '''
@@ -367,20 +361,17 @@ N = 100 #Steps
 B = sample_path_batch(M, N, 0, 0)
 """
 
-
 def timestamp2str(ts):
     """ Converts Timestamp object to str containing date and time
     """
     date = ts.date().strftime("%Y-%m-%d")
     return date
 
-
 def get_now():
     """ Return current datetime as str
     """
     return timestamp2str(datetime.datetime.now())
     # return timestamp2str(datetime.now())
-
 
 def dir_exists(foldername):
     """ Return True if folder exists, else False
@@ -505,6 +496,372 @@ def load_AccDualMom_curves(shares_list, startdate, enddate):
     t['date'] = t.index
     return t
 
+"""
+TODO common weights functions to be used for backtesting, signals and live trading
+"""
+
+#TODO to load the data for the signals for ADM
+def load_ADM_data(shares_list, startdate, enddate):
+    df = pd.DataFrame()
+    for i in range(len(shares_list)):
+        # this_df = web.DataReader(shares_list[i], "yahoo", startdate, enddate)["Adj Close"]
+        this_df = yf.download(shares_list[i], start=startdate, end=enddate)["Adj Close"]
+        this_df = this_df.fillna(method="ffill")
+        this_df = this_df.to_frame("close")
+        this_df = this_df[~this_df.index.duplicated(keep='first')]
+        this_df['asset'] = shares_list[i]
+        df = df.append(this_df)
+    df['Date'] = df.index
+    df.reset_index(drop=True, inplace=True)
+
+    # Keep common dates only
+    df_pivot = df.pivot(index='Date', columns='asset', values='close')
+    df_pivot = df_pivot.dropna()
+    df_pivot['Date'] = df_pivot.index
+    return df_pivot
+
+#TODO common function to calculate ADM score
+def ADM_score(data, startdate, enddate):
+    df_pivot = data
+
+    df = pd.melt(df_pivot, id_vars=['Date'])
+    df = df.set_index('Date')
+    df = df.rename(columns={'value': 'close'})
+
+    last_date = df_pivot['Date'][-1]
+
+    monthly = df.groupby(['asset']).resample('BM').last()
+    monthly = monthly.droplevel('asset')
+    monthly['m1'] = monthly.groupby(['asset']).close.shift(1)
+    monthly['m3'] = monthly.groupby(['asset']).close.shift(3)
+    monthly['m6'] = monthly.groupby(['asset']).close.shift(6)
+    monthly = monthly.drop(columns=['close'])
+    monthly = monthly.dropna()
+    last_monthly_date = monthly.index[-1]
+    monthly.rename(index={last_monthly_date: last_date}, inplace=True)
+
+    t = pd.merge(df, monthly, how="left",  left_on=['Date','asset'], right_on = ['Date','asset'])
+    t = t.bfill(axis='rows')
+    t['ret1m'] = t['close']/t['m1']-1
+    t['ret3m'] = t['close']/t['m3']-1
+    t['ret6m'] = t['close']/t['m6']-1
+    t['score'] = t['ret1m'] + t['ret3m'] + t['ret6m']
+    t = t.drop(["close",'m1','m3','m6','ret1m','ret3m','ret6m'],axis=1)
+    t['date'] = t.index
+    return t
+
+#TODO common func for the ADM gradient_diversified_weights
+def ADM_gradient_diversified_weights(score_data, reference_date):
+    indicator = ['DTB3']
+    momentum_df = score_data
+    momentum_df['asset_weight'] = 0
+
+    if momentum_df.loc[momentum_df['shares'] == 'VFINX', 'score'].values[0] > \
+            momentum_df.loc[momentum_df['shares'] == 'VINEX', 'score'].values[0]:
+
+        if momentum_df.loc[momentum_df['shares'] == 'VFINX', 'score'].values[0] > \
+                momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] + 0.2:
+            momentum_df.loc[momentum_df['shares'] == 'VFINX', 'asset_weight'] = 1
+        elif (momentum_df.loc[momentum_df['shares'] == 'VFINX', 'score'].values[0] >
+              momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] + 0.1 and
+              momentum_df.loc[momentum_df['shares'] == 'VFINX', 'score'].values[0] <
+              momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] + 0.2):
+            momentum_df.loc[momentum_df['shares'] == 'VFINX', 'asset_weight'] = 0.75
+            # All weather w/o stocks
+            momentum_df.loc[momentum_df['shares'] == 'TLT', 'asset_weight'] = 0.4 * 10 / 7 * 0.25
+            momentum_df.loc[momentum_df['shares'] == 'IEF', 'asset_weight'] = 0.15 * 10 / 7 * 0.25
+            momentum_df.loc[momentum_df['shares'] == 'GLD', 'asset_weight'] = 0.075 * 10 / 7 * 0.25
+            momentum_df.loc[momentum_df['shares'] == 'GSG', 'asset_weight'] = 0.075 * 10 / 7 * 0.25
+
+        elif (momentum_df.loc[momentum_df['shares'] == 'VFINX', 'score'].values[0] <
+              momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] + 0.1 and
+              momentum_df.loc[momentum_df['shares'] == 'VFINX', 'score'].values[0] >
+              momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] - 0.1):
+            momentum_df.loc[momentum_df['shares'] == 'VFINX', 'asset_weight'] = 0.5
+            # All weather w/o stocks
+            momentum_df.loc[momentum_df['shares'] == 'TLT', 'asset_weight'] = 0.4 * 10 / 7 * 0.5
+            momentum_df.loc[momentum_df['shares'] == 'IEF', 'asset_weight'] = 0.15 * 10 / 7 * 0.5
+            momentum_df.loc[momentum_df['shares'] == 'GLD', 'asset_weight'] = 0.075 * 10 / 7 * 0.5
+            momentum_df.loc[momentum_df['shares'] == 'GSG', 'asset_weight'] = 0.075 * 10 / 7 * 0.5
+
+        elif (momentum_df.loc[momentum_df['shares'] == 'VFINX', 'score'].values[0] <
+              momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] - 0.1 and
+              momentum_df.loc[momentum_df['shares'] == 'VFINX', 'score'].values[0] >
+              momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] - 0.2):
+            momentum_df.loc[momentum_df['shares'] == 'VFINX', 'asset_weight'] = 0.25
+            # All weather w/o stocks
+            momentum_df.loc[momentum_df['shares'] == 'TLT', 'asset_weight'] = 0.4 * 10 / 7 * 0.75
+            momentum_df.loc[momentum_df['shares'] == 'IEF', 'asset_weight'] = 0.15 * 10 / 7 * 0.75
+            momentum_df.loc[momentum_df['shares'] == 'GLD', 'asset_weight'] = 0.075 * 10 / 7 * 0.75
+            momentum_df.loc[momentum_df['shares'] == 'GSG', 'asset_weight'] = 0.075 * 10 / 7 * 0.75
+
+        elif momentum_df.loc[momentum_df['shares'] == 'VFINX', 'score'].values[0] < \
+                momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] - 0.2:
+            momentum_df.loc[momentum_df['shares'] == 'TLT', 'asset_weight'] = 0.4 * 10 / 7
+            momentum_df.loc[momentum_df['shares'] == 'IEF', 'asset_weight'] = 0.15 * 10 / 7
+            momentum_df.loc[momentum_df['shares'] == 'GLD', 'asset_weight'] = 0.075 * 10 / 7
+            momentum_df.loc[momentum_df['shares'] == 'GSG', 'asset_weight'] = 0.075 * 10 / 7
+    else:
+        if momentum_df.loc[momentum_df['shares'] == 'VINEX', 'score'].values[0] > \
+                momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] + 0.2:
+            momentum_df.loc[momentum_df['shares'] == 'VINEX', 'asset_weight'] = 1
+        elif (momentum_df.loc[momentum_df['shares'] == 'VINEX', 'score'].values[0] >
+              momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] + 0.1 and
+              momentum_df.loc[momentum_df['shares'] == 'VINEX', 'score'].values[0] <
+              momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] + 0.2):
+            momentum_df.loc[momentum_df['shares'] == 'VINEX', 'asset_weight'] = 0.75
+            # All weather w/o stocks
+            momentum_df.loc[momentum_df['shares'] == 'TLT', 'asset_weight'] = 0.4 * 10 / 7 * 0.25
+            momentum_df.loc[momentum_df['shares'] == 'IEF', 'asset_weight'] = 0.15 * 10 / 7 * 0.25
+            momentum_df.loc[momentum_df['shares'] == 'GLD', 'asset_weight'] = 0.075 * 10 / 7 * 0.25
+            momentum_df.loc[momentum_df['shares'] == 'GSG', 'asset_weight'] = 0.075 * 10 / 7 * 0.25
+
+        elif (momentum_df.loc[momentum_df['shares'] == 'VINEX', 'score'].values[0] <
+              momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] + 0.1 and
+              momentum_df.loc[momentum_df['shares'] == 'VINEX', 'score'].values[0] >
+              momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] - 0.1):
+            momentum_df.loc[momentum_df['shares'] == 'VINEX', 'asset_weight'] = 0.5
+            # All weather w/o stocks
+            momentum_df.loc[momentum_df['shares'] == 'TLT', 'asset_weight'] = 0.4 * 10 / 7 * 0.5
+            momentum_df.loc[momentum_df['shares'] == 'IEF', 'asset_weight'] = 0.15 * 10 / 7 * 0.5
+            momentum_df.loc[momentum_df['shares'] == 'GLD', 'asset_weight'] = 0.075 * 10 / 7 * 0.5
+            momentum_df.loc[momentum_df['shares'] == 'GSG', 'asset_weight'] = 0.075 * 10 / 7 * 0.5
+
+        elif (momentum_df.loc[momentum_df['shares'] == 'VINEX', 'score'].values[0] <
+              momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] - 0.1 and
+              momentum_df.loc[momentum_df['shares'] == 'VINEX', 'score'].values[0] >
+              momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] - 0.2):
+            momentum_df.loc[momentum_df['shares'] == 'VINEX', 'asset_weight'] = 0.25
+            # All weather w/o stocks
+            momentum_df.loc[momentum_df['shares'] == 'TLT', 'asset_weight'] = 0.4 * 10 / 7 * 0.75
+            momentum_df.loc[momentum_df['shares'] == 'IEF', 'asset_weight'] = 0.15 * 10 / 7 * 0.75
+            momentum_df.loc[momentum_df['shares'] == 'GLD', 'asset_weight'] = 0.075 * 10 / 7 * 0.75
+            momentum_df.loc[momentum_df['shares'] == 'GSG', 'asset_weight'] = 0.075 * 10 / 7 * 0.75
+
+        elif momentum_df.loc[momentum_df['shares'] == 'VINEX', 'score'].values[0] < \
+                momentum_df.loc[pd.to_datetime(momentum_df.index).date == reference_date, indicator].values[0][0] - 0.2:
+            momentum_df.loc[momentum_df['shares'] == 'TLT', 'asset_weight'] = 0.4 * 10 / 7
+            momentum_df.loc[momentum_df['shares'] == 'IEF', 'asset_weight'] = 0.15 * 10 / 7
+            momentum_df.loc[momentum_df['shares'] == 'GLD', 'asset_weight'] = 0.075 * 10 / 7
+            momentum_df.loc[momentum_df['shares'] == 'GSG', 'asset_weight'] = 0.075 * 10 / 7
+
+    return momentum_df
+
+"""
+TODO Supporting fuctions for fabio's alpha strat 
+"""
+def calc_idiosyncratic_mom(tseries, tspy, day, period, trading_days):
+    """
+    function that computes the beta: cov/var of the asset with
+    respect to the SP500 index (given by SPY), which is a proxy
+    for the market & the idiosyncratic momentum
+
+    :params:
+    - asset (str): the asset to consider
+
+    :returns:
+    - beta (float): the equivalent beta for the last 3 months
+    """
+    # get the price for the particular date
+    final_day = get_trading_day(day, trading_days)
+
+    # get the initial date
+    init_day = date_minus_period(final_day, trading_days, period=period)
+
+    # filter the dataframe for the period wanted
+    filtered_prices = tseries[(pd.to_datetime(tseries.index).date >= init_day) & (pd.to_datetime(tseries.index).date <= final_day)]
+
+    # calculate returns
+    filtered_returns = filtered_prices.pct_change()
+    filtered_returns = filtered_returns.fillna(0)
+
+    # filter the dataframe for the period wanted for the SPY
+    target_prices = tspy[(pd.to_datetime(tspy.index).date >= init_day) & (pd.to_datetime(tspy.index).date <= final_day)]
+
+    # calculate the returns for the period wanted for the spy
+    target_returns = target_prices.pct_change()
+    target_returns = target_returns.fillna(0)
+
+    # calculate the beta and alpha
+    (beta, alpha) = stats.linregress(target_returns.values, filtered_returns.values)[0:2]
+
+    return alpha, beta
+
+def get_idiosyncratic_mom(assets, data, day, trading_days):
+    """ function that obtains the idiosyncratic momentum for:
+
+    - 1-month: m1
+    - 3-month: m3
+    - 6-month: m6
+    - 12-month: m12
+
+    of the asset list assets.
+
+    :params:
+    - assets (list): list of strings (symbols)
+    - data (dataframe): dictionary of dataframe prices !! It needs to include SPY
+    - day (str): date to consider
+
+    :returns:
+    - ret (dict): dictionary of returns of assets
+    """
+    # initialize the dictionaries
+    mom = {}
+
+    for asset in assets:
+        # initialize the asset inside the return dictionary
+        mom[asset] = {}
+
+        for per in [1,3,6,12]:
+            # accumulate the data
+            mom[asset]['m%i' %per], _ = calc_idiosyncratic_mom(data[asset],
+                                                            data['SPY'],
+                                                            day,
+                                                            per,
+                                                            trading_days)
+
+    return mom
+
+def get_volatility(assets, dic_assets, day, trading_days):
+    """ function that obtains the volatiliy for:
+    - 1-month: m1
+    - 3-month: m3
+    - 6-month: m6
+    - 12-months: m12
+
+    of the asset list assets.
+
+    :params:
+    - assets (list): list of strings (symbols)
+    - day (str): date to consider
+
+    :returns:
+    - ann_vol (dict): dictionary of volatility of assets
+    """
+    # initialize the dictionaries
+    ann_vol = {}
+
+    for asset in assets:
+        # initialize the asset inside the return dictionary
+        ann_vol[asset] = {}
+
+        # for per in [1,3,6,12]:
+        for per in [3,12]:
+            # accumulate the data
+            ann_vol[asset]['m%i' %per] = calc_volatility(dic_assets[asset],
+                                                        day,
+                                                        trading_days,
+                                                        period=per)
+
+    return ann_vol
+
+def calc_volatility(tseries, today, trading_days, period=1):
+    """
+    Function that computes the volatility of 'tseries' from 'today'
+    with window of 'period'
+
+    :params:
+    - tseries (dataframe Series): the time series to consider for the calculation
+    - today (str/datetime): the date from which we should look back in time
+    - period (int): period to calculate the returns on the time series
+
+    :returns:
+    - ann_vol (float): annualized volatility for tseries on period
+    """
+
+    # get the price for the particular date
+    final_day = get_trading_day(today, trading_days)
+
+    # get the initial date
+    init_day = date_minus_period(final_day, trading_days, period=period)
+
+    # filter the dataframe for the period wanted
+    # filtered_prices = tseries[(tseries['Date'] >= init_day) & (tseries['Date'] <= final_day)]['Adj_Close']
+    filtered_prices = tseries[(pd.to_datetime(tseries.index).date >= init_day) & (pd.to_datetime(tseries.index).date <= final_day)]
+
+    # calculate returns
+    filtered_returns = filtered_prices.pct_change()
+
+    # calculate variance
+    filtered_covariance = np.cov(filtered_returns.fillna(0).T)
+
+    # calculate annualized volatility
+    ann_vol = np.sqrt(filtered_covariance) * 100 * np.sqrt(252)
+
+    return ann_vol
+
+def date_minus_period(st_date, trading_days, period=1):
+    """
+    Function that gets the date when taking the number of
+    months corresponding to the period
+
+    :params:
+    - st_date (str): initial date to remove period from
+    - trading_days (list): list of trading days
+    - period (int): period to calculate the returns on the time series
+
+    :returns:
+    - init_day (str): returns the initial day once the (adjusted) period
+    has been taken out ('adjusted' since only future trading days are available)
+    """
+    # fin_day = datetime.datetime.strptime(st_date, '%Y-%m-%d')
+    fin_day = st_date
+    initial_day = fin_day - relativedelta(months=+period)
+    # init_day = datetime.datetime.strftime(initial_day, '%Y-%m-%d')
+    init_day = initial_day
+    init_day = get_trading_day(init_day, trading_days)
+    return init_day
+
+def get_trading_day(st_date, trading_days, past=False):
+    """
+    Function that provides the first trading day
+    after the date if the date is not a trading day.
+    if past is True, it provides the first trading day
+    before the data if the date is not a trading day
+
+    :params:
+    - st_date (str): date to test
+    - trading_days (list): list of trading days
+    - past (bool)
+
+    :returns:
+    - rl_date (str): might return st_date or
+    couple of days later after the trading date
+
+    """
+
+    if is_trading_day(st_date, trading_days):
+        return st_date
+
+    else:
+        rl_date = st_date
+        while not is_trading_day(rl_date, trading_days):
+            # dt = datetime.datetime.strptime(rl_date, '%Y-%m-%d')
+            dt = rl_date
+            if past:
+                dt = dt - datetime.timedelta(days=1)
+            else:
+                dt = dt + datetime.timedelta(days=1)
+            # rl_date = datetime.datetime.strftime(dt, '%Y-%m-%d')
+            rl_date = dt
+
+        return rl_date
+
+def is_trading_day(st_date, trading_days):
+    """
+    Simple function that calculates if st_date is a trading day
+
+    :params:
+    - st_date (str): date to test if a trading day
+
+    :returns:
+    - boolean (bool): True if st_date is a trading day; False if not
+    """
+
+    # return st_date in trading_days
+    return pd.Timestamp(st_date) in pd.to_datetime(trading_days['days']).tolist()
+
+# for IB live trading
 def AccDualMom_weights():
     shares_list = ['VFINX','VINEX','VUSTX']
     # shares_list = ['SPY','SCZ','TLT']

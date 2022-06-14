@@ -9,6 +9,9 @@
 from datetime import date, timedelta, datetime
 import os
 
+# App vars
+RUN_LOCALLY = True
+
 # parameters used in main.py
 # Set the strategy parameters
 
@@ -106,5 +109,6 @@ params = {'live_backtest':'',
           'market_sigma': '',
           'stddev_sample': '',
           'annualize': '',
-          'logreturns': ''
+          'logreturns': '',
+          'fundmode': ''
           }

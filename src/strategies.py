@@ -8,6 +8,7 @@ import riskparityportfolio as rp
 from backtrader.utils.py3 import range
 from scipy import stats
 import sys
+import utils
 
 from risk_budgeting import target_risk_contribution
 
@@ -86,7 +87,8 @@ class StandaloneStrat(bt.Strategy):
         ('assetweights', []),  # weights of portfolio items (if provided)
         ('printlog', True),
         ('corrmethod', 'pearson'),  # 'spearman' # method for the calculation of the correlation matrix
-        ('leverage',0.0)
+        ('leverage',0.0),
+        ('data_df', [])
     )
 
     def __init__(self):
@@ -96,12 +98,13 @@ class StandaloneStrat(bt.Strategy):
         self.buyprice = None
         self.buycomm = None
 
-
         self.weights = [0] * self.params.n_assets
         self.effectiveweights = [0] * self.params.n_assets
 
         self.startdate = None
         self.timeframe = self.get_timeframe()
+
+        self.leverage = self.params.leverage
 
         days1month = 1
         days3month = 1
@@ -177,11 +180,14 @@ class StandaloneStrat(bt.Strategy):
         dates_df['month'] = months
         dates_df['year'] = year
         dates_eom_df = dates_df.groupby(['month', 'year']).max().sort_values('date')
-        dates_eom_df.drop(dates_eom_df.tail(1).index, inplace=True)
+        # dates_eom_df.drop(dates_eom_df.tail(1).index, inplace=True)
         dates_eom_df = dates_eom_df.reset_index()
         month_filter = pd.Series(range(0, len(dates_eom_df))) % self.params.reb_period == 0
         dates_eom_df = dates_eom_df[month_filter]['date']
         self.dates_eom_df = dates_eom_df
+
+        # get file with trading days for
+        self.trading_days = pd.read_csv('src/trading_days.csv')
 
     def start(self):
         self.broker.set_fundmode(fundmode=True, fundstartval=100.00)  # Activate the fund mode, default has 100 shares
@@ -330,7 +336,7 @@ class StandaloneStrat(bt.Strategy):
                 sold_value = sold_value + (self.assetclose[asset].get(0)[0] * position)
         cash_after_sell = sold_value + self.broker.get_cash()
 
-        if self.params.leverage > 0:  # short sell cash
+        if self.leverage > 0:  # short sell cash
             position = self.broker.getposition(data=self.loanassets[0]).size
             if position < 0: # first reverse the short cash position
                 self.buy(data=self.loanassets[0], exectype=bt.Order.Limit,
@@ -338,7 +344,7 @@ class StandaloneStrat(bt.Strategy):
                 sold_value = (self.loanassetsclose[0].get(0)[0] * position)
                 cash_after_sell = cash_after_sell + sold_value
             # then short sell cash according to the leverage ratio
-            target_size = int(cash_after_sell * self.params.leverage / self.loanassetsclose[0].get(0)[0])
+            target_size = int(cash_after_sell * self.leverage / self.loanassetsclose[0].get(0)[0])
             self.sell(data=self.loanassets[0], exectype=bt.Order.Limit,
                       price=self.loanassetsclose[0].get(0)[0], size=target_size, coo=True)
             sold_value = (self.loanassetsclose[0].get(0)[0] * target_size)
@@ -1220,6 +1226,19 @@ class StandaloneStrat(bt.Strategy):
 
         return momentum_df['asset_weight'].to_list()
 
+    # TODO ADM use new common score and weights functions
+    def specific_adm_grad_div_weights_2(self):
+        # Required asset classes to execute the strategy
+        data = self.params.data_df[['VFINX', 'VINEX', 'TLT', 'IEF', 'GLD', 'GSG','DTB3']]
+        reference_date = self.datas[0].datetime.date(0)
+        momentum_df = utils.ADM_weights(data, reference_date)
+
+        shares_df = pd.DataFrame(list(zip(self.params.data_df.columns, self.params.shareclass)), columns = ['shares', 'shareclass'])
+        shares_df = shares_df.loc[~shares_df.shareclass.isin(['non-tradable', 'benchmark', 'loan'])]
+        shares_df_momentum_df = pd.merge(shares_df, momentum_df, how='left', left_on=['shares'], right_on=['shares'])['asset_weight'].fillna(0)
+
+        return shares_df_momentum_df.to_list()
+
     def gem_weights(self):
         # Required asset classes to execute the strategy
         assetclasses = ["equity", "equity_intl", "bond_lt", "money_market"]
@@ -1616,6 +1635,35 @@ class StandaloneStrat(bt.Strategy):
 
         return momentum_df['asset_weight'].to_list()
 
+    # TODO NEW FABIO'S ALPHA
+    def idiosyncratic_mom_weights(self):
+        """
+        Method that contains the trading logic of idiosyncratic
+        """
+        # initiate an empty  dictionary
+        score_offensive = {}
+
+        # define offensive assets
+        assets = ['SPY','QQQ','MDY','EFA','FXI','FEMKX','VNQ','GLD','TLT','LQD']
+        data = self.params.data_df[assets]
+        day = self.datas[0].datetime.date(0)
+        # get the idiosyncratic momentum of the different assets
+
+        mom = utils.get_idiosyncratic_mom(assets, data, day, self.trading_days)
+        # ret = get_returns(assets, self.dic_assets, day)
+        # vol = get_volatility(assets, self.dic_assets, day)
+
+        # define dict for the returns of offensive assets
+        for asset in assets:
+            score_offensive[asset] = mom[asset]['m3']
+
+        asset_to_hold = sorted(score_offensive, key = score_offensive.get, reverse=True)[:1]
+
+        shares_df = pd.DataFrame(list(zip(self.params.data_df.columns, self.params.shareclass)),
+                                 columns=['shares', 'shareclass'])
+        shares_df = shares_df.loc[~shares_df.shareclass.isin(['non-tradable', 'benchmark', 'loan'])]
+        shares_df['asset_weight'] = np.where(shares_df["shares"].isin(asset_to_hold), 1, 0)
+        return shares_df['asset_weight'].tolist()
 
 """
 The child classes below are specific to one strategy.
@@ -2950,6 +2998,35 @@ class vigilant(StandaloneStrat):
             self.broker.get_fundvalue()))
             self.rebalance()
 
+class fabios(StandaloneStrat):
+    def __init__(self):
+        self.strategy_name = "Fabio's strategies"
+        super().__init__()
+
+    """
+    Fabio's strategies
+    """
+
+    def next_open(self):
+        if self.rebalance_flg():
+            # TEST FABIOS'
+            self.weights = ((np.array(self.specific_vigilant_weights()) +
+                           np.array(self.specific_rot_weights()) +
+                           np.array(self.specific_adm_weights()) +
+                           np.array(self.specific_fabio_adm2_weights()) +
+                           np.array(self.idiosyncratic_mom_weights()) +
+                           np.array(self.specific_fabio_adm3_weights()) )/6).tolist()
+                           # np.array(self.specific_weights()) )/6).tolist()
+
+            print(self.weights)
+            self.log("Pre-rebalancing CASH %.2f, VALUE  %.2f, FUND SHARES %.2f, FUND VALUE %.2f:" % (
+            self.broker.get_cash(),
+            self.broker.get_value(),
+            self.broker.get_fundshares(),
+            self.broker.get_fundvalue()))
+
+            self.rebalance()
+
 class TESTING(StandaloneStrat):
     def __init__(self):
         self.strategy_name = "rot_adm_dual_rp"
@@ -2962,47 +3039,85 @@ class TESTING(StandaloneStrat):
 
     def next_open(self):
         if self.rebalance_flg():
-            # weights_adm = self.adm_weights()
-            # weights_gem = self.gem_weights()
-            # weights_rp = self.riskparity_nested_weights()
-            # weights_rot = self.rot_weights()
-            # weights_adm_diversified = self.adm_diversified_weights()
-            # onlystocks_weights = self.onlystocks_weights()
-            # weights_adm_gradient = self.adm_gradient_weights()
-            # weights_adm_gradient_div = self.adm_grad_div_weights()
-            # self.weights = (np.array(onlystocks_weights) * 0.5 + 0.5 * ((np.array(weights_adm) + np.array(weights_gem) + np.array(weights_rp) + np.array(weights_rot))/4)).tolist()
-            # self.weights = (np.array(onlystocks_weights) * 1/3 + 2/3 * np.array(weights_adm_diversified) ).tolist()
-            # self.weights = (np.array(onlystocks_weights) * 1/3 + 2/3 * ((np.array(weights_adm_diversified) + np.array(weights_rot))/2)).tolist()
-            # self.weights = (3/3 * ((np.array(weights_rot) + np.array(weights_adm_gradient_div))/2)).tolist()
-            # self.weights = (3/3 * ((np.array(weights_specific_rot) + np.array(weights_specific_adm_gradient_div)))/2)).tolist()
-
-            # weights_specific_rot = self.specific_rot_weights()
-            # weights_specific = self.specific_weights()
-            # weights_specific_vigilant = self.specific_vigilant_weights()
-            # weights_specific_adm_gradient_div = self.specific_adm_grad_div_weights()
-            # # Current MAX Sharpe
-            # self.weights = (0.35 * np.array(weights_specific_rot) +
-            #                 0.35 * np.array(weights_specific_adm_gradient_div) +
-            #                 0.1 * np.array(weights_specific) +
-            #                 0.2 * np.array(weights_specific_vigilant)).tolist()
 
             # TEST FABIOS'
-            # self.weights = ((np.array(self.specific_vigilant_weights()) +
+            # weights = ((np.array(self.specific_vigilant_weights()) +
             #                np.array(self.specific_rot_weights()) +
             #                np.array(self.specific_adm_weights()) +
             #                np.array(self.specific_fabio_adm2_weights()) +
-            #                np.array(self.specific_fabio_adm3_weights()) +
-            #                np.array(self.specific_weights()) )/6).tolist()
-            # with ADM FG and ROT FG
-            self.weights = (
-                           0.18*np.array(self.specific_vigilant_weights()) +
-                           0.18*np.array(self.specific_rot_weights2()) +
-                           0.18*np.array(self.specific_adm_grad_div_weights()) +
-                           0.18*np.array(self.specific_fabiofg_adm2_weights()) +
-                           0.18*np.array(self.specific_fabio_adm3_weights()) +
-                           0.1*np.array(self.specific_weights())).tolist()
+            #                np.array(self.specific_fabio_adm3_weights()) )/5).tolist()
+            #                # np.array(self.specific_weights()) )/6).tolist()
 
-            print(self.weights)
+            # WITH NEW fabio's alpha STRAT
+            # weights = ((np.array(self.specific_vigilant_weights()) +
+            #                np.array(self.specific_rot_weights()) +
+            #                np.array(self.specific_adm_weights()) +
+            #                np.array(self.specific_fabio_adm2_weights()) +
+            #                np.array(self.idiosyncratic_mom_weights()) +
+            #                np.array(self.specific_fabio_adm3_weights()) )/6).tolist()
+            #                # np.array(self.specific_weights()) )/6).tolist()
+
+            # FABIO'S WITHOUT ADM, BRK-B AND WITH ALPHA
+            weights = ((np.array(self.specific_vigilant_weights()) +
+                           np.array(self.specific_rot_weights()) +
+                           np.array(self.specific_fabio_adm2_weights()) +
+                           np.array(self.idiosyncratic_mom_weights()) +
+                           np.array(self.specific_fabio_adm3_weights()) )/5).tolist()
+
+            # with ADM FG and ROT FG
+            # WITH NEW fabio's alpha STRAT
+            # weights = (
+            #                0.15*np.array(self.specific_vigilant_weights()) +
+            #                0.15*np.array(self.specific_rot_weights2()) +
+            #                # 0.18*np.array(self.specific_adm_grad_div_weights_2()) +
+            #                0.15*np.array(self.specific_adm_grad_div_weights()) +
+            #                0.15*np.array(self.specific_fabiofg_adm2_weights()) +
+            #                0.15*np.array(self.specific_fabio_adm3_weights()) +
+            #                0.15*np.array(self.idiosyncratic_mom_weights()) +
+            #                0.1*np.array(self.specific_weights())).tolist()
+
+            # WITHOUT NEW fabio's alpha STRAT
+            # weights = (
+            #                0.18*np.array(self.specific_vigilant_weights()) +
+            #                0.18*np.array(self.specific_rot_weights2()) +
+            #                0.18*np.array(self.specific_adm_grad_div_weights()) +
+            #                0.18*np.array(self.specific_fabiofg_adm2_weights()) +
+            #                0.18*np.array(self.specific_fabio_adm3_weights()) +
+            #                0.1*np.array(self.specific_weights())).tolist()
+
+            # weights = (
+            #                0.18*np.array(self.specific_vigilant_weights()) +
+            #                0.18*np.array(self.specific_rot_weights2()) +
+            #                # 0.18*np.array(self.specific_adm_grad_div_weights_2()) +
+            #                0.18*np.array(self.specific_adm_grad_div_weights()) +
+            #                0.18*np.array(self.specific_fabiofg_adm2_weights()) +
+            #                0.18*np.array(self.specific_fabio_adm3_weights()) +
+            #                0.1*np.array(self.specific_weights())).tolist()
+
+
+            shares_df = pd.DataFrame(list(zip(self.params.data_df.columns, self.params.shareclass)),
+                                     columns=['shares', 'shareclass'])
+            shares_df = shares_df.loc[~shares_df.shareclass.isin(['non-tradable', 'benchmark', 'loan'])]['shares']
+            dic_assets = self.params.data_df[shares_df]
+            day = self.datas[0].datetime.date(0)
+            assets = shares_df.tolist()
+            ann_vol = utils.get_volatility(assets, dic_assets, day, self.trading_days)
+
+            vol_scaling = []
+            for asset in assets:
+                vol_scaling.append(ann_vol[asset]['m12']/ann_vol[asset]['m3'])
+
+            weights = [a * b for a, b in zip(vol_scaling, weights)]
+
+            # self.weights = [number / sum(weights) for number in weights]
+
+            if sum(weights) > 1:
+                self.weights = [number / sum(weights) for number in weights]
+                self.leverage = self.params.leverage + (sum(weights) - 1)
+            else:
+                self.weights = weights
+                self.leverage = self.params.leverage
+
             self.log("Pre-rebalancing CASH %.2f, VALUE  %.2f, FUND SHARES %.2f, FUND VALUE %.2f:" % (
             self.broker.get_cash(),
             self.broker.get_value(),

@@ -260,8 +260,88 @@ def app():
             ticker_eom = "VUSTX"
     st.markdown("Today (" + AccDualMom_curves.index.max().strftime("%d/%m/%Y") + "), the accelerated dual momentum allocation would recommend to allocate resources to **" + ticker_eom + "**.")
 
+    # TODO use common functions for ADM signals
+    st.markdown("## Accelerating dual momentum")
+    st.write("Accelerating Dual Momentum. Needs only 3 assets of classes equity, equity_intl, bond_lt. example: "
+             "VFINX,VINEX,VUSTX, shareclass equity,equity_intl,bond_lt. "
+             "See https://engineeredportfolio.com/2018/05/02/accelerating-dual-momentum-investing/")
 
-    st.markdown("## Accelerating dual momentum (with GLD, Commodieties)")
+    # shares_list = ['VFINX','VINEX','VUSTX']
+    shares_list = ['VFINX', 'VINEX', 'TLT', 'IEF', 'GLD', 'GSG']
+    # shares_list = ['SPY','SCZ','TLT']
+    AccDualMom_curves = utils.load_AccDualMom_curves(shares_list, date.today()-timedelta(365*2.5), date.today())
+
+    # add the 3m t bill
+    t_bill = utils.load_fred_curve(date.today()-timedelta(365*2.5), date.today(), ['DTB3'])
+    t_bill = t_bill.rename(columns={"DTB3": "score"})
+    t_bill['score'] = t_bill['score']/100
+    t_bill['asset'] = '3m_tbill'
+    #t_bill['date'] = t_bill.index
+    t_bill = pd.merge(t_bill, AccDualMom_curves['date'], how='right', left_index=True, right_index=True)
+    t_bill = t_bill.fillna(method="ffill")
+    t_bill = t_bill.fillna(method="bfill")
+    AccDualMom_curves = AccDualMom_curves.append(t_bill)
+
+    fig = px.line(AccDualMom_curves, x="date", y="score", color="asset")
+    st.plotly_chart(fig, use_container_width=True)
+
+    end_month = AccDualMom_curves.groupby(AccDualMom_curves.index.month).max().sort_values('date').iloc[-2]['date']
+
+    col1, col2 = st.columns(2)
+    wd = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    AccDualMom_image_path = utils.find('acc_dualmom.png', wd)
+    AccDualMom_image = Image.open(AccDualMom_image_path)
+    col1.image(AccDualMom_image)
+
+    AccDualMom_stocks = [['equity',shares_list[0], 'Vanguard 500 Index Fund Investor Shares', AccDualMom_curves.loc[(AccDualMom_curves.asset == shares_list[0]) & (AccDualMom_curves.index == end_month)]['score'].values[0], AccDualMom_curves.loc[(AccDualMom_curves.asset == shares_list[0]) & (AccDualMom_curves.index == AccDualMom_curves.index.max())]['score'].values[0],'https://finance.yahoo.com/quote/VFINX'],
+                  ['equity_intl',shares_list[1], 'Vanguard International Explorer Fund Investor Shares', AccDualMom_curves.loc[(AccDualMom_curves.asset == shares_list[1]) & (AccDualMom_curves.index == end_month)]['score'].values[0], AccDualMom_curves.loc[(AccDualMom_curves.asset == shares_list[1]) & (AccDualMom_curves.index == AccDualMom_curves.index.max())]['score'].values[0],  'https://finance.yahoo.com/quote/VINEX'],
+                  ['3m_bills','DTB3', '3-Month Treasury Bill Secondary Market Rate', AccDualMom_curves.loc[(AccDualMom_curves.asset == '3m_tbill') & (AccDualMom_curves.index == end_month)]['score'].values[0], AccDualMom_curves.loc[(AccDualMom_curves.asset == '3m_tbill') & (AccDualMom_curves.index == AccDualMom_curves.index.max())]['score'].values[0], 'https://fred.stlouisfed.org/series/DTB3']]
+    AccDualMom_stocks_df = pd.DataFrame(AccDualMom_stocks, columns=['type','ticker', 'name', 'month end score','today score','link'])
+    st.dataframe(AccDualMom_stocks_df)
+
+    score_col_name = 'month end score'
+    data = AccDualMom_stocks_df
+
+    utils.ADM_weights(data, end_month)
+
+    if data.loc[data['type'] == 'equity', score_col_name].values[0] > \
+            data.loc[data['type'] == 'equity_intl', score_col_name].values[0]:
+        if data.loc[data['type'] == 'equity', score_col_name].values[0] > \
+                data.loc[data['type'] == '3m_bills', score_col_name].values[0]:
+            ticker_eom = data.loc[data['type'] == 'equity', 'ticker'].values[0]
+        else:
+            ticker_eom = "VUSTX"
+    else:
+        if data.loc[data['type'] == 'equity_intl', score_col_name].values[0] > \
+                data.loc[data['type'] == '3m_bills', score_col_name].values[0]:
+            ticker_eom = data.loc[data['type'] == 'equity_intl', 'ticker'].values[0]
+        else:
+            ticker_eom = "VUSTX"
+
+    st.markdown("The accelerated dual momentum allocation recommends to allocate resources to **" + ticker_eom + "**, based  on last month (" + end_month.strftime("%m/%Y") + ")  returns.")
+
+    score_col_name = 'today score'
+    data = AccDualMom_stocks_df
+
+    if data.loc[data['type'] == 'equity', score_col_name].values[0] > \
+            data.loc[data['type'] == 'equity_intl', score_col_name].values[0]:
+        if data.loc[data['type'] == 'equity', score_col_name].values[0] > \
+                data.loc[data['type'] == '3m_bills', score_col_name].values[0]:
+            ticker_eom = data.loc[data['type'] == 'equity', 'ticker'].values[0]
+        else:
+            ticker_eom = "VUSTX"
+    else:
+        if data.loc[data['type'] == 'equity_intl', score_col_name].values[0] > \
+                data.loc[data['type'] == '3m_bills', score_col_name].values[0]:
+            ticker_eom = data.loc[data['type'] == 'equity_intl', 'ticker'].values[0]
+        else:
+            ticker_eom = "VUSTX"
+    st.markdown("Today (" + AccDualMom_curves.index.max().strftime("%d/%m/%Y") + "), the accelerated dual momentum allocation would recommend to allocate resources to **" + ticker_eom + "**.")
+    # END TODO
+
+
+
+    st.markdown("## Accelerating dual momentum (with GLD, Commodities)")
     st.write("Accelerating Dual Momentum, including TIPs as inflation hedge. Needs only 4 assets of classes equity, "
              "equity_intl, bond_lt, gold. example: "
              "VFINX,VINEX,VUSTX,GLD,GSG  shareclass equity, equity_intl, bond_lt, gold, commodity. "

@@ -6,13 +6,15 @@ import os, sys
 import plotly.express as px
 import pandas as pd
 import numpy as np
+import math
 import utils
+import copy
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # import SessionState
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from main import main
-from GLOBAL_VARS import params
+from GLOBAL_VARS import params, RUN_LOCALLY
 
 # session_state = SessionState.get(ib_client = None,
 #                                  live_backtest=False,
@@ -62,104 +64,260 @@ from GLOBAL_VARS import params
 #                                  assets_multiselect=['SP500','ZB.F','ZN.F','BM.F','GC.C'],
 #                                  userallocation_live=False,
 #                                  ADM_live=False)
-st.session_state.ib_client = None
-st.session_state.live_backtest=False
-st.session_state.startdate=datetime.strptime('2000-01-01', '%Y-%m-%d')
-st.session_state.enddate = date.today()
-st.session_state.initial_cash=1000000.0
-st.session_state.contribution=0.0
-st.session_state.leverage=0.0
-st.session_state.expense_ratio=0.01
-st.session_state.historic="Yahoo Finance (daily prices)", #"Historical DB (daily prices)"
-# st.session_state.shares=['VFINX', 'VINEX', 'TLT', 'IEF', 'GLD', 'GSG', 'QQQ', 'TIP', 'EFA', 'EEM','AGG','LQD','SHY','BRK-B','']
-# st.session_state.shareclass=['equity','equity_intl','bond_lt','bond_it','gold','commodity','equity','bond_lt','equity','equity','bond_lt','bond_lt','bond_it','equity','']
-# FABIO'S strats
-st.session_state.shares=['SPY','EFA','FEMKX','AGG','LQD','IEF','SHY','VFINX','VINEX','VUSTX','QQQ','MDY','FXI','VNQ','GLD','TLT','VBMFX', 'BRK-B', 'TIP', 'GSG']
-st.session_state.shareclass=['equity','equity_intl','equity_intl','bond_lt','bond_lt','bond_it','bond_it','equity','equity_intl','bond_lt','equity','equity','equity_intl','equity','gold','bond_lt','bond_lt', 'equity', 'bond_lt', 'commodity']
-st.session_state.weights=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-# my strats
-# st.session_state.shares=   ['SPY','QQQ','MDY','EFA','FXI','FEMKX','VNQ','GLD','TLT','LQD','VBMFX', '', '', '', '']
-# st.session_state.shareclass=['equity','equity','equity','equity_intl','equity_intl','equity_intl','equity','gold','bond_lt','bond_lt','bond_lt','','','','']
-# st.session_state.weights=[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
-st.session_state.benchmark=''
-st.session_state.riskparity=False
-st.session_state.riskparity_nested=False
-st.session_state.rotationstrat=False
-st.session_state.uniform=False
-st.session_state.vanillariskparity=False
-st.session_state.onlystocks=False
-st.session_state.sixtyforty=False
-st.session_state.trend_u=False
-st.session_state.absmom_u=False
-st.session_state.relmom_u=False
-st.session_state.momtrend_u=False
-st.session_state.trend_rp=False
-st.session_state.absmom_rp=False
-st.session_state.relmom_rp=False
-st.session_state.momtrend_rp=False
-st.session_state.GEM=False
-st.session_state.acc_dualmom=False
-st.session_state.acc_dualmom2=False
-st.session_state.rot_adm=False
-st.session_state.rot_adm_dual_rp=False
-st.session_state.TESTING=True
-st.session_state.vigilant=False
-st.session_state.specific_vigilant=False
-st.session_state.specific_rot=False
-st.session_state.specific_rot2=False
-st.session_state.specific_adm=False
-st.session_state.specific_adm_grad_div=False
-st.session_state.specific_fabio_adm2=False
-st.session_state.specific_fabiofg_adm2=False
-st.session_state.specific_fabio_adm3=False
-st.session_state.specific=False
-# report
-st.session_state.create_report=True
-st.session_state.report_name='backtest report'
-st.session_state.user='FG'
-st.session_state.memo='backtest report'
-# advanced parameters
-st.session_state.MARGINLOAN_INT_RATE=1.5
-st.session_state.DAYS_IN_YEAR=252
-st.session_state.DAYS_IN_YEAR_BOND_PRICE=360
-st.session_state.reb_period_days=1
-st.session_state.reb_period_years=1
-st.session_state.reb_period_custweights=1
-st.session_state.lookback_period_short_days=20
-st.session_state.lookback_period_short_years=5
-st.session_state.lookback_period_short_custweights=20
-st.session_state.lookback_period_long_days=120
-st.session_state.lookback_period_long_years=10
-st.session_state.lookback_period_long_custweights=120
-st.session_state.moving_average_period_days=252
-st.session_state.moving_average_period_years=5
-st.session_state.moving_average_period_custweights=252
-st.session_state.momentum_period_days=252
-st.session_state.momentum_period_years=5
-st.session_state.momentum_period_custweights=252
-st.session_state.momentum_percentile_days=0.5
-st.session_state.momentum_percentile_years=0.5
-st.session_state.momentum_percentile_custweights=0.5
-st.session_state.corrmethod_days='pearson'
-st.session_state.corrmethod_years='pearson'
-st.session_state.corrmethod_custweights='pearson'
-st.session_state.riskfree=0.01
-st.session_state.targetrate=0.01
-st.session_state.alpha=0.05
-st.session_state.market_mu=0.07
-st.session_state.market_sigma=0.15
-st.session_state.stddev_sample=True
-st.session_state.annualize=True
-st.session_state.logreturns=False
-st.session_state.assets_startdate=datetime.strptime('2010-01-01', '%Y-%m-%d')
-st.session_state.assets_enddate = datetime.strptime('2021-01-01', '%Y-%m-%d')
-st.session_state.assets_multiselect=['SP500','ZB.F','ZN.F','BM.F','GC.C']
-st.session_state.userallocation_live=False
-st.session_state.ADM_live=False
+@st.experimental_singleton
+def initialize_session_state():
+    st.session_state.ib_client = None
+    st.session_state.live_backtest=False
+    # st.session_state.startdate=datetime.strptime('2000-01-01', '%Y-%m-%d')
+    st.session_state.startdate = datetime.strptime('2000-01-01', '%Y-%m-%d')
+    st.session_state.enddate = date.today()
+    st.session_state.initial_cash=1000000.0
+    st.session_state.contribution=0.0
+    st.session_state.leverage=0.0
+    st.session_state.expense_ratio=0.01
+    st.session_state.historic="Yahoo Finance (daily prices)" #"Historical DB (daily prices)"
+    # st.session_state.shares=['VFINX', 'VINEX', 'TLT', 'IEF', 'GLD', 'GSG', 'QQQ', 'TIP', 'EFA', 'EEM','AGG','LQD','SHY','BRK-B','']
+    # st.session_state.shareclass=['equity','equity_intl','bond_lt','bond_it','gold','commodity','equity','bond_lt','equity','equity','bond_lt','bond_lt','bond_it','equity','']
+    # FABIO'S strats
+    st.session_state.shares=['SPY','EFA','FEMKX','AGG','LQD','IEF','SHY','VFINX','VINEX','VUSTX','QQQ','MDY','FXI','VNQ','GLD','TLT','VBMFX', 'BRK-B', 'TIP', 'GSG']
+    st.session_state.shareclass=['equity','equity_intl','equity_intl','bond_lt','bond_lt','bond_it','bond_it','equity','equity_intl','bond_lt','equity','equity','equity_intl','equity','gold','bond_lt','bond_lt', 'equity', 'bond_lt', 'commodity']
+    st.session_state.weights=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    # my strats
+    # st.session_state.shares=   ['SPY','QQQ','MDY','EFA','FXI','FEMKX','VNQ','GLD','TLT','LQD','VBMFX', '', '', '', '']
+    # st.session_state.shareclass=['equity','equity','equity','equity_intl','equity_intl','equity_intl','equity','gold','bond_lt','bond_lt','bond_lt','','','','']
+    # st.session_state.weights=[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+    st.session_state.benchmark=''
+    st.session_state.riskparity=False
+    st.session_state.riskparity_nested=False
+    st.session_state.rotationstrat=False
+    st.session_state.uniform=False
+    st.session_state.vanillariskparity=False
+    st.session_state.onlystocks=False
+    st.session_state.sixtyforty=False
+    st.session_state.trend_u=False
+    st.session_state.absmom_u=False
+    st.session_state.relmom_u=False
+    st.session_state.momtrend_u=False
+    st.session_state.trend_rp=False
+    st.session_state.absmom_rp=False
+    st.session_state.relmom_rp=False
+    st.session_state.momtrend_rp=False
+    st.session_state.GEM=False
+    st.session_state.acc_dualmom=False
+    st.session_state.acc_dualmom2=False
+    st.session_state.rot_adm=False
+    st.session_state.rot_adm_dual_rp=False
+    st.session_state.TESTING=True
+    st.session_state.vigilant=False
+    st.session_state.specific_vigilant=False
+    st.session_state.specific_rot=False
+    st.session_state.specific_rot2=False
+    st.session_state.specific_adm=False
+    st.session_state.specific_adm_grad_div=False
+    st.session_state.specific_fabio_adm2=False
+    st.session_state.specific_fabiofg_adm2=False
+    st.session_state.specific_fabio_adm3=False
+    st.session_state.specific=False
+    # report
+    st.session_state.create_report=True
+    st.session_state.report_name='backtest report'
+    st.session_state.user='FG'
+    st.session_state.memo='backtest report'
+    # advanced parameters
+    st.session_state.MARGINLOAN_INT_RATE=1.5
+    st.session_state.DAYS_IN_YEAR=252
+    st.session_state.DAYS_IN_YEAR_BOND_PRICE=360
+    st.session_state.reb_period_days=1
+    st.session_state.reb_period_years=1
+    st.session_state.reb_period_custweights=1
+    st.session_state.lookback_period_short_days=20
+    st.session_state.lookback_period_short_years=5
+    st.session_state.lookback_period_short_custweights=20
+    st.session_state.lookback_period_long_days=120
+    st.session_state.lookback_period_long_years=10
+    st.session_state.lookback_period_long_custweights=120
+    st.session_state.moving_average_period_days=252
+    st.session_state.moving_average_period_years=5
+    st.session_state.moving_average_period_custweights=252
+    st.session_state.momentum_period_days=252
+    st.session_state.momentum_period_years=5
+    st.session_state.momentum_period_custweights=252
+    st.session_state.momentum_percentile_days=0.5
+    st.session_state.momentum_percentile_years=0.5
+    st.session_state.momentum_percentile_custweights=0.5
+    st.session_state.corrmethod_days='pearson'
+    st.session_state.corrmethod_years='pearson'
+    st.session_state.corrmethod_custweights='pearson'
+    st.session_state.riskfree=0.01
+    st.session_state.targetrate=0.01
+    st.session_state.alpha=0.05
+    st.session_state.market_mu=0.07
+    st.session_state.market_sigma=0.15
+    st.session_state.stddev_sample=True
+    st.session_state.annualize=True
+    st.session_state.logreturns=False
+    st.session_state.assets_startdate=datetime.strptime('2010-01-01', '%Y-%m-%d')
+    st.session_state.assets_enddate = datetime.strptime('2021-01-01', '%Y-%m-%d')
+    st.session_state.assets_multiselect=['SP500','ZB.F','ZN.F','BM.F','GC.C']
+    st.session_state.userallocation_live=False
+    st.session_state.ADM_live=False
+    return
+
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
+def portfolio_value_graph(live_returns, input_df):
+    input_df_0 = copy.deepcopy(input_df[0])
+    if params['live_backtest']:
+        live_price = params['initial_cash'] * (1 + live_returns['returns']).cumprod()
+        live_price.iloc[0] = params['initial_cash']
+        live_price_df = pd.DataFrame({'date': live_returns['date'], 'real_portfolio': live_price})
+        input_df_0 = pd.merge(input_df_0, live_price_df, left_index=True, right_on='date', how="inner")
+        input_df_0.set_index(['date'], inplace=True)
+    columns=input_df_0.columns
+    input_df_0['date'] = input_df_0.index
+    input_df_long = pd.melt(input_df_0, id_vars=['date'], value_vars=columns, var_name='strategy',
+                            value_name='price')
+    return input_df_long
+
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
+def portfolio_drawdowns_graph(live_returns, input_df):
+    input_df_5 = copy.deepcopy(input_df[5])
+    if params['live_backtest']:
+        live_price = params['initial_cash'] * (1 + live_returns['returns']).cumprod()
+        live_price.iloc[0] = params['initial_cash']
+        live_portfolio_dd = (live_price.shift(-1) / live_price.cummax(axis=0) - 1).shift(1)
+        live_portfolio_dd.iloc[0] = 0
+        live_portfolio_dd = live_portfolio_dd.clip(None, 0)
+        live_portfolio_dd_df = pd.DataFrame({'date': live_returns['date'], 'real_portfolio': live_portfolio_dd})
+        input_df_5 = pd.merge(input_df_5, live_portfolio_dd_df, left_index=True, right_on='date', how="inner")
+        input_df_5.set_index(['date'], inplace=True)
+    columns = input_df_5.columns
+    input_df_5['date'] = input_df_5.index
+    input_df_long = pd.melt(input_df_5, id_vars=['date'], value_vars=columns, var_name='strategy',
+                            value_name='drawdown')
+    return input_df_long
+
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
+def portfolio_metrics_table(live_returns, input_df):
+    input_df_2 = copy.deepcopy(input_df[2])
+    if params['live_backtest']:
+        returns_df = live_returns['returns']
+        live_portfolio_metrics_df = utils.live_portfolio_metrics(params, returns_df)
+        input_df_2 = pd.merge(input_df_2, live_portfolio_metrics_df, left_index=True, right_index=True, how='inner')
+    return input_df_2
+
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
+def portfolio_weights_graph(input_df):
+    # col1, col2 = st.columns(2)
+    #
+    # idx = 3
+    # columns=input_df[idx].columns
+    # input_df[idx]['date'] = input_df[idx].index
+    # input_df_long = pd.melt(input_df[idx], id_vars=['date','strategy'], value_vars=columns[0:-1],var_name='asset', value_name='weight')
+    #
+    # col1.subheader("Target weights")
+    #
+    # for strat in input_df_long['strategy'].unique():
+    #     fig = px.bar(input_df_long[input_df_long['strategy']==strat], x="date", y="weight", color="asset", title=strat + ' weights')
+    #     col1.plotly_chart(fig, use_container_width=True)
+    input_df_4 = copy.deepcopy(input_df[4])
+    columns = input_df_4.columns
+    input_df_4['date'] = input_df_4.index
+    input_df_month = input_df_4
+
+    # If the backtest period is larger than 1 year then display the weights at monthly frequency
+    if (st.session_state.enddate - st.session_state.startdate).days > 365:
+        dates_df = pd.DataFrame(input_df_month['date'], columns=["date"])
+        dates_df['month'] = pd.DatetimeIndex(dates_df["date"]).month
+        dates_df['year'] = pd.DatetimeIndex(dates_df["date"]).year
+        dates_df = dates_df.groupby(['month', 'year']).max().sort_values('date')
+        dates_df.drop(dates_df.tail(1).index, inplace=True)
+        input_df_month = pd.merge(left=input_df_month, right=dates_df, how='right', left_on=["date"], right_on=["date"])
+
+    input_df_long = pd.melt(input_df_month, id_vars=['date', 'strategy'], value_vars=columns[0:-1], var_name='asset',
+                            value_name='weight')
+    return input_df_long
+
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
+def asset_values_graph(input_df):
+    input_df_6 = copy.deepcopy(input_df[6])
+    columns = input_df_6.columns
+    input_df_6['date'] = input_df_6.index
+    input_df_month = input_df_6
+
+    # If the backtest period is larger than 1 year then display the weights at monthly frequency
+    if (st.session_state.enddate - st.session_state.startdate).days > 365:
+        dates_df = pd.DataFrame(input_df_month['date'], columns=["date"])
+        dates_df['month'] = pd.DatetimeIndex(dates_df["date"]).month
+        dates_df['year'] = pd.DatetimeIndex(dates_df["date"]).year
+        dates_df = dates_df.groupby(['month', 'year']).max().sort_values('date')
+        dates_df.drop(dates_df.tail(1).index, inplace=True)
+        input_df_month = pd.merge(left=input_df_month, right=dates_df, how='right', left_on=["date"], right_on=["date"])
+
+    input_df_long = pd.melt(input_df_month, id_vars=['date'], value_vars=columns, var_name='asset', value_name='price')
+    return input_df_long
+
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
+def asset_drawdown_graph(input_df):
+    input_df_7 = copy.deepcopy(input_df[7])
+    columns = input_df_7.columns
+    input_df_7['date'] = input_df_7.index
+    input_df_month = input_df_7
+
+    # If the backtest period is larger than 1 year then display the weights at monthly frequency
+    if (st.session_state.enddate - st.session_state.startdate).days > 365:
+        dates_df = pd.DataFrame(input_df_month['date'], columns=["date"])
+        dates_df['month'] = pd.DatetimeIndex(dates_df["date"]).month
+        dates_df['year'] = pd.DatetimeIndex(dates_df["date"]).year
+        dates_df = dates_df.groupby(['month', 'year']).max().sort_values('date')
+        dates_df.drop(dates_df.tail(1).index, inplace=True)
+        input_df_month = pd.merge(left=input_df_month, right=dates_df, how='right', left_on=["date"], right_on=["date"])
+
+    input_df_long = pd.melt(input_df_month, id_vars=['date'], value_vars=columns, var_name='asset',
+                            value_name='drawdown')
+    return input_df_long
+
+@st.cache(suppress_st_warning=True, persist=True, show_spinner=False)
+def portfolio_rollingrets_graph(input_df, rolling_ret_period):
+    input_df_1 = copy.deepcopy(input_df[1])
+
+    # Determine the price frequency
+    dates = []
+    for i in range(1, len(input_df_1.index)):
+        dates.append(datetime.strptime(str(input_df_1.index[i]), '%Y-%m-%d'))
+    datediff = stats.mode(np.diff(dates))[0][0]
+    if datediff > timedelta(days=250):
+        frequency = "Years"
+    elif datediff < timedelta(days=2):
+        frequency = "Days"
+
+    if frequency == "Days":  # plot the rolling return (annualized)
+        for column in input_df_1:
+            if params['logreturns']:
+                input_df_1[column] = (input_df_1[column]).rolling(
+                    window=params['DAYS_IN_YEAR'] * rolling_ret_period).sum() / rolling_ret_period
+            else:
+                input_df_1[column] = (1 + input_df_1[column]).rolling(
+                    window=params['DAYS_IN_YEAR'] * rolling_ret_period).apply(np.prod) ** (1 / rolling_ret_period) - 1
+    elif frequency == "Years":  # plot the rolling 5 years return
+        for column in input_df_1:
+            if params['logreturns']:
+                input_df_1[column] = (input_df_1[column]).rolling(window=rolling_ret_period).mean()
+            else:
+                input_df_1[column] = (1 + input_df_1[column]).rolling(window=rolling_ret_period).apply(np.prod) - 1
+
+    columns = input_df_1.columns
+    input_df_1['date'] = input_df_1.index
+    input_df_long = pd.melt(input_df_1, id_vars=['date'], value_vars=columns, var_name='strategy',
+                            value_name='rolling return')
+
+    portfolio_rollingrets_fig = px.line(input_df_long, x="date", y="rolling return", color="strategy")
+    return portfolio_rollingrets_fig
 
 def app():
     global input_df
     global account
+
+    initialize_session_state()
 
     st.title('Home')
 
@@ -356,12 +514,17 @@ def app():
             params['stddev_sample'] = st.session_state.stddev_sample
             params['annualize'] = st.session_state.annualize
             params['logreturns'] = st.session_state.logreturns
+            if params['contribution'] == 0:
+                params["fundmode"] = True
+            else:
+                params["fundmode"] = False
 
         #if input_df != 0:
     mainout = main(params)
     if mainout is not False:
         input_df = copy.deepcopy(mainout)
 
+        live_returns = 0
         if params['live_backtest']:
             live_returns = utils.get_portfolio_returns(st.session_state.ib_client, st.session_state.ib_client.account, freq='D')
             live_returns = live_returns[live_returns['date'] > params['startdate']]
@@ -373,144 +536,52 @@ def app():
             st.plotly_chart(fig, use_container_width=True)
 
         # Portfolio value
-        idx = 0
-
-        if params['live_backtest']:
-            live_price = params['initial_cash'] * (1 + live_returns['returns']).cumprod()
-            live_price.iloc[0] = params['initial_cash']
-            live_price_df = pd.DataFrame({'date':live_returns['date'],'real_portfolio':live_price})
-            input_df[idx] = pd.merge(input_df[idx], live_price_df, left_index=True, right_on='date', how="inner")
-            input_df[idx].set_index(['date'], inplace=True)
-
-        columns=input_df[idx].columns
-        input_df[idx]['date'] = input_df[idx].index
-
-        input_df_long = pd.melt(input_df[idx], id_vars=['date'], value_vars=columns,var_name='strategy', value_name='price')
-
-        fig = px.line(input_df_long, x="date", y="price", color="strategy")
-
         st.markdown("### Portfolio value")
-        st.plotly_chart(fig, use_container_width=True)
+        portfolio_value_df = portfolio_value_graph(live_returns, input_df)
+        fig_portfolio_value = px.line(portfolio_value_df, x="date", y="price", color="strategy")
+        st.plotly_chart(fig_portfolio_value, use_container_width=True)
 
         # Portfolio drawdowns
-        idx = 5 # find a smarter way later
-
-        if params['live_backtest']:
-            live_portfolio_dd = (live_price.shift(-1) / live_price.cummax(axis=0) - 1).shift(1)
-            live_portfolio_dd.iloc[0] = 0
-            live_portfolio_dd = live_portfolio_dd.clip(None, 0)
-            live_portfolio_dd_df = pd.DataFrame({'date': live_returns['date'], 'real_portfolio': live_portfolio_dd})
-            input_df[idx] = pd.merge(input_df[idx], live_portfolio_dd_df, left_index=True, right_on='date', how="inner")
-            input_df[idx].set_index(['date'], inplace=True)
-
-        columns=input_df[idx].columns
-        input_df[idx]['date'] = input_df[idx].index
-
-        input_df_long = pd.melt(input_df[idx], id_vars=['date'], value_vars=columns,var_name='strategy', value_name='drawdown')
-
-        fig = px.line(input_df_long, x="date", y="drawdown", color="strategy")
-
         st.markdown("### Portfolio drawdown")
-        st.plotly_chart(fig, use_container_width=True)
+        portfolio_drawdown_df = portfolio_drawdowns_graph(live_returns, input_df)
+        fig_portfolio_drawdown = px.line(portfolio_drawdown_df, x="date", y="drawdown", color="strategy")
+        st.plotly_chart(fig_portfolio_drawdown, use_container_width=True)
 
         # Portfolio metrics
         st.markdown("### Portfolio metrics")
-
-        if params['live_backtest']:
-            returns_df = live_returns['returns']
-            live_portfolio_metrics_df = utils.live_portfolio_metrics(params, returns_df)
-
-            input_df[2] = pd.merge(input_df[2], live_portfolio_metrics_df, left_index=True, right_index=True, how = 'inner')
-
-        st.dataframe(input_df[2])
-
+        input_df_2 = portfolio_metrics_table(live_returns, input_df)
+        st.dataframe(input_df_2)
 
         # Portfolio weights
         st.markdown("### Portfolio weights")
-        # col1, col2 = st.columns(2)
-        #
-        # idx = 3
-        # columns=input_df[idx].columns
-        # input_df[idx]['date'] = input_df[idx].index
-        # input_df_long = pd.melt(input_df[idx], id_vars=['date','strategy'], value_vars=columns[0:-1],var_name='asset', value_name='weight')
-        #
-        # col1.subheader("Target weights")
-        #
-        # for strat in input_df_long['strategy'].unique():
-        #     fig = px.bar(input_df_long[input_df_long['strategy']==strat], x="date", y="weight", color="asset", title=strat + ' weights')
-        #     col1.plotly_chart(fig, use_container_width=True)
-        idx = 4
-        columns=input_df[idx].columns
-        input_df[idx]['date'] = input_df[idx].index
-        input_df_long = pd.melt(input_df[idx], id_vars=['date','strategy'], value_vars=columns[0:-1],var_name='asset', value_name='weight')
-
-        st.subheader("Effective weights")
-
+        st.write("Effective weights")
+        input_df_long = portfolio_weights_graph(input_df)
         for strat in input_df_long['strategy'].unique():
-            fig = px.bar(input_df_long[input_df_long['strategy']==strat], x="date", y="weight", color="asset", title=strat + ' weights')
-            st.plotly_chart(fig, use_container_width=True)
-
+            this_weights_fig = px.bar(input_df_long[input_df_long['strategy'] == strat], x="date", y="weight", color="asset",
+                         title=strat + ' weights')
+            st.plotly_chart(this_weights_fig, use_container_width=True)
 
         # Asset value
-        idx = 6
-        columns=input_df[idx].columns
-        input_df[idx]['date'] = input_df[idx].index
-        input_df_long = pd.melt(input_df[idx], id_vars=['date'], value_vars=columns,var_name='asset', value_name='price')
-
-        fig = px.line(input_df_long, x="date", y="price", color="asset")
-
         st.markdown("### Assets value")
-        st.plotly_chart(fig, use_container_width=True)
+        assets_value_df = asset_values_graph(input_df)
+        assets_value_fig = px.line(assets_value_df, x="date", y="price", color="asset")
+        st.plotly_chart(assets_value_fig, use_container_width=True)
 
         # Assets drawdowns
-        idx = 7 # find a smarter way later
-        columns=input_df[idx].columns
-        input_df[idx]['date'] = input_df[idx].index
-        input_df_long = pd.melt(input_df[idx], id_vars=['date'], value_vars=columns,var_name='asset', value_name='drawdown')
-
-        fig = px.line(input_df_long, x="date", y="drawdown", color="asset")
-
         st.markdown("### Assets drawdown")
-        st.plotly_chart(fig, use_container_width=True)
+        assets_dd_df = asset_drawdown_graph(input_df)
+        assets_dd_fig = px.line(assets_dd_df, x="date", y="drawdown", color="asset")
+        st.plotly_chart(assets_dd_fig, use_container_width=True)
 
-        # # Portfolio Returns
-        idx = 1
-        # Determine the price frequency
-        dates=[]
-        for i in range(1, len(input_df[idx].index)):
-            dates.append(datetime.strptime(str(input_df[idx].index[i]), '%Y-%m-%d'))
-        datediff = stats.mode(np.diff(dates))[0][0]
-        if datediff > timedelta(days=250):
-            frequency = "Years"
-        elif datediff < timedelta(days=2):
-            frequency = "Days"
+        # Portfolio Returns
+        st.markdown("### Portfolio rolling returns")
 
-        rolling_ret_period = st.slider("rolling returns period (in years)", min_value=1, max_value=30,
-                                       value=1, step=1, format='%i', key='rolling_ret_period',
-                                       help='period of rolling annual return (in years)')
-
-        if frequency == "Days": # plot the rolling return (annualized)
-            for column in input_df[idx]:
-                if params['logreturns']:
-                    input_df[idx][column] = (input_df[idx][column]).rolling(window=params['DAYS_IN_YEAR']*rolling_ret_period).sum()/rolling_ret_period
-                else:
-                    input_df[idx][column] = (1 + input_df[idx][column]).rolling(window=params['DAYS_IN_YEAR']*rolling_ret_period).apply(np.prod) ** (1 / rolling_ret_period) - 1
-        elif frequency == "Years": # plot the rolling 5 years return
-            for column in input_df[idx]:
-                if params['logreturns']:
-                    input_df[idx][column] = (input_df[idx][column]).rolling(window=rolling_ret_period).mean()
-                else:
-                    input_df[idx][column] = (1 + input_df[idx][column]).rolling(window=rolling_ret_period).apply(np.prod) - 1
-
-
-        columns=input_df[idx].columns
-        input_df[idx]['date'] = input_df[idx].index
-        input_df_long = pd.melt(input_df[idx], id_vars=['date'], value_vars=columns,var_name='strategy', value_name='rolling return')
-
-        fig = px.line(input_df_long, x="date", y="rolling return", color="strategy")
-
-        st.markdown("### Portfolio returns")
-        st.plotly_chart(fig, use_container_width=True)
+        if math.floor((st.session_state.enddate - st.session_state.startdate).days / 365) > 1:
+            rolling_ret_period = st.slider("rolling returns period (in years)", min_value=1, max_value=math.floor((st.session_state.enddate - st.session_state.startdate).days / 365),
+                                           value=1, step=1, format='%i', key='rolling_ret_period',
+                                           help='period of rolling annual return (in years)')
+            portfolio_rollingrets_fig = portfolio_rollingrets_graph(input_df, rolling_ret_period)
+            st.plotly_chart(portfolio_rollingrets_fig, use_container_width=True)
 
         st.markdown("### Downloads area")
 
@@ -519,10 +590,13 @@ def app():
                           "Effective Weights", "Portfolio Drawdown", "Asset Prices", "Assets drawdown"]
 
         i = 0
+        outputpath = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))) + "\\output\\"
         for name in outputfilename:
             inputfilepath = name + "_" + today_str + '.csv'
             tmp_download_link = utils.download_link(input_df[i], inputfilepath, 'Click here to download ' + name)
             st.markdown(tmp_download_link, unsafe_allow_html=True)
+            if RUN_LOCALLY:
+                input_df[i].to_csv(outputpath + inputfilepath)
             i = i + 1
 
         inputfilepath = params['report_name'] + "_" + today_str + '.html'

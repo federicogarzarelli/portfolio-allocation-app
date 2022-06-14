@@ -10,6 +10,7 @@ import os, sys
 import plotly.express as px
 import numpy as np
 
+
 # from pages.home import session_state
 
 pd.options.mode.chained_assignment = None  # default='warn'
@@ -19,6 +20,8 @@ pd.options.mode.chained_assignment = None  # default='warn'
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from utils import *
 from resources.IBRK_client import IBClient
+from GLOBAL_VARS import params, RUN_LOCALLY
+
 
 def app():
     st.title('Connect to Interactive Brokers')
@@ -27,7 +30,6 @@ def app():
     if st.session_state.ib_client is not None:
         if st.session_state.ib_client.is_authenticated()['authenticated']:
             connected_flg = True
-            connected = True
 
     if connected_flg:
         st.write("Connected to Interactive Brokers.")
